@@ -1,0 +1,4 @@
+- make the border move around the edge
+- add photo to header
+- visual typography
+- add passively-responsive background elements

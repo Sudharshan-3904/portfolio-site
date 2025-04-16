@@ -1,0 +1,76 @@
+.showcase-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  width: 95%;
+  position: relative;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.status-tag {
+  background: #222;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.project-links {
+  margin-top: 0.7rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+
+.status-tag.completed {
+  background-color: #4caf50;
+}
+
+.status-tag.in-progress {
+  background-color: #ff9800;
+}
+
+.status-tag.planned {
+  background-color: #2196f3;
+}
