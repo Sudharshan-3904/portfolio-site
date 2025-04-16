@@ -6,7 +6,7 @@ function Header() {
       <div className="cyber-container">
         <div className="cyber-profile">
           <div className="cyber-profile-photo">
-            <img src="./src/assets/otherImages/profile.jpg" alt="Profile" />
+            <img src="./src/assets/otherImages/profile_photo.jpg" alt="Profile" />
           </div>
           <div className="cyber-profile-content">
             <h1 className="cyber-text" style={cyber_text_main_header}>
