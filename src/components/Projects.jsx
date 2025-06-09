@@ -74,7 +74,7 @@ const Projects = () => {
       title: "Echo State Network Research",
       description:
         "A hands-on research and testing into development of Echo State Networks (ESN).",
-      image: "/project_images/local_agents.png",
+      image: "/project_images/echo_state_network.png",
       category: "Research",
       tech: ["Python", "Numpy", "CUDA", "nltk", "tensorlfow", "scikit-learn"],
       githubLink:
