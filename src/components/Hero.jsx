@@ -1,12 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FiGithub,
-  FiLinkedin,
-  FiTwitter,
-  FiMail,
-  FiDownload,
-} from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
 
 const Hero = () => {
   // Animation variants
@@ -87,13 +81,13 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 md:px-6 z-10">
         <motion.div
-          className="grid md:grid-cols-5 gap-8 items-center"
+          className="grid md:grid-cols-5 gap-3 items-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Main Content */}
-          <div className="md:col-span-3 space-y-6 gap-3">
+          <div className="md:col-span-3 space-y-6 gap-8">
             <motion.div variants={itemVariants} className="inline-block mb-2">
               <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
                 Data Engineer
