@@ -8,18 +8,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -27,118 +19,46 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
   ];
 
-  const menuVariants = {
-    open: {
-      opacity: 1,
-      height: 'auto',
-      transition: {
-        duration: 0.3,
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-    closed: {
-      opacity: 0,
-      height: 0,
-      transition: {
-        duration: 0.3,
-        staggerChildren: 0.05,
-        staggerDirection: -1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.3 },
-    },
-    closed: {
-      opacity: 0,
-      y: -20,
-      transition: { duration: 0.3 },
-    },
-  };
-
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-xl md:text-2xl font-bold"
-          >
-            <a href="#home" className="text-primary">
-              <span className="text-primary-dark">&lt;</span>
-              Portfolio
-              <span className="text-primary-dark">/&gt;</span>
-            </a>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="hidden md:flex space-x-8"
-          >
-            {navLinks.map((link, index) => (
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-dark shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="container flex justify-between items-center py-4">
+        <a href="#home" className="text-primary font-bold text-xl">
+          MyPortfolio
+        </a>
+        <button
+          className="md:hidden btn btn-outline"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          Menu
+        </button>
+        <ul
+          className={`md:flex gap-6 items-center hidden ${
+            isOpen ? "block" : "hidden"
+          }`}
+        >
+          {navLinks.map((link, index) => (
+            <li key={index}>
               <a
-                key={index}
                 href={link.href}
-                className="text-gray-800 hover:text-primary transition-colors duration-300"
+                className="text-darkText-primary hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
-            ))}
-          </motion.div>
-
-          {/* Mobile Navigation Toggle */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-800 focus:outline-none"
-            >
-              {isOpen ? (
-                <FiX className="h-6 w-6" />
-              ) : (
-                <FiMenu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        <motion.div
-          initial="closed"
-          animate={isOpen ? 'open' : 'closed'}
-          variants={menuVariants}
-          className="md:hidden overflow-hidden"
-        >
-          <div className="flex flex-col space-y-4 py-4">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                variants={itemVariants}
-                href={link.href}
-                className="text-gray-800 hover:text-primary py-2 transition-colors duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
