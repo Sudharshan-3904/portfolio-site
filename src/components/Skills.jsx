@@ -61,7 +61,7 @@ const Skills = () => {
   // Skill data
   const skillCategories = [
     {
-      title: "Laguages",
+      title: "Languages",
       skills: [
         { name: "Python", icon: <FaPython />, level: 90 },
         { name: "C++", icon: <SiCplusplus />, level: 85 },
@@ -80,8 +80,8 @@ const Skills = () => {
         { name: "Flask", icon: <FaFlask />, level: 75 },
         { name: "Streamlit", icon: <SiStreamlit />, level: 80 },
         { name: "React", icon: <FaReact />, level: 80 },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90 },
         { name: "Firebase", icon: <SiFirebase />, level: 80 },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 75 },
       ],
     },
     {
@@ -135,7 +135,7 @@ const Skills = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             I've accumulated experience in various technologies and frameworks
-            across the stack. Here are the skills I've been focusing on
+            across the stack. Here are the skills I've been focussing on
             recently.
           </motion.p>
         </div>

@@ -1,14 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FiGithub,
-  FiLinkedin,
-  FiTwitter,
-  FiMail,
-  FiArrowUp,
-  FiHeart,
-  FiCode,
-} from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiArrowUp } from "react-icons/fi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,15 +11,20 @@ const Footer = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
   ];
 
   // Social links
   const socialLinks = [
-    { icon: <FiGithub />, url: "https://github.com", label: "GitHub" },
-    { icon: <FiLinkedin />, url: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <FiTwitter />, url: "https://twitter.com", label: "Twitter" },
-    { icon: <FiMail />, url: "mailto:your.email@example.com", label: "Email" },
+    {
+      icon: <FiGithub />,
+      url: "https://github.com/Sudharshan-3904",
+      label: "GitHub",
+    },
+    {
+      icon: <FiLinkedin />,
+      url: "https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9",
+      label: "LinkedIn",
+    },
   ];
 
   // Scroll to top function
@@ -152,57 +149,17 @@ const Footer = () => {
                   App Development
                 </a>
               </motion.li>
+              <motion.li whileHover={{ x: 5 }}>
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-primary transition-colors"
+                >
+                  Tool Development
+                </a>
+              </motion.li>
             </motion.ul>
           </div>
-
-          {/* Contact Info
-          <div className="md:col-span-4">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-lg font-semibold mb-4"
-            >
-              Contact Info
-            </motion.h3>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="space-y-3 text-gray-400"
-            >
-              <p>Coimbatore, India</p>
-              <p>john.doe@example.com</p>
-              <p>+1 (555) 123-4567</p>
-            </motion.div>
-            <motion.a
-              href="#contact"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="inline-block mt-4 px-5 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get in Touch
-            </motion.a>
-          </div> */}
         </div>
-
-        {/* Copyright & Credits */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="pt-8 mt-8 border-t border-gray-800 text-center text-gray-500 text-sm"
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="mt-2 md:mt-0 flex items-center justify-center">
-              Made with <FiHeart className="mx-1 text-red-500" /> and{" "}
-              <FiCode className="mx-1 text-primary" />
-            </p>
-          </div>
-        </motion.div>
       </div>
     </footer>
   );

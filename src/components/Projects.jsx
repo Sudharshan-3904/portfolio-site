@@ -13,147 +13,252 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern E-commerce Platform",
+      title: "Portfolio Website",
       description:
-        "A fully responsive e-commerce platform with advanced product filtering, user authentication, and payment integration.",
-      image: "https://via.placeholder.com/600x400?text=E-commerce+App",
-      category: "Web App",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-      demoLink: "https://demo-ecommerce.example.com",
-      githubLink: "https://github.com/username/ecommerce-project",
-      longDescription: `This project is a fully-featured e-commerce platform built with the MERN stack. 
-      Features include product search and filtering, user authentication, shopping cart functionality, 
-      checkout process with Stripe integration, order history, and an admin dashboard for product management.
+        "A personal portfolio website showcasing my projects and skills.",
+      image: "/project_images/portfolio.png",
+      category: "Projects",
+      tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
+      githubLink: "https://github.com/Sudharshan-3904/portfolio-site",
+      longDescription: `This is my personal portfolio website, built with React and Tailwind CSS. It showcases my projects, skills, and experience in a visually appealing and interactive manner. The site is designed to be responsive and user-friendly, providing a seamless experience across devices.
       
-      The frontend is built with React and utilizes Redux for state management. The UI is styled with 
-      Tailwind CSS for a responsive design that works across all device sizes. The backend is powered 
-      by Node.js and Express, with MongoDB as the database.`,
+      The website features smooth animations using Framer Motion, enhancing the user experience. It includes sections for my projects, skills, and a contact form, allowing visitors to easily get in touch with me.`,
       highlights: [
-        "Responsive design optimized for all devices",
-        "User authentication with JWT",
-        "Shopping cart with persistent storage",
-        "Payment processing with Stripe",
-        "Admin dashboard for product management",
+        "Responsive Desing",
+        "Modern Simplistic Design",
+        "Animated transition with Framer Motion",
+        "Easily Customizable and Extensible",
       ],
     },
     {
       id: 2,
-      title: "Task Management Dashboard",
+      title: "PyVerse",
       description:
-        "A collaborative task management system with real-time updates, drag-and-drop interface, and team collaboration features.",
-      image: "https://via.placeholder.com/600x400?text=Task+Manager",
-      category: "Web App",
-      tech: ["React", "Firebase", "Redux", "Tailwind CSS"],
-      demoLink: "https://task-manager.example.com",
-      githubLink: "https://github.com/username/task-manager",
-      longDescription: `This task management dashboard allows teams to organize and track their projects efficiently. 
-      The application features a drag-and-drop interface for task management, real-time updates using Firebase, 
-      team collaboration tools, and detailed analytics.
+        "An Interactive python based application to simulate celestial systems with basic parameters.",
+      image: "/project_images/pyverse.png",
+      category: "Projects",
+      tech: ["Python", "PyGame", "CUDA", "PyTorch", "Vispy", "OpenGL"],
+      githubLink: "https://github.com/Sudharshan-3904/PyVerse",
+      longDescription: `PyVerse is a Python-based, interactive, and extensible galaxy-scale simulation platform. It supports real-time visualization, advanced physics models, and performance monitoring, making it ideal for both scientific exploration and educational demos.
       
-      Users can create projects, assign tasks to team members, set deadlines, and track progress through 
-      an intuitive interface. The app also includes a notification system to keep team members updated on task changes.`,
+      This is built by integrating PyGame and Vispy to enable realistic physics simulation of celestial systems. The application allows users to simulate and visualize the motion of celestial bodies in a galaxy, providing an interactive experience for understanding complex astronomical phenomena.`,
       highlights: [
-        "Drag-and-drop interface for intuitive task management",
-        "Real-time updates with Firebase",
-        "Team collaboration features",
-        "Task assignment and deadline tracking",
-        "Project analytics and reporting",
+        "Realistic Pysics Simulation",
+        "Preloaded with a sample presets",
+        "Realtime rendeting",
+        "Performance monitoring",
+        "Benchmarking and Stress testing",
       ],
     },
     {
       id: 3,
-      title: "Personal Finance Tracker",
+      title: "Local Agents",
       description:
-        "An application for tracking personal finances, including expense categorization, budget planning, and interactive reports.",
-      image: "https://via.placeholder.com/600x400?text=Finance+Tracker",
-      category: "Mobile App",
-      tech: ["React Native", "Firebase", "Chart.js", "Expo"],
-      demoLink: "https://finance-app.example.com",
-      githubLink: "https://github.com/username/finance-tracker",
-      longDescription: `This personal finance tracker helps users manage their finances effectively by tracking 
-      income and expenses, categorizing transactions, and providing visual reports of spending habits.
-      
-      Built with React Native, the application works seamlessly on both iOS and Android devices. 
-      Data is securely stored in Firebase, and the app features offline capabilities to ensure users can 
-      access their financial information anytime, anywhere.`,
+        "A exploration of local LLM based agents for productivity tools.",
+      image: "/project_images/local_agents.png",
+      category: "AI",
+      tech: ["Python", "Streamlit", "Ollama", "uv", "LangChain"],
+      githubLink: "https://github.com/Sudharshan-3904/LocalAgent",
+      longDescription: `This repository hosts a local AI agent system, providing a versatile platform for code generation, analysis, and email management through an intuitive Streamlit-based user interface. All agents run locally on your system, ensuring data privacy and control.
+
+      This projeect was implemented using langchain to implement basics of agentic AI for simple productivity tasks. The agents are designed to be modular and extensible, allowing for easy integration of new functionalities and improvements.`,
       highlights: [
-        "Income and expense tracking",
-        "Transaction categorization",
-        "Budget planning tools",
-        "Interactive charts and reports",
-        "Recurring transaction management",
+        "Github Copilot like basic code agent",
+        "Email management Agent ",
+        "Blog writing Agent",
+        "RAG agent for document analysis",
       ],
     },
     {
       id: 4,
-      title: "AI-Powered Content Generator",
+      title: "Echo State Network Research",
       description:
-        "A tool that leverages AI to generate various types of content including blog posts, social media captions, and product descriptions.",
-      image: "https://via.placeholder.com/600x400?text=AI+Content+Generator",
-      category: "AI Tool",
-      tech: ["Python", "TensorFlow", "React", "Flask", "OpenAI API"],
-      demoLink: "https://ai-writer.example.com",
-      githubLink: "https://github.com/username/ai-content-generator",
-      longDescription: `This AI-powered content generation tool helps marketers, bloggers, and business owners create 
-      high-quality content quickly. The application uses advanced natural language processing to generate 
-      blog posts, social media captions, product descriptions, and more.
-      
-      The backend is built with Python and Flask, and leverages the OpenAI API for content generation. 
-      The frontend is a React application that provides an intuitive interface for users to specify their 
-      content requirements and review the generated content.`,
+        "A hands-on research and testing into development of Echo State Networks (ESN).",
+      image: "/project_images/local_agents.png",
+      category: "Research",
+      tech: ["Python", "Numpy", "CUDA", "nltk", "tensorlfow", "scikit-learn"],
+      githubLink:
+        "https://github.com/Sudharshan-3904/EchoStateNetwork-Research",
+      longDescription: `This was a hands-on research project focused on the development and testing of Echo State Networks (ESN), a type of recurrent neural network known for its efficiency in processing time-series data. The project involved implementing ESN from scratch, experimenting with various configurations, and evaluating its performance on different datasets.
+
+      The main goal was to explore the capabilities of ESN in tasks such as time-series prediction, classification, and signal processing. The project also included a comprehensive analysis of the ESN's performance compared to traditional neural networks and other machine learning models.`,
       highlights: [
-        "Advanced NLP for content generation",
-        "Multiple content types (blogs, social media, product descriptions)",
-        "Customizable tone and style",
-        "SEO optimization suggestions",
-        "Content editing and refinement tools",
+        "Pickle file based model saving",
+        "Numpy based implementation",
+        "CPU, GPU and NPU support",
+        "Extensive testing and benchmarking",
+        "Documentation and detailed logs",
       ],
     },
     {
       id: 5,
-      title: "Weather Dashboard",
+      title: "Neural Style Transfer",
       description:
-        "A comprehensive weather application with forecasts, interactive maps, and severe weather alerts for locations worldwide.",
-      image: "https://via.placeholder.com/600x400?text=Weather+App",
-      category: "Web App",
-      tech: ["JavaScript", "React", "OpenWeatherMap API", "Leaflet.js"],
-      demoLink: "https://weather-app.example.com",
-      githubLink: "https://github.com/username/weather-dashboard",
-      longDescription: `This weather dashboard provides users with accurate weather information for locations worldwide. 
-      The application includes current conditions, hourly forecasts, 7-day forecasts, and severe weather alerts.
-      
-      The app is built with React and uses the OpenWeatherMap API for weather data. Interactive maps powered by 
-      Leaflet.js allow users to visualize weather patterns and conditions across different regions.`,
+        "A practical implementation of Neural Style Transfer using Deep Learning Techniques.",
+      image: "/project_images/nst_application.png",
+      category: "AI",
+      tech: ["Python", "Streamlit", "CUDA", "PyTorch", "OpenCV", "Numpy"],
+      githubLink: "https://github.com/Sudharshan-3904/NeuralStyleTransfer",
+      longDescription: `This is a Streamlit web application that implements Neural Style Transfer, allowing users to combine the content of one image with the artistic style of another.
+
+      This application uses deep learning techniques to transfer the style of one image (like a famous painting) onto the content of another image (like a photograph). The implementation is based on the original Neural Style Transfer paper by Gatys et al. and uses pre-trained VGG networks (VGG16 and VGG19) to extract content and style features.`,
       highlights: [
-        "Real-time weather data",
-        "Interactive weather maps",
-        "Hourly and 7-day forecasts",
-        "Severe weather alerts",
-        "Location search and favorites",
+        "User-friendly Streamlit interface",
+        "Customizable parameters for style transfer",
+        "Multiple image formats supported",
+        "Real-time processing with GPU acceleration",
+        "High-quality output images",
       ],
     },
     {
       id: 6,
-      title: "Portfolio Website Template",
+      title: "Full Stack Blog Wesbite",
       description:
-        "A customizable portfolio website template designed for developers and designers to showcase their work and skills.",
-      image: "https://via.placeholder.com/600x400?text=Portfolio+Template",
-      category: "Website",
-      tech: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      demoLink: "https://portfolio-template.example.com",
-      githubLink: "https://github.com/username/portfolio-template",
-      longDescription: `This portfolio template is designed for developers and designers who want to showcase their 
-      work and skills in a professional and visually appealing way. The template is fully customizable and 
-      features smooth animations, responsive design, and optimized performance.
-      
-      Built with React and Tailwind CSS, the template is easy to customize and deploy. Framer Motion is used for 
-      animations, providing a polished user experience.`,
+        "A modern, responsive blog website with a React frontend and a Python/Flask backend.",
+      image: "/project_images/fs_blog_site.png",
+      category: "Full Stack",
+      tech: [
+        "Python",
+        "Flask",
+        "React",
+        "CSS/SCSS",
+        "SQLAlchemy",
+        "JWT",
+        "REST API",
+      ],
+      githubLink: "https://github.com/Sudharshan-3904/BlogWebsiteFullStack",
+      longDescription: `This is a full-stack blog website built with a React frontend and a Python/Flask backend. The application allows users to create, read, update, and delete blog posts, as well as manage user authentication and authorization.
+
+      The frontend is built with React, providing a modern and responsive user interface. The backend is implemented using Flask, which handles API requests, user authentication, and database interactions. The application uses SQLAlchemy for ORM and JWT for secure user authentication.`,
       highlights: [
-        "Fully responsive design",
-        "Customizable sections and themes",
-        "Smooth page transitions and animations",
-        "Optimized for performance",
-        "SEO-friendly structure",
+        "User authentication and authorization",
+        "Comment system for blog posts",
+        "Rich text editor for blog posts",
+        "Responsive design for all devices",
+        "Search functionality for blog posts",
+      ],
+    },
+    {
+      id: 7,
+      title: "Worlde Game",
+      description:
+        "A command-line implementation of the popular Wordle word guessing game.",
+      image: "/project_images/wordle.png",
+      category: "Projects",
+      tech: ["Python", "Flask", "Requests"],
+      githubLink: "https://github.com/Sudharshan-3904/Wordle",
+      longDescription: `This is a command-line implementation of the popular Wordle word guessing game. The game allows users to guess a five-letter word within six attempts, providing feedback on the correctness of each guess.
+
+      The implementation includes a simple command-line interface where users can input their guesses and receive feedback on which letters are correct and in the right position, which letters are correct but in the wrong position, and which letters are not in the word at all. The game continues until the user either guesses the word correctly or runs out of attempts.`,
+      highlights: [
+        "API based random word generation",
+        "Color-coded feedback for guesses",
+        "Input validation for user guesses",
+        "6 attempts to guess the word",
+        "Clear and concise command-line interface",
+      ],
+    },
+    {
+      id: 8,
+      title: "Utilities App",
+      description:
+        "A collection of useful utilities and tools for everyday tasks.",
+      image: "/project_images/utilities.png",
+      category: "Projects",
+      tech: ["Python", "Pillow", "PyTube", "Custom Tkinter"],
+      githubLink: "https://github.com/Sudharshan-3904/UtilitiesApp",
+      longDescription: `This is a collection of useful utilities and tools for everyday tasks, implemented as a Python application with a custom Tkinter GUI. The application includes features like image processing, video downloading, and more.
+
+      The Utilities App provides a user-friendly interface for performing various tasks, such as converting images to different formats, downloading videos from YouTube, and more. The application is designed to be modular and extensible, allowing for easy addition of new utilities in the future.`,
+      highlights: [
+        "Youtube Video Downloader",
+        "Image Converter",
+        "Spreadsheet Converter",
+        "Video to Audio Converter",
+        "Internet Speed Test",
+        "Passwrod Creation Tool",
+      ],
+    },
+    {
+      id: 9,
+      title: "Flight Ticket Booking System",
+      description:
+        "A basic flight ticket booking system with user authentication and booking management.",
+      image: "/project_images/flight_booking_app.png",
+      category: "Projects",
+      tech: ["C Language", "CSV File Handling", "Data Logging"],
+      githubLink: "https://github.com/Sudharshan-3904/FlightBookingApp",
+      longDescription: `The Flight Booking System is a C program designed to manage and operate a basic flight booking system. This system allows users to book new flights, delete booked flights, view all currently booked flights, print a flight ticket, and quit the program.
+
+      The program uses CSV file handling to store flight data and user bookings, ensuring that all information is persistent across sessions. It includes features for user authentication, allowing users to log in and manage their bookings securely.`,
+      highlights: [
+        "Local CSV file handling for data storage",
+        "User authentication for secure access",
+        "Secure data storage and management",
+        "Basic flight management operations",
+        "Secure and efficient data handling",
+      ],
+    },
+    {
+      id: 10,
+      title: "Do It Later App",
+      description:
+        "A simple task management application to help users manage their tasks and reminders.",
+      image: "/project_images/do_it_later_app.png",
+      category: "Projects",
+      tech: ["Flutter", "Dart", "JSON Storage", "Mobile App"],
+      githubLink: "https://github.com/Sudharshan-3904/DoItLater",
+      longDescription: `DoItLater is a simple yet powerful to-do list manager built with Flutter. It allows you to keep track of your tasks, categorize them, prioritize them, and set deadlines. This project demonstrates how to use state management in Flutter, interact with JSON files for data persistence, and handle user inputs effectively.
+
+      The application features a clean and intuitive user interface, making it easy to add, edit, and delete tasks. It also supports task categorization and prioritization, allowing users to focus on what matters most.`,
+      highlights: [
+        "Easy task management",
+        "Categorization and prioritization of tasks",
+        "User-friendly interface",
+        "Data persistence using JSON files",
+        "Dark and Light themes",
+      ],
+    },
+    {
+      id: 11,
+      title: "Library Management System",
+      description:
+        "A lightweight library management system to manage books, members, and transactions.",
+      image: "/project_images/library_system.png",
+      category: "Projects",
+      tech: ["Python", "SQLite", "bcrypt", "Custom Tkinter"],
+      githubLink: "https://github.com/Sudharshan-3904/LibrarySystem",
+      longDescription: `This project is a graphical user interface (GUI) application built using Python and the CTk library for creating modern and visually appealing interfaces. The code provides functionality for users to log in, view home section content, and update book data.
+
+      The Library Management System allows users to manage books, members, and transactions efficiently. It provides features for adding, updating, and deleting books, managing member information, and tracking book loans and returns. The application is designed to be user-friendly and intuitive, making it easy for librarians to manage their library operations.`,
+      highlights: [
+        "ISBN based online searching",
+        "Password hashing for secure authentication",
+        "Detailed logging and error handling",
+        "User-friendly interface with CTk",
+        "Different user roles (Admin, Librarian, Member)",
+        "Data persistence using SQLite files",
+      ],
+    },
+    {
+      id: 12,
+      title: "React Quizz App",
+      description:
+        "A simple quiz application built with React to test knowledge on various topics.",
+      image: "/project_images/react_quizz_app.png",
+      category: "Projects",
+      tech: ["React", "CSS/SCSS", "JSON", "Node.js"],
+      githubLink: "https://github.com/Sudharshan-3904/React-QuizApp",
+      longDescription: `This is a simple quiz application built with React that allows users to test their knowledge on various topics. The application fetches quiz questions from a JSON file and provides an interactive interface for users to answer the questions.
+
+      The React Quiz App features a clean and modern design, making it easy for users to navigate through the quiz. It includes functionalities such as displaying questions, tracking user answers, and providing feedback on the user's performance at the end of the quiz.`,
+      highlights: [
+        "JSON based quiz questions",
+        "Dynamic question rendering",
+        "User-friendly interface",
+        "User authentication and authorization",
+        "Google OAuth integration",
+        "Responsive design for all devices",
       ],
     },
   ];
@@ -375,15 +480,6 @@ const Projects = () => {
                     >
                       <FiGithub className="w-5 h-5" />
                     </a>
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-darkText-secondary hover:text-primary transition-colors"
-                      aria-label="Live Demo"
-                    >
-                      <FiExternalLink className="w-5 h-5" />
-                    </a>
                   </div>
                   <button
                     onClick={() => openModal(project)}
@@ -448,14 +544,6 @@ const Projects = () => {
                       className="flex items-center gap-2 px-4 py-2 bg-dark-lightest text-darkText-primary rounded-md text-sm hover:bg-dark-lighter transition-colors"
                     >
                       <FiGithub /> GitHub
-                    </a>
-                    <a
-                      href={selectedProject.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-md text-sm hover:bg-primary-dark transition-colors"
-                    >
-                      <FiExternalLink /> Live Demo
                     </a>
                   </div>
                 </div>

@@ -129,20 +129,20 @@ const About = () => {
               variants={itemVariants}
               className="text-darkText-secondary mb-6"
             >
-              I'm a full-stack developer with expertise in creating responsive
-              web applications that provide exceptional user experiences. With a
-              background in both design and development, I bridge the gap
-              between aesthetics and functionality.
+              I'm a creative developer with a passion for building beautiful,
+              functional projects and applications. I love transforming ideas
+              into reality through code, design, and innovation.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-darkText-secondary mb-8"
             >
-              My journey began with a Computer Science degree, followed by roles
-              at various tech companies where I've honed my skills in modern web
-              technologies. I'm passionate about clean code, intuitive design,
-              and building applications that solve real-world problems.
+              My journey began with a facination for computer and coding,
+              followed by curiosity based learnign where I've honed my skills in
+              primarily python based implementations. I'm passionate about clean
+              code, intuitive design, and building applications that solve
+              real-world problems.
             </motion.p>
 
             {/* Highlights Grid

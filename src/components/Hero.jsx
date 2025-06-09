@@ -31,10 +31,16 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: <FiGithub />, url: "https://github.com", label: "GitHub" },
-    { icon: <FiLinkedin />, url: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <FiTwitter />, url: "https://twitter.com", label: "Twitter" },
-    { icon: <FiMail />, url: "mailto:your.email@example.com", label: "Email" },
+    {
+      icon: <FiGithub />,
+      url: "https://github.com/Sudharshan-3904",
+      label: "GitHub",
+    },
+    {
+      icon: <FiLinkedin />,
+      url: "https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9",
+      label: "LinkedIn",
+    },
   ];
 
   return (
@@ -87,7 +93,7 @@ const Hero = () => {
           animate="visible"
         >
           {/* Main Content */}
-          <div className="md:col-span-3 space-y-6">
+          <div className="md:col-span-3 space-y-6 gap-3">
             <motion.div variants={itemVariants} className="inline-block mb-2">
               <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
                 Data Engineer
@@ -122,7 +128,7 @@ const Hero = () => {
             >
               I'm a Software Developer specializing in building exceptional
               tools and projects. Currently, I'm focused on creating useful,
-              interesting and small projects for exterimental learning.
+              interesting and small projects for experimental learning.
             </motion.p>
 
             {/* Action Buttons */}
