@@ -60,18 +60,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="md:col-span-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-4"
-            >
-              <a href="#home" className="text-2xl font-bold">
-                <span className="text-gray-300">&lt;</span>
-                <span className="text-primary">Portfolio</span>
-                <span className="text-gray-300">/&gt;</span>
-              </a>
-            </motion.div>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

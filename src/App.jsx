@@ -59,7 +59,7 @@ function App() {
       <div className="fixed top-0 right-0 w-1/3 h-screen bg-primary opacity-5 blur-3xl -z-10"></div>
       <div className="fixed bottom-0 left-0 w-1/4 h-1/2 bg-accent opacity-5 blur-3xl -z-10"></div>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main className="relative">
         <Hero />

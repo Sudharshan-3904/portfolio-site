@@ -120,9 +120,9 @@ const Hero = () => {
               variants={itemVariants}
               className="text-darkText-secondary text-lg md:text-xl max-w-2xl"
             >
-              I'm a Full Stack Developer specializing in building exceptional
-              digital experiences. Currently, I'm focused on creating
-              accessible, human-centered products.
+              I'm a Software Developer specializing in building exceptional
+              tools and projects. Currently, I'm focused on creating useful,
+              interesting and small projects for exterimental learning.
             </motion.p>
 
             {/* Action Buttons */}
@@ -186,7 +186,7 @@ const Hero = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center relative z-10">
                 <div className="absolute inset-2 bg-dark-darker rounded-full flex items-center justify-center">
                   <img
-                    src="/images/profile.jpg"
+                    src="/photos/avatar.jpg"
                     alt="Developer"
                     className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover"
                   />

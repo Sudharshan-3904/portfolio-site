@@ -92,7 +92,7 @@ const About = () => {
               {/* Image frame with gradient border */}
               <div className="w-full max-w-md relative z-10">
                 <img
-                  src="/images/profile.jpg"
+                  src="/photos/profile.jpg"
                   alt="Professional portrait"
                   className="rounded-xl shadow-dark-md relative z-20 border-2 border-dark-lightest"
                 />
