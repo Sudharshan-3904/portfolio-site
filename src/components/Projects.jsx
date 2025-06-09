@@ -323,7 +323,7 @@ const Projects = () => {
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="bg-surface border border-dark-lightest rounded-xl shadow-dark-md hover:shadow-dark-lg transition-all duration-300"
+              className="bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative"
             >
               {/* Project Image */}
               <div className="relative overflow-hidden h-56">

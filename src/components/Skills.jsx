@@ -5,48 +5,23 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
-  FaNodeJs,
-  FaDatabase,
-  FaGitAlt,
-  FaFigma,
-  FaDocker,
-  FaAws,
   FaPython,
   FaFlask,
   FaRobot,
   FaChartBar,
 } from "react-icons/fa";
 import {
-  SiTypescript,
-  SiNextdotjs,
   SiTailwindcss,
-  SiExpress,
   SiMongodb,
-  SiPostgresql,
-  SiGraphql,
   SiFirebase,
-  SiRedux,
-  SiJest,
   SiCplusplus,
   SiC,
   SiSqlite,
   SiFlutter,
   SiStreamlit,
-  SiDatabricks,
-  SiLlvm,
-  SiMlb,
-  SiIota,
-  SiDataverse,
-  SiAib,
   SiSourceforge,
   SiAnaconda,
-  SiInteractiondesignfoundation,
-  SiDgraph,
-  SiScala,
   SiArduino,
-  SiJupyter,
-  SiVisualstudiocode,
-  SiVirgin,
   SiVirustotal,
 } from "react-icons/si";
 
@@ -136,7 +111,7 @@ const Skills = () => {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 shadow-dark-md bg-dark">
         {/* Section Title */}
         <div className="section-title">
           <motion.h2
@@ -171,20 +146,23 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-dark-lightest"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
               variants={categoryVariants}
-              className="bg-surface border border-dark-lightest rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300"
+              className="bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative"
               whileHover={{
                 y: -5,
                 boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
                 borderColor: "rgba(124, 77, 255, 0.2)",
               }}
             >
-              <h3 className="text-xl font-bold mb-5 text-darkText-primary">
+              {/* Add subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-transparent rounded-xl" />
+
+              <h3 className="text-xl font-bold mb-5 text-darkText-primary relative z-10">
                 {category.title}
               </h3>
 
@@ -235,15 +213,17 @@ const Skills = () => {
 
         {/* Additional tools tags */}
         <motion.div
-          className="mt-12"
+          className="mt-12 relative bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md px-6 py-8 flex flex-col items-center overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <h3 className="text-xl font-semibold mb-6 text-center text-darkText-primary">
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-transparent rounded-xl pointer-events-none" />
+          <h3 className="text-xl font-semibold mb-6 text-center text-darkText-primary relative z-10">
             Other Tools & Technologies
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 relative z-10">
             {[
               "Git",
               "GitHub",
@@ -256,7 +236,7 @@ const Skills = () => {
             ].map((tool, index) => (
               <motion.span
                 key={index}
-                className="bg-surface px-4 py-2 rounded-full text-darkText-secondary text-sm border border-dark-lightest hover:border-primary hover:shadow-dark-md transition-all cursor-default"
+                className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20"
                 whileHover={{
                   y: -4,
                   scale: 1.05,

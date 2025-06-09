@@ -9,25 +9,30 @@
   }
 
   body {
-    font-family: 'Inter', sans-serif;
-    color: #f8fafc; /* Light text for dark background */
-    background-color: #111827; /* Dark background */
+    @apply font-sans text-darkText-primary bg-dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    color: #f8fafc; /* Light text */
+    @apply font-bold text-darkText-primary;
   }
-
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
   p {
-    color: #cbd5e1; /* Muted light text */
+    @apply text-darkText-secondary;
   }
 
   section {
-    padding: 4rem 0;
-    position: relative;
+    @apply py-16 md:py-24 relative;
   }
 
   /* Custom scrollbar for dark mode */
@@ -37,16 +42,15 @@
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #1f2937; /* Darker track */
+    @apply bg-dark-darker;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #374151; /* Lighter thumb */
-    border-radius: 4px;
+    @apply bg-dark-lightest rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #646cff; /* Primary color */
+    @apply bg-primary;
   }
 }
 
@@ -57,81 +61,56 @@
   }
   
   .btn {
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-    border-radius: 0.375rem;
-    transition: all 0.3s;
+    @apply px-6 py-2 font-medium transition-all duration-300 rounded-md;
   }
   
   .btn-primary {
-    color: #ffffff;
-    background-color: #646cff; /* Primary color */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    @apply text-white bg-primary hover:bg-primary-dark shadow-md hover:shadow-dark-glow;
   }
   
-  .btn-primary:hover {
-    background-color: #535bf2; /* Darker primary */
-  }
-
   .btn-outline {
-    background-color: transparent;
-    border: 1px solid #646cff; /* Primary color */
-    color: #646cff; /* Primary color */
-  }
-
-  .btn-outline:hover {
-    background-color: #374151; /* Darker hover */
+    @apply bg-transparent-border border-primary text-primary hover:bg-transparent-border;
   }
 
   .card {
-    background-color: #1f2937; /* Dark surface */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
+    @apply bg-surface shadow-dark-md rounded-xl p-6 hover:shadow-dark-lg transition-all duration-300;
   }
 
   .section-title {
-    text-align: center;
-    margin-bottom: 4rem;
+    @apply text-center mb-16;
   }
 
   .section-title h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #f8fafc; /* Light text */
+    @apply text-3xl md:text-4xl font-bold mb-4;
   }
 
   .section-title .underline {
-    width: 5rem;
-    height: 0.25rem;
-    background-color: #646cff; /* Primary color */
-    margin: 0 auto;
+    @apply w-20 h-1 bg-primary mx-auto;
   }
 
   .glow-effect {
-    position: relative;
+    @apply relative;
   }
 
   .glow-effect::after {
     content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 0.375rem;
-    background-color: #646cff; /* Primary color */
-    opacity: 0;
-    filter: blur(8px);
-    transition: opacity 0.3s;
+    @apply absolute inset-0 rounded-md bg-primary opacity-0 blur-md transition-opacity duration-300;
     z-index: -1;
   }
 
   .glow-effect:hover::after {
-    opacity: 0.2;
+    @apply opacity-20;
   }
 
   .gradient-text {
-    color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(to right, #646cff, #00e5b0);
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .bg-transparent-border {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }

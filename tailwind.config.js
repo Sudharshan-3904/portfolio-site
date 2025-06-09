@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx,css}", "./public/index.html"],
-  safelist: ["hover:bg-dark-lighter"], // Explicitly include the class
   theme: {
     extend: {
       colors: {
@@ -22,7 +21,6 @@ module.exports = {
           darker: "#0f172a",
           darkest: "#030712",
         },
-        "dark.lighter": "#374151", // Added this line
         darkText: {
           primary: "#f8fafc",
           secondary: "#cbd5e1",
@@ -42,6 +40,7 @@ module.exports = {
         "dark-darker": "#1a1a1a",
         "dark-lightest": "#2a2a2a",
         surface: "#f9f9f9",
+        "bg-transparent-border": "rgba(255, 255, 255, 0.1)",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
