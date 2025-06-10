@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiDownload, FiMail } from "react-icons/fi";
 
 const Hero = () => {
   // Animation variants
@@ -34,6 +34,11 @@ const Hero = () => {
       icon: <FiLinkedin />,
       url: "https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9",
       label: "LinkedIn",
+    },
+    {
+      icon: <FiMail />,
+      url: "mailto:sudharshanvalar@gmail.com",
+      label: "Mail",
     },
   ];
 

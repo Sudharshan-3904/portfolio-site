@@ -65,7 +65,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        {/* <Papers /> */}
+        <Papers />
       </main>
 
       <Footer />
