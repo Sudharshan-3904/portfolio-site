@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Papers from "./components/Papers";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import "./main.css";
@@ -48,7 +49,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dark text-darkText-primary">
-      {/* Progress bar at the top of the page */}
+      <Navbar />
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
         style={{ scaleX }}
@@ -59,13 +60,12 @@ function App() {
       <div className="fixed top-0 right-0 w-1/3 h-screen bg-primary opacity-5 blur-3xl -z-10"></div>
       <div className="fixed bottom-0 left-0 w-1/4 h-1/2 bg-accent opacity-5 blur-3xl -z-10"></div>
 
-      {/* <Navbar /> */}
-
       <main className="relative">
         <Hero />
         <About />
         <Skills />
         <Projects />
+        {/* <Papers /> */}
       </main>
 
       <Footer />

@@ -27,17 +27,17 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Papers", href: "#papers" },
   ];
 
   const menuVariants = {
     open: {
       opacity: 1,
-      height: 'auto',
+      height: "auto",
       transition: {
         duration: 0.3,
         staggerChildren: 0.1,
@@ -69,22 +69,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-dark shadow-md py-3" : "bg-transparent py-5"
+      }`}
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-xl md:text-2xl font-bold"
-          >
-            <a href="#home" className="text-primary">
-              <span className="text-primary-dark">&lt;</span>
-              Portfolio
-              <span className="text-primary-dark">/&gt;</span>
-            </a>
-          </motion.div>
-
           {/* Desktop Navigation */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -96,7 +87,7 @@ const Navbar = () => {
               <a
                 key={index}
                 href={link.href}
-                className="text-gray-800 hover:text-primary transition-colors duration-300"
+                className="text-darkText-secondary hover:text-primary-dark transition-colors duration-300"
               >
                 {link.name}
               </a>
@@ -121,7 +112,7 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         <motion.div
           initial="closed"
-          animate={isOpen ? 'open' : 'closed'}
+          animate={isOpen ? "open" : "closed"}
           variants={menuVariants}
           className="md:hidden overflow-hidden"
         >

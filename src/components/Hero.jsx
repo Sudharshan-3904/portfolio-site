@@ -88,12 +88,15 @@ const Hero = () => {
         >
           {/* Main Content */}
           <div className="md:col-span-3 space-y-6 gap-8">
-            <motion.div variants={itemVariants} className="inline-block mb-2">
+            <motion.div
+              variants={itemVariants}
+              className="inline-block mb-2 gap-3 flex flex-wrap items-center"
+            >
               <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
                 Data Engineer
               </span>
               <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
-                AI Engineer
+                ML/DL Engineer
               </span>
             </motion.div>
 

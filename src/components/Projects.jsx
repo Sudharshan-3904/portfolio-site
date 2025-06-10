@@ -444,6 +444,7 @@ const Projects = () => {
                   </span>
                 </div>
               </div>
+
               {/* Project Content */}
               <div className="p-5">
                 <h3 className="text-xl font-bold mb-2 text-darkText-primary">
@@ -497,14 +498,14 @@ const Projects = () => {
       <AnimatePresence>
         {isModalOpen && selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center modal-backdrop"
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center modal-backdrop"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
             <motion.div
-              className="bg-surface border border-dark-lightest rounded-xl w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto shadow-dark-lg"
+              className="bg-dark-lightest border border-dark-lightest rounded-xl w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto shadow-dark-lg"
               variants={modalVariants}
               initial="hidden"
               animate="visible"

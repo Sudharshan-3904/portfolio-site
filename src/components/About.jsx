@@ -36,7 +36,20 @@ const About = () => {
   };
 
   // Removed Experience from highlights as requested
-  const highlights = [];
+  const highlights = [
+    {
+      icon: <FiCode />,
+      title: "Polyglot Programming",
+      description:
+        "Proficient in multiple programming languages, adapting to the best tool for each task.",
+    },
+    {
+      icon: <FiCode />,
+      title: "Creative Coding",
+      description:
+        "Transforming ideas into functional code with creativity and precision.",
+    },
+  ];
 
   return (
     <section
@@ -145,19 +158,28 @@ const About = () => {
               real-world problems.
             </motion.p>
 
-            {/* Highlights Grid
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            {/* Highlights Grid */}
+            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
               {highlights.map((item, index) => (
                 <motion.div
                   key={index}
                   variants={cardVariants}
                   className="bg-surface p-4 rounded-lg border border-dark-lightest flex flex-col items-center text-center space-y-3 hover:shadow-dark-md transition-all duration-300"
-                  whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)" }}
+                  whileHover={{
+                    y: -5,
+                    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
+                  }}
                 >
-                  <div className="text-primary text-2xl p-3 bg-dark rounded-full">{item.icon}</div>
+                  <div className="text-primary text-2xl p-3 bg-dark rounded-full">
+                    {item.icon}
+                  </div>
                   <div>
-                    <h5 className="font-semibold text-darkText-primary mb-2">{item.title}</h5>
-                    <p className="text-darkText-secondary text-sm">{item.description}</p>
+                    <h5 className="font-semibold text-darkText-primary mb-2">
+                      {item.title}
+                    </h5>
+                    <p className="text-darkText-secondary text-sm">
+                      {item.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
