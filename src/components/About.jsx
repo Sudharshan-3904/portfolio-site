@@ -151,8 +151,8 @@ const About = () => {
               variants={itemVariants}
               className="text-darkText-secondary mb-8"
             >
-              My journey began with a facination for computer and coding,
-              followed by curiosity based learnign where I've honed my skills in
+              My journey began with a fascination for computer and coding,
+              followed by curiosity based learning where I've honed my skills in
               primarily python based implementations. I'm passionate about clean
               code, intuitive design, and building applications that solve
               real-world problems.

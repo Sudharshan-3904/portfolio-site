@@ -140,7 +140,7 @@ const Projects = () => {
     },
     {
       id: 7,
-      title: "Worlde Game",
+      title: "Wordle Game",
       description:
         "A command-line implementation of the popular Wordle word guessing game.",
       image: "/project_images/wordle.png",
