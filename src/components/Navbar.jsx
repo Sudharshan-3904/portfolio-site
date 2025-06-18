@@ -32,6 +32,7 @@ const Navbar = () => {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Papers", href: "#papers" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const menuVariants = {
