@@ -12,9 +12,9 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/47fuej7himy46ys9j34of/icliniq-internship-certificate.pdf?rlkey=tomjytpycezmmw60h0btcu5tv&st=5bhzkf40&dl=0",
     highlights: [
-      "Implemented a ssytem to convert traditional medical reports into interactiable data and allow the user to interact with an chatbot based on it.",
-      "This was done by modelleing a pipeline and allownig for a non-linear flow of data through multiple modules optimizing the user experience.",
-      "This was developped as a backend system with the ability to host a model locally allowing dynamic changes.",
+      "Implemented a ssytem to convert traditional medical reports into interactable data and allow the user to interact with a chatbot based on it.",
+      "This was done by modelleing a pipeline and allowing for a non-linear flow of data through multiple modules optimizing the user experience.",
+      "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
     ],
     tools: ["Python", "MongoDB", "OCR", "RAG", "NLP", "LLM", "LM Studio"],
   },
@@ -27,9 +27,9 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/4wvev4ncf8hlkjd38t7sr/Telkom-University-Internship-Certificate.pdf?rlkey=npu52vxpp33smgjbtom1xcldg&st=wj4khic8&dl=0",
     highlights: [
-      "Wroked on prototyping an IoT based approach to hydroponics to imprtove productivity and provide additional motoring methods in real-time.",
+      "Worked on prototyping an IoT based approach to Hydroponics to improve productivity and provide additional real-time motoring methods.",
       "Tested teh viability of the system on various microcontroller boards inluding Arduino Uno and ESP32 with could integration.",
-      "This was developped as a backend system with the ability to host a model locally allowing dynamic changes.",
+      "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
     ],
     tools: [
       "Firebase",
@@ -45,13 +45,14 @@ const experiences = [
     position: "Student Developer",
     organization: "Samsung PRISM",
     location: "Coimbatore, India",
+    start_date: "2024",
     end_date: "2025",
     certificate_link:
       "https://www.dropbox.com/scl/fi/el8z30c47sohl0c9fluvt/Samsung-PRISM-Completion-Cetificate.pdf?rlkey=ta55rz3lkow04vedu2jcbzvho&st=zyhwl0s8&dl=0",
     highlights: [
-      "Developed a backed java based script for AI-based ondevice malware detection on Android for validating doanloaded files.",
-      "Designed and trained the model on  python ad used the model using Java to test the file for malware base on the file's metadata.",
-      "Thjis support multiple files types such as .docx, .pdf, .ppt, .apk, and other document file types.",
+      "Developed a backend java based script for AI-based on-device malware detection on Android for validating doanloaded files.",
+      "Designed and trained the model on  python and using Java to invoke the model to test the file for malware based on the file's metadata.",
+      "This support multiple files types such as .docx, .pdf, .ppt, .apk, and other document file types.",
     ],
     tools: ["Java", "Tensorflow", "Gradle", "ML", "Android", "APK"],
   },
@@ -64,8 +65,8 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/l91bud42kytw3rc6k0bph/MagnusVista-Internship-Certificate.pdf?rlkey=zkwpuua4nk8kyi4pe1pdqfg8d&st=y2r4qscn&dl=0",
     highlights: [
-      "Wroked on agile development of a React-based Quiz app with JSON integration.",
-      "Has the capability to dynamically laod and display data from a JSON file that can be retrived from an API for a fluid and intuitive system.",
+      "Worked on agile development of a React-based Quiz app with JSON integration.",
+      "Has the capability to dynamically load and display data from a JSON file that can be retrieved from an API for a fluid and intuitive system.",
     ],
     tools: ["React", "HTML", "CSS", "JS", "Vite", "Frontend", "JSON"],
   },
