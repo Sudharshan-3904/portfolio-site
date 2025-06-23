@@ -12,7 +12,7 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/47fuej7himy46ys9j34of/icliniq-internship-certificate.pdf?rlkey=tomjytpycezmmw60h0btcu5tv&st=5bhzkf40&dl=0",
     highlights: [
-      "Implemented a ssytem to convert traditional medical reports into interactable data and allow the user to interact with a chatbot based on it.",
+      "Implemented a system to convert traditional medical reports into interactable data and allow the user to interact with a chatbot based on it.",
       "This was done by modelleing a pipeline and allowing for a non-linear flow of data through multiple modules optimizing the user experience.",
       "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
     ],
