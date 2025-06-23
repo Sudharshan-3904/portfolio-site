@@ -4,16 +4,6 @@ import { FiGithub, FiLinkedin, FiArrowUp } from "react-icons/fi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  // Navigation links
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
-
   // Social links
   const socialLinks = [
     {
@@ -53,10 +43,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main Footer Content */}
+      {/* Main Footer Content
       <div className="container mx-auto px-4 md:px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
-          {/* Logo and Description */}
+          Logo and Description
           <div className="md:col-span-4">
             <motion.p
               initial={{ opacity: 0 }}
@@ -88,80 +78,8 @@ const Footer = () => {
               ))}
             </motion.div>
           </div>
-
-          {/* Quick Links */}
-          <div className="md:col-span-2 md:col-start-6">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-lg font-semibold mb-4"
-            >
-              Quick Links
-            </motion.h3>
-            <motion.ul
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-2"
-            >
-              {navLinks.map((link, index) => (
-                <motion.li key={index} whileHover={{ x: 5 }}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </div>
-
-          {/* Services */}
-          <div className="md:col-span-2">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg font-semibold mb-4"
-            >
-              Services
-            </motion.h3>
-            <motion.ul
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="space-y-2"
-            >
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  Web Development
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  App Development
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }}>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                >
-                  Tool Development
-                </a>
-              </motion.li>
-            </motion.ul>
-          </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
