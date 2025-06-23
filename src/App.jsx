@@ -8,6 +8,7 @@ import Papers from "./components/Papers";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import Experiences from "./components/experiences";
 import "./main.css";
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
       <div className="fixed bottom-0 left-0 w-1/4 h-1/2 bg-accent opacity-5 blur-3xl -z-10"></div>
 
       <main className="relative">
+        <Experiences />
         <Hero />
         <About />
         <Skills />

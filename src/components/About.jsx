@@ -83,7 +83,10 @@ const About = () => {
           />
         </div>
 
-        <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
+        <div
+          ref={ref}
+          className="grid md:grid-cols-2 gap-12 items-center justify-center"
+        >
           {/* Image Column */}
           <motion.div
             className="flex justify-center md:justify-end order-2 md:order-1"
