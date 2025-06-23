@@ -45,6 +45,7 @@ const experiences = [
     position: "Student Developer",
     organization: "Samsung PRISM",
     location: "Coimbatore, India",
+    start_date: "2024",
     end_date: "2025",
     certificate_link:
       "https://www.dropbox.com/scl/fi/el8z30c47sohl0c9fluvt/Samsung-PRISM-Completion-Cetificate.pdf?rlkey=ta55rz3lkow04vedu2jcbzvho&st=zyhwl0s8&dl=0",
