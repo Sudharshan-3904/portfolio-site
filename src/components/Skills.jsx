@@ -20,10 +20,13 @@ import {
   SiFlutter,
   SiStreamlit,
   SiSourceforge,
-  SiAnaconda,
   SiArduino,
-  SiVirustotal,
+  SiPostman,
 } from "react-icons/si";
+import { BiSolidBarChartAlt2 } from "react-icons/bi";
+import { RiAiGenerate2 } from "react-icons/ri";
+import { BsClipboard2DataFill } from "react-icons/bs";
+import { LuBrainCircuit } from "react-icons/lu";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -66,39 +69,55 @@ const Skills = () => {
         { name: "Python", icon: <FaPython />, level: 90 },
         { name: "C++", icon: <SiCplusplus />, level: 85 },
         { name: "C Programming", icon: <SiC />, level: 80 },
-        { name: "SQL", icon: <SiSqlite />, level: 80 },
-        { name: "JavaScript", icon: <FaJs />, level: 90 },
         { name: "HTML5", icon: <FaHtml5 />, level: 95 },
+        { name: "SQL", icon: <SiSqlite />, level: 80 },
+        { name: "JavaScript", icon: <FaJs />, level: 85 },
         { name: "CSS3", icon: <FaCss3Alt />, level: 90 },
-        { name: "Flutter", icon: <SiFlutter />, level: 70 },
+        { name: "Flutter", icon: <SiFlutter />, level: 65 },
       ],
     },
     {
       title: "Frameworks",
       skills: [
-        { name: "Mongo DB", icon: <SiMongodb />, level: 90 },
+        { name: "Mongo DB", icon: <SiMongodb />, level: 85 },
         { name: "Flask", icon: <FaFlask />, level: 75 },
         { name: "Streamlit", icon: <SiStreamlit />, level: 80 },
-        { name: "React", icon: <FaReact />, level: 80 },
+        { name: "React", icon: <FaReact />, level: 85 },
         { name: "Firebase", icon: <SiFirebase />, level: 80 },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 75 },
+        { name: "Power BI", icon: <BiSolidBarChartAlt2 />, level: 80 },
+        { name: "Postman", icon: <SiPostman />, level: 75 },
       ],
     },
     {
       title: "Fields of Expertise",
       skills: [
-        { name: "Data Science", icon: <SiVirustotal />, level: 90 },
-        { name: "LLM", icon: <FaRobot />, level: 75 },
+        { name: "Data Science", icon: <BsClipboard2DataFill />, level: 90 },
+        { name: "Generative AI", icon: <RiAiGenerate2 />, level: 85 },
+        { name: "LLM's", icon: <FaRobot />, level: 80 },
+        { name: "Deep Learning", icon: <LuBrainCircuit />, level: 85 },
         { name: "Machine Learning", icon: <SiSourceforge />, level: 80 },
-        { name: "Deep Learning", icon: <SiAnaconda />, level: 80 },
         {
           name: "Internet of Things",
           icon: <SiArduino />,
           level: 90,
         },
-        { name: "Data Visualization", icon: <FaChartBar />, level: 80 },
+        { name: "Data Visualization", icon: <FaChartBar />, level: 85 },
       ],
     },
+  ];
+
+  const tools_and_tech = [
+    "Git",
+    "GitHub",
+    "FastAPI",
+    "LangChain",
+    "Next.js",
+    "Tableau",
+    "Responsive Web Design",
+    "Netlify",
+    "Arduino IDE",
+    "Ollama",
   ];
 
   return (
@@ -111,7 +130,7 @@ const Skills = () => {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
 
-      <div className="container mx-auto px-4 md:px-6 shadow-dark-md bg-dark">
+      <div className="container mx-auto px-4 md:px-6 bg-dark">
         {/* Section Title */}
         <div className="section-title">
           <motion.h2
@@ -146,7 +165,7 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-dark-lightest"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
@@ -224,16 +243,7 @@ const Skills = () => {
             Other Tools & Technologies
           </h3>
           <div className="flex flex-wrap justify-center gap-3 relative z-10">
-            {[
-              "Git",
-              "GitHub",
-              "FastAPI",
-              "LangChain",
-              "Next.js",
-              "Postman",
-              "Responsive Web Design",
-              "Netlify",
-            ].map((tool, index) => (
+            {tools_and_tech.map((tool, index) => (
               <motion.span
                 key={index}
                 className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20"
