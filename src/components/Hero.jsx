@@ -1,6 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiDownload, FiMail } from "react-icons/fi";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiDownload,
+  FiMail,
+  FiMap,
+} from "react-icons/fi";
 
 const Hero = () => {
   // Animation variants
@@ -203,12 +209,12 @@ const Hero = () => {
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-12 h-12 bg-dark-lighter rounded-lg flex items-center justify-center shadow-dark-md z-20"
+                className="absolute -top-4 -right-4 w-11 h-12 bg-dark-lighter rounded-lg flex items-center justify-center shadow-dark-md z-20"
                 initial={{ scale: 0, rotate: 0 }}
                 animate={{ scale: 1, rotate: 5 }}
                 transition={{ delay: 1, duration: 0.5 }}
               >
-                <span className="text-2xl text-primary">⚛️</span>
+                <span className="text-2xl text-primary">\^o^/</span>
               </motion.div>
 
               <motion.div
@@ -217,7 +223,7 @@ const Hero = () => {
                 animate={{ scale: 1, rotate: -10 }}
                 transition={{ delay: 1.2, duration: 0.5 }}
               >
-                <span className="text-3xl text-accent">💻</span>
+                <span className="text-3xl text-accent">👨🏻‍💻</span>
               </motion.div>
             </div>
           </motion.div>

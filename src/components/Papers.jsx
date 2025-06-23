@@ -106,69 +106,51 @@ const Papers = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-1 lg:grid-cols-2 gap-8"
+          className="flex flex-col gap-10"
         >
           {papers.map((paper) => (
             <motion.div
               key={paper.id}
               variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className="flex bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative"
+              className="bg-dark-lightest border border-primary/30 rounded-xl p-6 md:p-8 shadow-dark-md flex flex-col md:flex-row items-stretch max-w-3xl mx-auto relative"
             >
-              {/* Left Side: Paper Image */}
-              <div className="flex-shrink-8 w-2/5 flex align-center justify-center items-center relative">
-                <div className="relative w-full h-full">
-                  <img
-                    src={paper.image}
-                    alt={paper.title}
-                    className="w-full h-auto object-cover rounded-md transition-transform duration-500 hover:scale-110"
-                  />
-
-                  {/* Paper PDF Link */}
-                  {/* <a
+              {/* Left: Paper Image */}
+              <div className="md:w-1/2 w-full flex justify-center items-center mb-6 md:mb-0 md:mr-8">
+                <img
+                  src={paper.image}
+                  alt={paper.title}
+                  className="rounded-md object-cover w-full max-w-xs h-auto border border-dark"
+                />
+              </div>
+              {/* Right: Paper Content */}
+              <div className="flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {paper.title}
+                  </h3>
+                  <p className="text-darkText-secondary text-base mb-4 whitespace-pre-line">
+                    {paper.description}
+                  </p>
+                  <h4 className="text-lg font-semibold mb-2 text-darkText-primary">
+                    Key Highlights:
+                  </h4>
+                  <ul className="list-disc list-inside text-darkText-secondary space-y-1 mb-6">
+                    {paper.highlights.map((highlight, index) => (
+                      <li key={index} className="text-base">
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex justify-end mt-4">
+                  <a
                     href={paper.pdfLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute bottom-4 left-4 px-3 py-1 bg-primary bg-opacity-90 text-white text-xs rounded-full flex items-center hover:bg-opacity-100 transition"
+                    className="bg-primary hover:bg-accent text-white px-5 py-2 rounded font-medium transition-colors text-sm"
                   >
-                    <FiPaperclip className="mr-1" /> View PDF
-                  </a> */}
-
-                  <div className="absolute bottom-0 left-0 p-4 w-full">
-                    <span className="px-3 py-1 bg-primary bg-opacity-90 text-white text-xs rounded-full">
-                      {/* {paper.pdfLink} */}
-                      <a
-                        href={paper.pdfLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute bottom-4 left-4 px-3 py-1 bg-primary bg-opacity-90 text-white text-xs rounded-full flex items-center hover:bg-opacity-100 transition"
-                      >
-                        <FiPaperclip className="mr-1" /> View PDF
-                      </a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Side: Paper Description */}
-              <div className="flex-grow w-3/5 p-3">
-                <h3 className="text-2xl font-bold text-darkText-primary mb-2">
-                  {paper.title}
-                </h3>
-                <p className="text-darkText-secondary text-sm mb-3 whitespace-pre-line">
-                  {paper.description}
-                </p>
-
-                {/* Highlights */}
-                <div className="mb-4">
-                  <h4 className="text-lg font-semibold mb-1 text-darkText-primary">
-                    Key Highlights
-                  </h4>
-                  <ul className="list-disc list-inside text-darkText-secondary space-y-1">
-                    {paper.highlights.map((highlight, index) => (
-                      <li key={index}>{highlight}</li>
-                    ))}
-                  </ul>
+                    Download PDF
+                  </a>
                 </div>
               </div>
             </motion.div>

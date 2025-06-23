@@ -8,6 +8,7 @@ import Papers from "./components/Papers";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import Experiences from "./components/Experience";
 import "./main.css";
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Experiences />
         <Projects />
         <Papers />
         <Contact />
