@@ -4,20 +4,21 @@ A **clean, modern portfolio** built with **React** and **Tailwind CSS**. This si
 
 ---
 
-- Hero (with name, tagline, and buttons)
+- Hero
 - About Me
 - Skills
+- Professional Experiences
 - Projects
+- Paper Publication
 - Contact
-- Footer
 
 ---
 
 ## ✅ Tech Stack Used
 
-- React (Create React App)
+- React
 - Tailwind CSS
-- Framer Motion (for smooth animations)
+- Framer Motion
 - React Icons
 - Responsive Design with Flexbox/Grid
 
@@ -28,34 +29,41 @@ A **clean, modern portfolio** built with **React** and **Tailwind CSS**. This si
 ```bash
 portfolio/
 ├── public/
-│   ├── favicon.ico
-│   └── index.html
+│   ├── paper_photos/
+│   │   └── hydroponics.jpg
+│   ├── photos/
+│   │   ├── avatar.jpg
+│   │   ├── icon.svg
+│   │   └── profile.jpg
+│   ├── project_images/
+│   │   ├── do_it_later_app.png
+│   │   ├── echo_state_network.png
+│   │   ├── flight_booking_app.png
+│   │   ├── fs_blog_stie.png
+│   │   ├── library_system.png
+│   │   ├── local_agent.png
+│   │   ├── nst_application.png
+│   │   ├── portfolio.png
+│   │   ├── pyverse.png
+│   │   ├── react_quizz_app.png
+│   │   ├── utilities.png
+│   │   └── wordle.png
+│   └── resume.pdf
 ├── src/
-│   ├── assets/
-│   │   └── Sudharshan M Prabhu Resume.pdf
 │   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
 │   │   ├── About.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Projects.jsx
 │   │   ├── Contact.jsx
-│   │   └── Footer.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Papers.jsx
+│   │   ├── Projects.jsx
+│   │   └── Skills.jsx
 │   ├── App.jsx
 │   ├── index.js
+│   ├── index.jsx
 │   └── main.css
-├── build/
-│   ├── asset-manifest.json
-│   ├── favicon.ico
-│   ├── index.html
-│   └── static/
-│       ├── css/
-│       │   ├── main.559a1acc.css
-│       │   └── main.559a1acc.css.map
-│       └── js/
-│           ├── main.15d02873.js
-│           ├── main.15d02873.js.LICENSE.txt
-│           └── main.15d02873.js.map
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── webpack.config.js
