@@ -9,10 +9,11 @@ const experiences = [
     location: "Coimbatore, India",
     start_date: "2024",
     end_date: "2025",
-    certificate_link: "#",
+    certificate_link:
+      "https://www.dropbox.com/scl/fi/47fuej7himy46ys9j34of/icliniq-internship-certificate.pdf?rlkey=tomjytpycezmmw60h0btcu5tv&st=5bhzkf40&dl=0",
     highlights: [
-      "Convertion of traditional medcal report into interactiable data and allow the user to interact based on the data.",
-      "Modelling a pipeline and allownig for a non-linear flow of data through multiple modules.",
+      "Implemented a ssytem to convert traditional medical reports into interactiable data and allow the user to interact with an chatbot based on it.",
+      "This was done by modelleing a pipeline and allownig for a non-linear flow of data through multiple modules optimizing the user experience.",
       "This was developped as a backend system with the ability to host a model locally allowing dynamic changes.",
     ],
     tools: ["Python", "MongoDB", "OCR", "RAG", "NLP", "LLM", "LM Studio"],
@@ -23,7 +24,8 @@ const experiences = [
     organization: "Telkom University",
     location: "Bandung, Indonesia",
     end_date: "2025",
-    certificate_link: "#",
+    certificate_link:
+      "https://www.dropbox.com/scl/fi/4wvev4ncf8hlkjd38t7sr/Telkom-University-Internship-Certificate.pdf?rlkey=npu52vxpp33smgjbtom1xcldg&st=wj4khic8&dl=0",
     highlights: [
       "Wroked on prototyping an IoT based approach to hydroponics to imprtove productivity and provide additional motoring methods in real-time.",
       "Tested teh viability of the system on various microcontroller boards inluding Arduino Uno and ESP32 with could integration.",
@@ -44,13 +46,14 @@ const experiences = [
     organization: "Samsung PRISM",
     location: "Coimbatore, India",
     end_date: "2025",
-    certificate_link: "#",
+    certificate_link:
+      "https://www.dropbox.com/scl/fi/el8z30c47sohl0c9fluvt/Samsung-PRISM-Completion-Cetificate.pdf?rlkey=ta55rz3lkow04vedu2jcbzvho&st=zyhwl0s8&dl=0",
     highlights: [
-      "Developed a backed java based script for AI-based ondevice malware detection on Android for validating doanloaded files..",
-      "Modelling a pipeline and allownig for a non-linear flow of data through multiple modules.",
-      "This was developped as a backend system with the ability to host a model locally allowing dynamic changes.",
+      "Developed a backed java based script for AI-based ondevice malware detection on Android for validating doanloaded files.",
+      "Designed and trained the model on  python ad used the model using Java to test the file for malware base on the file's metadata.",
+      "Thjis support multiple files types such as .docx, .pdf, .ppt, .apk, and other document file types.",
     ],
-    tools: ["Python", "MongoDB", "OCR", "RAG", "NLP", "LLM", "LM Studio"],
+    tools: ["Java", "Tensorflow", "Gradle", "ML", "Android", "APK"],
   },
   {
     id: 4,
@@ -58,11 +61,11 @@ const experiences = [
     organization: "MagnusVista Labs",
     location: "Coimbatore, India",
     end_date: "2023",
-    certificate_link: "#",
+    certificate_link:
+      "https://www.dropbox.com/scl/fi/l91bud42kytw3rc6k0bph/MagnusVista-Internship-Certificate.pdf?rlkey=zkwpuua4nk8kyi4pe1pdqfg8d&st=y2r4qscn&dl=0",
     highlights: [
       "Wroked on agile development of a React-based Quiz app with JSON integration.",
       "Has the capability to dynamically laod and display data from a JSON file that can be retrived from an API for a fluid and intuitive system.",
-      "Implemented gooogle based authenticaition and user score tracking.",
     ],
     tools: ["React", "HTML", "CSS", "JS", "Vite", "Frontend", "JSON"],
   },
@@ -132,7 +135,10 @@ const Experiences = () => {
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
-    <section className="py-20 bg-dark relative overflow-hidden">
+    <section
+      className="py-20 bg-dark relative overflow-hidden"
+      id="experiences"
+    >
       <div className="absolute right-0 top-20 w-96 h-96 bg-primary opacity-5 blur-3xl -z-10" />
       <div className="absolute -left-10 bottom-10 w-64 h-64 bg-accent opacity-5 blur-2xl -z-10" />
       <div className="absolute left-1/3 top-1/2 w-20 h-20 bg-primary opacity-5 blur-xl -z-10" />

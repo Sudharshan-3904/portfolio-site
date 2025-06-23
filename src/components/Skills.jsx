@@ -146,7 +146,7 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-dark-lightest"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
