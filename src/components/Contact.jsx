@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FiSend } from "react-icons/fi";
-
+import emailjs from "@emailjs/browser";
 const TARGET_EMAIL = "sudharshanvalar@gmail.com";
 
 const containerVariants = {
@@ -40,15 +40,31 @@ export default function Contact() {
     }));
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!form.name || !form.sender || !form.message) return;
+  //   const mailtoLink = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(
+  //     `Message from ${form.name}`
+  //   )}&body=${encodeURIComponent(
+  //     `Name: ${form.name}\nEmail: ${form.sender}\n\n${form.message}`
+  //   )}`;
+  //   window.location.href = mailtoLink;
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.name || !form.sender || !form.message) return;
-    const mailtoLink = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(
-      `Message from ${form.name}`
-    )}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.sender}\n\n${form.message}`
-    )}`;
-    window.location.href = mailtoLink;
+    emailjs
+      .sendForm("service_pyuvbub", "template_u7zna1c", form.current, {
+        publicKey: "portfolio_gmail",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   return (
