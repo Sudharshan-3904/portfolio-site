@@ -32,6 +32,43 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "Smart Lab Copilot",
+      description: "An IoT enabled smart solution for resource wasteage.",
+      image: "/project_images/slc.png",
+      category: "Prototype",
+      tech: ["Arduino IDE", "IoT", "Arduino Uno", "ESP32"],
+      githubLink: "https://github.com/Sudharshan-3904/SmartLabCopilot",
+      longDescription: `This is an automated smart lab power management system, built with IoT sensors and automation technology. It addresses the growing power consumption challenges in institutional computer laboratories where students learn modern technical skills like coding, blockchain, and IoT. The system is designed to be scalable and easy to implement, providing optimal power regulation without cumbersome manual oversight.
+    
+      The project features sensor-based monitoring and automated power control, significantly reducing energy waste in hierarchical computer networks. It includes comprehensive design documentation, implementation guidelines, and performance results, offering institutions a reliable solution for sustainable laboratory operations while maintaining effective hands-on learning environments.`,
+      highlights: [
+        "Ablity to be an embedded system",
+        "Simple and effective design",
+        "Srteamline process and data flow",
+        "Scalable and Plug and play",
+      ],
+    },
+    {
+      id: 3,
+      title: "IoT-Based Hydroponics System",
+      description:
+        "An automated hydroponics monitoring system with real-time data collection and cloud integration.",
+      image: "/project_images/hydroponics.png",
+      category: "Prototype",
+      tech: ["Arduino", "ESP32", "IoT", "Python", "Flask", "Firebase"],
+      githubLink: "https://github.com/Sudharshan-3904/SmartHydropnics",
+      longDescription: `This is an IoT-based hydroponics monitoring system designed to improve agricultural productivity through automated real-time monitoring. The system utilizes microcontroller boards like Arduino Uno and ESP32 with cloud integration to provide comprehensive plant growth management. It features a robust backend system with local model hosting capabilities, allowing for dynamic system adjustments and optimizations.
+      
+      The project demonstrates the practical application of IoT technology in agriculture, offering farmers and researchers an efficient way to monitor and control hydroponic environments remotely while ensuring optimal growing conditions.`,
+      highlights: [
+        "Real-time Environmental Monitoring",
+        "Multi-platform Microcontroller Support",
+        "Cloud Integration with Firebase",
+        "Local Model Hosting with Dynamic Updates",
+      ],
+    },
+    {
+      id: 4,
       title: "PyVerse",
       description:
         "An Interactive python based application to simulate celestial systems with basic parameters.",
@@ -51,7 +88,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 3,
+      id: 5,
       title: "Local Agents",
       description:
         "A exploration of local LLM based agents for productivity tools.",
@@ -70,7 +107,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 4,
+      id: 6,
       title: "Echo State Network Research",
       description:
         "A hands-on research and testing into development of Echo State Networks (ESN).",
@@ -91,7 +128,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 5,
+      id: 7,
       title: "Neural Style Transfer",
       description:
         "A practical implementation of Neural Style Transfer using Deep Learning Techniques.",
@@ -111,7 +148,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 6,
+      id: 8,
       title: "Full Stack Blog Wesbite",
       description:
         "A modern, responsive blog website with a React frontend and a Python/Flask backend.",
@@ -139,7 +176,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 7,
+      id: 9,
       title: "Wordle Game",
       description:
         "A command-line implementation of the popular Wordle word guessing game.",
@@ -159,7 +196,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 8,
+      id: 10,
       title: "Utilities App",
       description:
         "A collection of useful utilities and tools for everyday tasks.",
@@ -180,7 +217,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 9,
+      id: 11,
       title: "Flight Ticket Booking System",
       description:
         "A basic flight ticket booking system with user authentication and booking management.",
@@ -200,7 +237,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 10,
+      id: 12,
       title: "Do It Later App",
       description:
         "A simple task management application to help users manage their tasks and reminders.",
@@ -220,7 +257,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 11,
+      id: 13,
       title: "Library Management System",
       description:
         "A lightweight library management system to manage books, members, and transactions.",
@@ -241,7 +278,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 12,
+      id: 14,
       title: "React Quizz App",
       description:
         "A simple quiz application built with React to test knowledge on various topics.",

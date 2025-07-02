@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiAward, FiCode, FiHeart } from 'react-icons/fi';
+import { FiCode, FiHeart } from "react-icons/fi";
+import { PiCertificateFill } from "react-icons/pi";
 
 const About = () => {
   const ref = useRef(null);
@@ -28,11 +29,11 @@ const About = () => {
 
   const cardVariants = {
     hidden: { y: 30, opacity: 0 },
-    visible: { 
-      y: 0, 
+    visible: {
+      y: 0,
       opacity: 1,
-      transition: { duration: 0.6 }
-    }
+      transition: { duration: 0.6 },
+    },
   };
 
   // Removed Experience from highlights as requested
@@ -44,10 +45,10 @@ const About = () => {
         "Proficient in multiple programming languages, adapting to the best tool for each task.",
     },
     {
-      icon: <FiCode />,
-      title: "Creative Coding",
+      icon: <PiCertificateFill />,
+      title: "Certifications",
       description:
-        "Transforming ideas into functional code with creativity and precision.",
+        "Certification in multiple online courses for proficiency and capability in various languages and skills.",
     },
   ];
 
@@ -83,42 +84,13 @@ const About = () => {
           />
         </div>
 
-        <div ref={ref} className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image Column */}
-          <motion.div
-            className="flex justify-center md:justify-end order-2 md:order-1"
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="relative">
-              {/* Glowing effect around image */}
-              <motion.div
-                className="absolute -inset-4 bg-gradient-to-tr from-primary to-accent rounded-xl opacity-20 blur-xl"
-                animate={{
-                  opacity: [0.1, 0.2, 0.1],
-                  scale: [0.98, 1.02, 0.98],
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-
-              {/* Image frame with gradient border */}
-              <div className="w-full max-w-md relative z-10">
-                <img
-                  src="/photos/profile.jpg"
-                  alt="Professional portrait"
-                  className="rounded-xl shadow-dark-md relative z-20 border-2 border-dark-lightest"
-                />
-              </div>
-
-              {/* Background pattern */}
-              <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-dark-lighter rounded-lg shadow-dark-md -z-0 hidden md:block"></div>
-            </div>
-          </motion.div>
-
+        <div
+          ref={ref}
+          className="grid md:grid-cols-1 gap-12 items-center justify-items-center"
+        >
           {/* Content Column */}
           <motion.div
-            className="order-1 md:order-2"
+            className="order-2 justify-center items-center mx-auto max-w-2xl w-full text-center"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -158,13 +130,23 @@ const About = () => {
               real-world problems.
             </motion.p>
 
+            <motion.p
+              variants={itemVariants}
+              className="text-darkText-secondary mb-8"
+            >
+              I develop tools, recreate games and experiment with various tools,
+              technologies, concepts and methodologies to gain knowledge and
+              experience. I am keen on exploring fields like Cybersecurity,
+              Natural Language Processing and Open LLM Architectures.
+            </motion.p>
+
             {/* Highlights Grid */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 bg-dark">
               {highlights.map((item, index) => (
                 <motion.div
                   key={index}
                   variants={cardVariants}
-                  className="bg-surface p-4 rounded-lg border border-dark-lightest flex flex-col items-center text-center space-y-3 hover:shadow-dark-md transition-all duration-300"
+                  className="bg-dark-lightest p-4 rounded-lg border border-dark-lightest flex flex-col items-center text-center space-y-3 hover:shadow-dark-md transition-all duration-300"
                   whileHover={{
                     y: -5,
                     boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
@@ -183,7 +165,7 @@ const About = () => {
                   </div>
                 </motion.div>
               ))}
-            </div> */}
+            </div>
           </motion.div>
         </div>
       </div>
