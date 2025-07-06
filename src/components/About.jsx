@@ -97,7 +97,7 @@ const About = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-xl font-medium text-primary mb-3"
+              className="text-2xl font-medium text-primary mb-3"
             >
               Get to know me
             </motion.h3>
