@@ -123,10 +123,10 @@ const About = () => {
               variants={itemVariants}
               className="text-darkText-secondary mb-8"
             >
-              My journey began with a fascination for computer and coding,
-              followed by curiosity based learning where I've honed my skills in
-              primarily python based implementations. I'm passionate about clean
-              code, intuitive design, and building applications that solve
+              My journey began with a fascination for computers and coding,
+              followed by curiosity-driven learning, where I've honed my skills
+              in primarily Python-based implementations. I'm passionate about
+              clean code, intuitive design, and building applications that solve
               real-world problems.
             </motion.p>
 
@@ -134,10 +134,10 @@ const About = () => {
               variants={itemVariants}
               className="text-darkText-secondary mb-8"
             >
-              I develop tools, recreate games and experiment with various tools,
-              technologies, concepts and methodologies to gain knowledge and
-              experience. I am keen on exploring fields like Cybersecurity,
-              Natural Language Processing and Open LLM Architectures.
+              I develop tools, recreate games, and experiment with various
+              tools, technologies, concepts, and methodologies to gain knowledge
+              and experience. I am eager to explore fields like Cybersecurity,
+              Natural Language Processing, and Open LLM Architectures.
             </motion.p>
 
             {/* Highlights Grid */}
