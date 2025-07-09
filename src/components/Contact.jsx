@@ -28,8 +28,10 @@ export default function Contact() {
     sender: "",
     name: "",
     message: "",
+    subject: "",
   });
   const ref = useRef(null);
+  const formRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const handleChange = (e) => {
@@ -40,29 +42,18 @@ export default function Contact() {
     }));
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!form.name || !form.sender || !form.message) return;
-  //   const mailtoLink = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(
-  //     `Message from ${form.name}`
-  //   )}&body=${encodeURIComponent(
-  //     `Name: ${form.name}\nEmail: ${form.sender}\n\n${form.message}`
-  //   )}`;
-  //   window.location.href = mailtoLink;
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_pyuvbub", "template_u7zna1c", form.current, {
-        publicKey: "portfolio_gmail",
+      .sendForm("service_3on2h5m", "template_u7zna1c", formRef.current, {
+        publicKey: "Nj9QaumWahmMlt_1E",
       })
       .then(
         () => {
           console.log("SUCCESS!");
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log("FAILED... ", error.text);
         }
       );
   };
@@ -70,7 +61,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-dark-lighter relative overflow-hidden"
+      className="py-20 bg-dark-lighter relative overflow-hidden min-h-screen flex items-center justify-center"
     >
       {/* Background Design Elements */}
       <div className="absolute right-0 top-20 w-64 h-64 bg-primary opacity-5 blur-3xl -z-10" />
@@ -79,9 +70,9 @@ export default function Contact() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 flex flex-col items-center justify-center w-full">
         {/* Section Title */}
-        <div className="section-title">
+        <div className="section-title flex flex-col items-center justify-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-4"
             initial={{ opacity: 0, y: -20 }}
@@ -99,73 +90,93 @@ export default function Contact() {
         </div>
         <motion.div
           ref={ref}
-          className="grid md:grid-cols-2 gap-12 items-center mt-10"
+          className="w-full flex items-center justify-center"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Left: Form Fields */}
+          {/* Form Grid */}
           <motion.form
+            ref={formRef}
             onSubmit={handleSubmit}
-            className="flex flex-col gap-6 bg-dark-lighter rounded-xl shadow-dark-md p-8"
-            variants={itemVariants}
+            className="grid md:grid-cols-2 gap-12 items-center bg-dark-lighter rounded-xl shadow-dark-md p-8 w-full max-w-3xl"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
           >
-            <div>
-              <label className="block text-darkText-secondary text-sm mb-1">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                required
-                className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
-                placeholder="Your name"
-              />
+            {/* Left: Name and Email Fields */}
+            <div className="flex flex-col gap-6">
+              <input type="hidden" name="email" value={TARGET_EMAIL} />
+              <div>
+                <label className="block text-darkText-secondary text-sm mb-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label className="block text-darkText-secondary text-sm mb-1">
+                  E-mail
+                </label>
+                <input
+                  type="email"
+                  name="sender"
+                  value={form.sender}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <motion.button
+                type="submit"
+                className="btn btn-outline flex items-center justify-center gap-2 px-6 py-3 rounded-md text-center w-full mt-6 transition-transform"
+                whileHover={{ scale: 1.07 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <FiSend className="w-5 h-5" />
+                SEND
+              </motion.button>
             </div>
+            {/* Right: Message Box */}
             <div>
-              <label className="block text-darkText-secondary text-sm mb-1">
-                E-mail
-              </label>
-              <input
-                type="email"
-                name="sender"
-                value={form.sender}
-                onChange={handleChange}
-                required
-                className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
-                placeholder="your@email.com"
-              />
+              <div>
+                <label className="block text-darkText-secondary text-sm mb-1">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
+                  placeholder="Subject of your message"
+                />
+              </div>
+              <br></br>
+              <div className="flex flex-col h-full">
+                <label className="block text-darkText-secondary text-sm mb-1">
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full h-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors min-h-[120px] resize-none placeholder-darkText-secondary"
+                  placeholder="Write text here..."
+                />
+              </div>
             </div>
-            <motion.button
-              type="submit"
-              className="btn btn-outline flex items-center justify-center gap-2 px-6 py-3 rounded-md text-center w-full transition-transform"
-              whileHover={{ scale: 1.07 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <FiSend className="w-5 h-5" />
-              SEND
-            </motion.button>
           </motion.form>
-
-          {/* Right: Message Box */}
-          <motion.div
-            className="flex flex-col bg-dark rounded-xl shadow-dark-md p-8 h-full"
-            variants={itemVariants}
-          >
-            <label className="block text-darkText-secondary text-sm mb-1">
-              Message
-            </label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              className="w-full h-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors min-h-[120px] resize-none placeholder-darkText-secondary"
-              placeholder="Write text here..."
-            />
-          </motion.div>
         </motion.div>
       </div>
     </section>

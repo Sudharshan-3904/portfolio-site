@@ -71,7 +71,6 @@ function App() {
         <Papers />
         <Contact />
       </main>
-
       <Footer />
     </div>
   );
