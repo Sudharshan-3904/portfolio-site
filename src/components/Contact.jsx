@@ -30,6 +30,7 @@ export default function Contact() {
     message: "",
     subject: "",
   });
+  const [status, setStatus] = useState(""); // <-- Add status state
   const ref = useRef(null);
   const formRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -44,16 +45,18 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus(""); // Clear previous status
     emailjs
       .sendForm("service_3on2h5m", "template_u7zna1c", formRef.current, {
         publicKey: "Nj9QaumWahmMlt_1E",
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setStatus("Message sent successfully!");
+          setForm({ sender: "", name: "", message: "", subject: "" });
         },
         (error) => {
-          console.log("FAILED... ", error.text);
+          setStatus("Failed to send message. Please try again later.");
         }
       );
   };
@@ -88,6 +91,16 @@ export default function Contact() {
             transition={{ duration: 0.7, delay: 0.3 }}
           />
         </div>
+        {/* Status message */}
+        {status && (
+          <div
+            className={`mb-4 text-center font-bold ${
+              status.includes("success") ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {status}
+          </div>
+        )}
         <motion.div
           ref={ref}
           className="w-full flex items-center justify-center"
