@@ -109,6 +109,9 @@ const Hero = () => {
               <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
                 ML/DL Engineer
               </span>
+              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+                Tools Developer
+              </span>
             </motion.div>
 
             <motion.h1
@@ -197,19 +200,22 @@ const Hero = () => {
                 transition={{ duration: 4, repeat: Infinity }}
               />
 
-              <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center relative z-10">
-                <div className="absolute inset-2 bg-dark-darker rounded-full flex items-center justify-center">
-                  <img
-                    src="/photos/avatar.jpg"
-                    alt="Developer"
-                    className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover"
-                  />
-                </div>
+              {/* Image frame with gradient border */}
+              <div className="w-full max-w-md relative z-10">
+                <img
+                  // src="/photos/profile.jpg"
+                  src="/photos/ProfileNoBG.png"
+                  alt="Professional portrait"
+                  className="rounded-xl shadow-dark-md relative z-20 border-2 border-dark-lightest"
+                />
               </div>
+
+              {/* Background pattern */}
+              <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-dark-lighter rounded-lg shadow-dark-md -z-0 hidden md:block"></div>
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-11 h-12 bg-dark-lighter rounded-lg flex items-center justify-center shadow-dark-md z-20"
+                className="absolute -top-4 -right-4 w-11 h-12 bg-dark-light rounded-lg flex items-center justify-center shadow-dark-md z-20"
                 initial={{ scale: 0, rotate: 0 }}
                 animate={{ scale: 1, rotate: 5 }}
                 transition={{ delay: 1, duration: 0.5 }}

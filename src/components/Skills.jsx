@@ -110,14 +110,15 @@ const Skills = () => {
   const tools_and_tech = [
     "Git",
     "GitHub",
-    "FastAPI",
     "LangChain",
     "Next.js",
     "Tableau",
     "Responsive Web Design",
     "Netlify",
-    "Arduino IDE",
     "Ollama",
+    "Docker",
+    "Arduino",
+    "Raspberry Pi",
   ];
 
   return (
