@@ -12,12 +12,48 @@ const Projects = () => {
   // Project data
   const projects = [
     {
-      id: 1,
+      id: 16,
+      title: "AStartRoadMaps",
+      description: "A learning aid to create a structure roadmap.",
+      image: "/project_images/a_start_road_maps.png",
+      category: "AI",
+      tech: ["Python", "Streamlit", "Ollama", "uv", "LM Stuido", "AI Agent"],
+      githubLink: "https://github.com/Sudharshan-3904/AStarRoadMaps",
+      longDescription: `AStarRoadMaps is an AI-agent-based project that generates learning roadmaps for any given topic.
+      
+      It leverages locally hosted language models (via LM Studio or Ollama) to dynamically produce structured pathways tailored to different skill levels.`,
+      highlights: [
+        "Easily Adaptable",
+        "Local Environment Management",
+        "Customizable Levels",
+        "Modular and Extensible",
+      ],
+    },
+    {
+      id: 15,
+      title: "Multi Model Researcher",
+      description: "A modular and multi agent research automation.",
+      image: "/project_images/multi_model_researcher.png",
+      category: "AI",
+      tech: ["Python", "Streamlit", "Ollama", "uv", "LM Stuido", "Agentic AI"],
+      githubLink: "https://github.com/Sudharshan-3904/Multi-Model-Researcher",
+      longDescription: `Multi-Model-Researcher is a modular, multi-agent research automation platform designed for deep analysis, summarization, and reporting using multiple LLM providers. 
+      
+      It orchestrates agents to collect, analyze, and synthesize information from scholarly sources and web APIs, producing well-structured, auditable research reports.`,
+      highlights: [
+        "Customizable Pipelinle",
+        "Straightforward UI",
+        "Multi Model Capability",
+        "Coud Model Providers Intergratopms",
+      ],
+    },
+    {
+      id: 14,
       title: "Portfolio Website",
       description:
         "A personal portfolio website showcasing my projects and skills.",
       image: "/project_images/portfolio.png",
-      category: "Projects",
+      category: "AI",
       tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
       githubLink: "https://github.com/Sudharshan-3904/portfolio-site",
       longDescription: `This is my personal portfolio website, built with React and Tailwind CSS. It showcases my projects, skills, and experience in a visually appealing and interactive manner. The site is designed to be responsive and user-friendly, providing a seamless experience across devices.
@@ -31,7 +67,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 2,
+      id: 13,
       title: "Smart Lab Copilot",
       description: "An IoT enabled smart solution for resource wasteage.",
       image: "/project_images/slc.png",
@@ -49,7 +85,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 3,
+      id: 12,
       title: "IoT-Based Hydroponics System",
       description:
         "An automated hydroponics monitoring system with real-time data collection and cloud integration.",
@@ -68,7 +104,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 4,
+      id: 11,
       title: "PyVerse",
       description:
         "An Interactive python based application to simulate celestial systems with basic parameters.",
@@ -88,13 +124,13 @@ const Projects = () => {
       ],
     },
     {
-      id: 5,
+      id: 10,
       title: "Local Agents",
       description:
         "A exploration of local LLM based agents for productivity tools.",
       image: "/project_images/local_agents.png",
       category: "AI",
-      tech: ["Python", "Streamlit", "Ollama", "uv", "LangChain"],
+      tech: ["Python", "Streamlit", "Ollama", "uv", "LangChain", "Agentic AI"],
       githubLink: "https://github.com/Sudharshan-3904/LocalAgent",
       longDescription: `This repository hosts a local AI agent system, providing a versatile platform for code generation, analysis, and email management through an intuitive Streamlit-based user interface. All agents run locally on your system, ensuring data privacy and control.
 
@@ -107,7 +143,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 6,
+      id: 9,
       title: "Echo State Network Research",
       description:
         "A hands-on research and testing into development of Echo State Networks (ESN).",
@@ -128,7 +164,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 7,
+      id: 8,
       title: "Neural Style Transfer",
       description:
         "A practical implementation of Neural Style Transfer using Deep Learning Techniques.",
@@ -148,7 +184,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 8,
+      id: 7,
       title: "Full Stack Blog Wesbite",
       description:
         "A modern, responsive blog website with a React frontend and a Python/Flask backend.",
@@ -176,7 +212,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 9,
+      id: 6,
       title: "Wordle Game",
       description:
         "A command-line implementation of the popular Wordle word guessing game.",
@@ -196,7 +232,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 10,
+      id: 5,
       title: "Utilities App",
       description:
         "A collection of useful utilities and tools for everyday tasks.",
@@ -217,7 +253,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 11,
+      id: 4,
       title: "Flight Ticket Booking System",
       description:
         "A basic flight ticket booking system with user authentication and booking management.",
@@ -237,7 +273,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 12,
+      id: 3,
       title: "Do It Later App",
       description:
         "A simple task management application to help users manage their tasks and reminders.",
@@ -257,7 +293,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 13,
+      id: 2,
       title: "Library Management System",
       description:
         "A lightweight library management system to manage books, members, and transactions.",
@@ -278,7 +314,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 14,
+      id: 1,
       title: "React Quizz App",
       description:
         "A simple quiz application built with React to test knowledge on various topics.",

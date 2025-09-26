@@ -73,7 +73,6 @@ const Skills = () => {
         { name: "SQL", icon: <SiSqlite />, level: 80 },
         { name: "JavaScript", icon: <FaJs />, level: 85 },
         { name: "CSS3", icon: <FaCss3Alt />, level: 90 },
-        { name: "Flutter", icon: <SiFlutter />, level: 65 },
       ],
     },
     {
@@ -85,8 +84,7 @@ const Skills = () => {
         { name: "React", icon: <FaReact />, level: 85 },
         { name: "Firebase", icon: <SiFirebase />, level: 80 },
         { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 75 },
-        { name: "Power BI", icon: <BiSolidBarChartAlt2 />, level: 80 },
-        { name: "Postman", icon: <SiPostman />, level: 75 },
+        { name: "Flutter", icon: <SiFlutter />, level: 65 },
       ],
     },
     {
@@ -110,13 +108,16 @@ const Skills = () => {
   const tools_and_tech = [
     "Git",
     "GitHub",
+    "Linux",
+    "Docker",
     "LangChain",
     "Next.js",
+    "Power BI",
     "Tableau",
     "Responsive Web Design",
     "Netlify",
+    "Postman",
     "Ollama",
-    "Docker",
     "Arduino",
     "Raspberry Pi",
   ];
