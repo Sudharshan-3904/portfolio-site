@@ -203,7 +203,6 @@ const Hero = () => {
               {/* Image frame with gradient border */}
               <div className="w-full max-w-md relative z-10">
                 <img
-                  // src="/photos/profile.jpg"
                   src="/photos/ProfileNoBG.png"
                   alt="Professional portrait"
                   className="rounded-xl shadow-dark-md relative z-20 border-2 border-dark-lightest"
