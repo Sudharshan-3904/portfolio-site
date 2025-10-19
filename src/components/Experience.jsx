@@ -61,7 +61,7 @@ const experiences = [
     position: "Student Intern",
     organization: "MagnusVista Labs",
     location: "Coimbatore, India",
-    end_date: "2023",
+    end_date: "2024",
     certificate_link:
       "https://www.dropbox.com/scl/fi/l91bud42kytw3rc6k0bph/MagnusVista-Internship-Certificate.pdf?rlkey=zkwpuua4nk8kyi4pe1pdqfg8d&st=y2r4qscn&dl=0",
     highlights: [
