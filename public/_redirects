@@ -1,0 +1,4 @@
+# Netlify redirects for the git subdomain
+# (Note: This requires the subdomain to be configured in Netlify settings)
+https://git.sudharshan.me/* https://github.com/Sudharshan-3904 301!
+https://git.localhost/* https://github.com/Sudharshan-3904 301!
