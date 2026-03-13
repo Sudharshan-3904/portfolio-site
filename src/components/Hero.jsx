@@ -141,8 +141,6 @@ const Hero = () => {
               interesting and small projects for experimental learning.
             </motion.p>
 
-
-
             {/* Social Links */}
             <motion.div variants={itemVariants} className="flex gap-5 pt-4">
               {socialLinks.map((link, index) => (
@@ -197,12 +195,12 @@ const Hero = () => {
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-11 h-12 bg-dark-light rounded-lg flex items-center justify-center shadow-dark-md z-20"
+                className="absolute -top-4 -right-4 w-15 h-12 bg-dark-light rounded-lg flex items-center justify-center shadow-dark-md z-20"
                 initial={{ scale: 0, rotate: 0 }}
                 animate={{ scale: 1, rotate: 5 }}
                 transition={{ delay: 1, duration: 0.5 }}
               >
-                <span className="text-2xl text-primary">\^o^/</span>
+                <span className="text-2xl text-primary">(⌐■_■)</span>
               </motion.div>
 
               <motion.div

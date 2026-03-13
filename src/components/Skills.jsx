@@ -3,17 +3,14 @@ import { motion, useInView } from "framer-motion";
 import {
   FaReact,
   FaHtml5,
-  FaCss3Alt,
-  FaJs,
   FaPython,
   FaFlask,
-  FaRobot,
   FaChartBar,
+  FaJava,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiMongodb,
-  SiFirebase,
   SiCplusplus,
   SiC,
   SiSqlite,
@@ -21,12 +18,14 @@ import {
   SiStreamlit,
   SiSourceforge,
   SiArduino,
-  SiPostman,
+  SiN8N,
+  SiQt,
 } from "react-icons/si";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
-import { RiAiGenerate2 } from "react-icons/ri";
+import { RiAiGenerate2, RiAiGenerateText, RiRobot2Fill } from "react-icons/ri";
 import { BsClipboard2DataFill } from "react-icons/bs";
-import { LuBrainCircuit } from "react-icons/lu";
+import { LuBrainCircuit, LuMagnet, LuNetwork } from "react-icons/lu";
+import { FaDartLang } from "react-icons/fa6";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -69,10 +68,27 @@ const Skills = () => {
         { name: "Python", icon: <FaPython />, level: 90 },
         { name: "C++", icon: <SiCplusplus />, level: 85 },
         { name: "C Programming", icon: <SiC />, level: 80 },
-        { name: "HTML5", icon: <FaHtml5 />, level: 95 },
+        { name: "HTML5/CSS/JS", icon: <FaHtml5 />, level: 85 },
         { name: "SQL", icon: <SiSqlite />, level: 80 },
-        { name: "JavaScript", icon: <FaJs />, level: 85 },
-        { name: "CSS3", icon: <FaCss3Alt />, level: 90 },
+        { name: "Dart", icon: <FaDartLang />, level: 85 },
+        { name: "Java", icon: <FaJava />, level: 80 },
+      ],
+    },
+    {
+      title: "Fields of Expertise",
+      skills: [
+        { name: "Data Science", icon: <BsClipboard2DataFill />, level: 90 },
+        { name: "AI Agents", icon: <SiN8N />, level: 90 },
+        { name: "Generative AI", icon: <RiAiGenerate2 />, level: 85 },
+        { name: "LLM's", icon: <RiRobot2Fill />, level: 80 },
+        { name: "Deep Learning", icon: <LuBrainCircuit />, level: 85 },
+        { name: "Machine Learning", icon: <SiSourceforge />, level: 80 },
+        {
+          name: "Internet of Things",
+          icon: <SiArduino />,
+          level: 90,
+        },
+        { name: "Data Visualization", icon: <FaChartBar />, level: 85 },
       ],
     },
     {
@@ -82,25 +98,9 @@ const Skills = () => {
         { name: "Flask", icon: <FaFlask />, level: 75 },
         { name: "Streamlit", icon: <SiStreamlit />, level: 80 },
         { name: "React", icon: <FaReact />, level: 85 },
-        { name: "Firebase", icon: <SiFirebase />, level: 80 },
-        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 75 },
-        { name: "Flutter", icon: <SiFlutter />, level: 65 },
-      ],
-    },
-    {
-      title: "Fields of Expertise",
-      skills: [
-        { name: "Data Science", icon: <BsClipboard2DataFill />, level: 90 },
-        { name: "Generative AI", icon: <RiAiGenerate2 />, level: 85 },
-        { name: "LLM's", icon: <FaRobot />, level: 80 },
-        { name: "Deep Learning", icon: <LuBrainCircuit />, level: 85 },
-        { name: "Machine Learning", icon: <SiSourceforge />, level: 80 },
-        {
-          name: "Internet of Things",
-          icon: <SiArduino />,
-          level: 90,
-        },
-        { name: "Data Visualization", icon: <FaChartBar />, level: 85 },
+        { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 80 },
+        { name: "Flutter", icon: <SiFlutter />, level: 75 },
+        { name: "PyQT", icon: <SiQt  />, level: 65 },
       ],
     },
   ];
@@ -120,6 +120,8 @@ const Skills = () => {
     "Ollama",
     "Arduino",
     "Raspberry Pi",
+    "N8N",
+    "Virtual Box",
   ];
 
   return (

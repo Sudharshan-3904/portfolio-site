@@ -17,7 +17,7 @@ const Projects = () => {
       description:
         "A simple quiz application built with React to test knowledge on various topics.",
       image: "/project_images/react_quizz_app.png",
-      category: "Projects",
+      category: "Project",
       tech: ["React", "CSS/SCSS", "JSON", "Node.js"],
       githubLink: "https://github.com/Sudharshan-3904/React-QuizApp",
       longDescription: `This is a simple quiz application built with React that allows users to test their knowledge on various topics. The application fetches quiz questions from a JSON file and provides an interactive interface for users to answer the questions.
@@ -38,7 +38,7 @@ const Projects = () => {
       description:
         "A lightweight library management system to manage books, members, and transactions.",
       image: "/project_images/library_system.png",
-      category: "Projects",
+      category: "Project",
       tech: ["Python", "SQLite", "bcrypt", "Custom Tkinter"],
       githubLink: "https://github.com/Sudharshan-3904/LibrarySystem",
       longDescription: `This project is a graphical user interface (GUI) application built using Python and the CTk library for creating modern and visually appealing interfaces. The code provides functionality for users to log in, view home section content, and update book data.
@@ -87,7 +87,7 @@ const Projects = () => {
       description:
         "A simple task management application to help users manage their tasks and reminders.",
       image: "/project_images/do_it_later_app.png",
-      category: "Projects",
+      category: "Project",
       tech: ["Flutter", "Dart", "JSON Storage", "Mobile App"],
       githubLink: "https://github.com/Sudharshan-3904/DoItLater",
       longDescription: `DoItLater is a simple yet powerful to-do list manager built with Flutter. It allows you to keep track of your tasks, categorize them, prioritize them, and set deadlines. This project demonstrates how to use state management in Flutter, interact with JSON files for data persistence, and handle user inputs effectively.
@@ -204,7 +204,7 @@ const Projects = () => {
       description:
         "An Interactive python based application to simulate celestial systems with basic parameters.",
       image: "/project_images/pyverse.png",
-      category: "Projects",
+      category: "Project",
       tech: ["Python", "PyGame", "CUDA", "PyTorch", "Vispy", "OpenGL"],
       githubLink: "https://github.com/Sudharshan-3904/PyVerse",
       longDescription: `PyVerse is a Python-based, interactive, and extensible galaxy-scale simulation platform. It supports real-time visualization, advanced physics models, and performance monitoring, making it ideal for both scientific exploration and educational demos.
@@ -224,7 +224,7 @@ const Projects = () => {
       description:
         "A personal portfolio website showcasing my top projects and skills.",
       image: "/project_images/portfolio.png",
-      category: "Projects",
+      category: "Project",
       tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
       githubLink: "https://github.com/Sudharshan-3904/portfolio-site",
       longDescription: `This is my personal portfolio website, built with React and Tailwind CSS. It showcases my projects, skills, and experience in a visually appealing and interactive manner. The site is designed to be responsive and user-friendly, providing a seamless experience across devices.
