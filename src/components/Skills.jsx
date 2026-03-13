@@ -250,7 +250,7 @@ const Skills = () => {
             {tools_and_tech.map((tool, index) => (
               <motion.span
                 key={index}
-                className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20"
+                className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20"
                 whileHover={{
                   y: -4,
                   scale: 1.05,

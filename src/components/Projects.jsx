@@ -477,7 +477,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60" />
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <span className="px-3 py-1 bg-primary bg-opacity-90 text-white text-xs rounded-full">
+                  <span className="px-3 py-1 bg-primary/90 text-white text-xs rounded-full">
                     {project.category}
                   </span>
                 </div>
@@ -536,7 +536,7 @@ const Projects = () => {
       <AnimatePresence>
         {isModalOpen && selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center modal-backdrop"
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center modal-backdrop"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"

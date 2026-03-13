@@ -112,7 +112,7 @@ const ExperienceCard = ({ exp }) => (
       {exp.tools.map((tool, ind) => (
         <span
           key={ind}
-          className="text-xs px-2 py-1 bg-dark-lightest text-darkText-secondary rounded-md border border-primary border-opacity-20 rounded"
+          className="text-xs px-2 py-1 bg-dark-lightest text-darkText-secondary rounded-md border border-primary/20"
         >
           {tool}
         </span>

@@ -102,13 +102,13 @@ const Hero = () => {
               variants={itemVariants}
               className="inline-block mb-2 gap-3 flex flex-wrap items-center"
             >
-              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+              <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
                 Data Engineer
               </span>
-              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+              <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
                 ML/DL Engineer
               </span>
-              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+              <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
                 Tools Developer
               </span>
             </motion.div>
