@@ -11,7 +11,7 @@ const Papers = () => {
   const papers = [
     {
       id: 1,
-      title: "IoT For Smart Hydroponics",
+      title: "IoT For Smart Hydrophonics",
       description: `In this research, we propose an IoT-enabled hydroponic system for maximizing plant growth and resource utilization. Our system yielded a 30% increase in crop yield and a 40% decrease in water usage, indicating its viability for sustainable farming.`,
       image: "/paper_photos/hydroponics.jpg",
       highlights: [

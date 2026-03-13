@@ -13,6 +13,17 @@ import Experiences from "./components/Experience";
 import "./main.css";
 
 function App() {
+  // Subdomain redirect logic
+  useEffect(() => {
+    const hostname = window.location.hostname;
+    const githubUrl = "https://github.com/Sudharshan-3904";
+    
+    // Check if the hostname starts with 'git.' or is exactly 'git' (in case of local testing)
+    if (hostname.startsWith("git.") || hostname === "git") {
+      window.location.href = githubUrl;
+    }
+  }, []);
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
