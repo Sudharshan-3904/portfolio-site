@@ -13,10 +13,10 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "React Quizz App",
+      title: "React Quiz App",
       description:
         "A simple quiz application built with React to test knowledge on various topics.",
-      image: "/project_images/react_quizz_app.png",
+      image: "/project_images/react_quiz_app.png",
       category: "Project",
       tech: ["React", "CSS/SCSS", "JSON", "Node.js"],
       githubLink: "https://github.com/Sudharshan-3904/React-QuizApp",
@@ -55,7 +55,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Full Stack Blog Wesbite",
+      title: "Full Stack Blog Website",
       description:
         "A modern, responsive blog website with a React frontend and a Python/Flask backend.",
       image: "/project_images/fs_blog_site.png",
@@ -128,7 +128,7 @@ const Projects = () => {
         "A hands-on research and testing into development of Echo State Networks (ESN).",
       image: "/project_images/echo_state_network.png",
       category: "Research",
-      tech: ["Python", "Numpy", "CUDA", "nltk", "tensorlfow", "scikit-learn"],
+      tech: ["Python", "Numpy", "CUDA", "nltk", "tensorflow", "scikit-learn"],
       githubLink:
         "https://github.com/Sudharshan-3904/EchoStateNetwork-Research",
       longDescription: `This was a hands-on research project focused on the development and testing of Echo State Networks (ESN), a type of recurrent neural network known for its efficiency in processing time-series data. The project involved implementing ESN from scratch, experimenting with various configurations, and evaluating its performance on different datasets.
@@ -164,7 +164,7 @@ const Projects = () => {
     {
       id: 8,
       title: "Smart Lab Copilot",
-      description: "An IoT enabled smart solution for resource wasteage.",
+      description: "An IoT enabled smart solution for resource wastage.",
       image: "/project_images/slc.png",
       category: "Prototype",
       tech: ["Arduino IDE", "IoT", "Arduino Uno", "ESP32"],
@@ -173,9 +173,9 @@ const Projects = () => {
     
       The project features sensor-based monitoring and automated power control, significantly reducing energy waste in hierarchical computer networks. It includes comprehensive design documentation, implementation guidelines, and performance results, offering institutions a reliable solution for sustainable laboratory operations while maintaining effective hands-on learning environments.`,
       highlights: [
-        "Ablity to be an embedded system",
+        "Ability to be an embedded system",
         "Simple and effective design",
-        "Srteamline process and data flow",
+        "Streamline process and data flow",
         "Scalable and Plug and play",
       ],
     },
@@ -190,7 +190,7 @@ const Projects = () => {
       githubLink: "https://github.com/Sudharshan-3904/LocalAgent",
       longDescription: `This repository hosts a local AI agent system, providing a versatile platform for code generation, analysis, and email management through an intuitive Streamlit-based user interface. All agents run locally on your system, ensuring data privacy and control.
 
-      This projeect was implemented using langchain to implement basics of agentic AI for simple productivity tasks. The agents are designed to be modular and extensible, allowing for easy integration of new functionalities and improvements.`,
+      This project was implemented using LangChain to implement basics of agentic AI for simple productivity tasks. The agents are designed to be modular and extensible, allowing for easy integration of new functionalities and improvements.`,
       highlights: [
         "Github Copilot like basic code agent",
         "Email management Agent ",
@@ -211,9 +211,9 @@ const Projects = () => {
       
       This is built by integrating PyGame and Vispy to enable realistic physics simulation of celestial systems. The application allows users to simulate and visualize the motion of celestial bodies in a galaxy, providing an interactive experience for understanding complex astronomical phenomena.`,
       highlights: [
-        "Realistic Pysics Simulation",
+        "Realistic Physics Simulation",
         "Preloaded with a sample presets",
-        "Realtime rendeting",
+        "Realtime rendering",
         "Performance monitoring",
         "Benchmarking and Stress testing",
       ],
@@ -231,7 +231,7 @@ const Projects = () => {
       
       The website features smooth animations using Framer Motion, enhancing the user experience. It includes sections for my projects, skills, and a contact form, allowing visitors to easily get in touch with me.`,
       highlights: [
-        "Responsive Desing",
+        "Responsive Design",
         "Modern Simplistic Design",
         "Animated transition with Framer Motion",
         "Easily Customizable and Extensible",
@@ -240,16 +240,16 @@ const Projects = () => {
     {
       id: 12,
       title: "PyCursor",
-      description: "A python based AI IDE for phyton applicaiton development.",
+      description: "A Python based AI IDE for Python application development.",
       image: "/project_images/pycursor.png",
       category: "IDE",
       tech: ["Python", "PyQt6", "LLM", "AI Agents"],
       githubLink: "https://github.com/Sudharshan-3904/PyCursor",
-      longDescription: `This is a python based PyQt6 desktop application that incorporates Cursor like capabilities through completly local models hosted via ollama or on the local network enabling secure and rapid development.
+      longDescription: `This is a Python based PyQt6 desktop application that incorporates Cursor like capabilities through completely local models hosted via Ollama or on the local network enabling secure and rapid development.
       
-      It features a MicroSoft Visual Studio Code like interface with responsive interace. This app is currently in pre-alpha testing. `,
+      It features a Microsoft Visual Studio Code like interface with responsive interface. This app is currently in pre-alpha testing. `,
       highlights: [
-        "Completly offline capable",
+        "Completely offline capable",
         "Dynamic Venv management",
         "Built-In git integration",
         "API based model integration",

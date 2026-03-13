@@ -15,7 +15,7 @@ const FreelanceWorks = () => {
         "Built a responsive e-commerce site for a business using React, TailwindCSS and Node.js.",
       image: "/project_images/ecommerce.png",
       tech: ["React", "Tailwind CSS", "Node.js"],
-      liveLink: "https://iconembeddedcontrolsdev.netlify.app/",
+      liveLink: "https://www.iconembededcontrols.com",
       longDescription: `Developed a full-featured e-commerce website for a client, including product catalog, shopping cart, and payment integration. The site is fully responsive and optimized for performance.`,
       highlights: [
         "Responsive Design",

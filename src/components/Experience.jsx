@@ -12,8 +12,8 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/47fuej7himy46ys9j34of/icliniq-internship-certificate.pdf?rlkey=tomjytpycezmmw60h0btcu5tv&st=5bhzkf40&dl=0",
     highlights: [
-      "Implemented a system to convert traditional medical reports into interactable data and allow the user to interact with a chatbot based on it.",
-      "This was done by modelleing a pipeline and allowing for a non-linear flow of data through multiple modules optimizing the user experience.",
+      "Implemented a system to convert traditional medical reports into interactive data and allow the user to interact with a chatbot based on it.",
+      "This was done by modelling a pipeline and allowing for a non-linear flow of data through multiple modules optimizing the user experience.",
       "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
     ],
     tools: ["Python", "MongoDB", "OCR", "RAG", "NLP", "LLM", "LM Studio"],
@@ -27,8 +27,8 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/4wvev4ncf8hlkjd38t7sr/Telkom-University-Internship-Certificate.pdf?rlkey=npu52vxpp33smgjbtom1xcldg&st=wj4khic8&dl=0",
     highlights: [
-      "Worked on prototyping an IoT based approach to Hydroponics to improve productivity and provide additional real-time motoring methods.",
-      "Tested teh viability of the system on various microcontroller boards inluding Arduino Uno and ESP32 with could integration.",
+      "Worked on prototyping an IoT based approach to Hydroponics to improve productivity and provide additional real-time monitoring methods.",
+      "Tested the viability of the system on various microcontroller boards including Arduino Uno and ESP32 with cloud integration.",
       "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
     ],
     tools: [
@@ -50,8 +50,8 @@ const experiences = [
     certificate_link:
       "https://www.dropbox.com/scl/fi/el8z30c47sohl0c9fluvt/Samsung-PRISM-Completion-Cetificate.pdf?rlkey=ta55rz3lkow04vedu2jcbzvho&st=zyhwl0s8&dl=0",
     highlights: [
-      "Developed a backend java based script for AI-based on-device malware detection on Android for validating doanloaded files.",
-      "Designed and trained the model on  python and using Java to invoke the model to test the file for malware based on the file's metadata.",
+      "Developed a backend java based script for AI-based on-device malware detection on Android for validating downloaded files.",
+      "Designed and trained the model on Python and using Java to invoke the model to test the file for malware based on the file's metadata.",
       "This support multiple files types such as .docx, .pdf, .ppt, .apk, and other document file types.",
     ],
     tools: ["Java", "Tensorflow", "Gradle", "ML", "Android", "APK"],
