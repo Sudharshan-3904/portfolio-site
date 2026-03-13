@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   FiGithub,
   FiLinkedin,
-  FiDownload,
   FiMail,
   FiMap,
 } from "react-icons/fi";
@@ -142,23 +141,7 @@ const Hero = () => {
               interesting and small projects for experimental learning.
             </motion.p>
 
-            {/* Action Buttons */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap gap-4 pt-2"
-            >
-              <motion.a
-                href="/resume.pdf"
-                className="btn btn-outline flex items-center gap-2 px-6 py-3 rounded-md"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FiDownload className="w-5 h-5" />
-                Resume
-              </motion.a>
-            </motion.div>
+
 
             {/* Social Links */}
             <motion.div variants={itemVariants} className="flex gap-5 pt-4">

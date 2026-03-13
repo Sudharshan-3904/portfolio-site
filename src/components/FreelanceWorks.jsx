@@ -12,13 +12,12 @@ const FreelanceWorks = () => {
   const freelanceWorks = [
     {
       id: 1,
-      title: "Icon Embedded Controls Website DEvelopment",
+      title: "Icon Embedded Controls Website Development",
       description:
         "<UPDATE> Built a responsive e-commerce site for a business using React and tailwindCSS.",
       image: "/project_images/ecommerce.png",
       tech: ["React", "Tailwind CSS", "Node.js", "Frontend"],
-      githubLink: "https://github.com/Sudharshan-3904",
-      liveLink: "https://sudharshan.in",
+      liveLink: "https://iconembeddedcontrols.com/",
       longDescription: `Developed a full-featured e-commerce website for a client, including product catalog, shopping cart, and payment integration. The site is fully responsive and optimized for performance.`,
       highlights: [
         "Responsive Design",
