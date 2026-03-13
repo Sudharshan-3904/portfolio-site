@@ -242,7 +242,7 @@ const Projects = () => {
       title: "PyCursor",
       description: "A python based AI IDE for phyton applicaiton development.",
       image: "/project_images/pycursor.png",
-      category: "AI",
+      category: "IDE",
       tech: ["Python", "PyQt6", "LLM", "AI Agents"],
       githubLink: "https://github.com/Sudharshan-3904/PyCursor",
       longDescription: `This is a python based PyQt6 desktop application that incorporates Cursor like capabilities through completly local models hosted via ollama or on the local network enabling secure and rapid development.
