@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   FiGithub,
   FiLinkedin,
-  FiDownload,
   FiMail,
   FiMap,
 } from "react-icons/fi";
@@ -103,13 +102,13 @@ const Hero = () => {
               variants={itemVariants}
               className="inline-block mb-2 gap-3 flex flex-wrap items-center"
             >
-              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+              <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
                 Data Engineer
               </span>
-              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+              <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
                 ML/DL Engineer
               </span>
-              <span className="bg-primary bg-opacity-10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary border-opacity-20">
+              <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
                 Tools Developer
               </span>
             </motion.div>
@@ -141,24 +140,6 @@ const Hero = () => {
               tools and projects. Currently, I'm focused on creating useful,
               interesting and small projects for experimental learning.
             </motion.p>
-
-            {/* Action Buttons */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-wrap gap-4 pt-2"
-            >
-              <motion.a
-                href="/resume.pdf"
-                className="btn btn-outline flex items-center gap-2 px-6 py-3 rounded-md"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FiDownload className="w-5 h-5" />
-                Resume
-              </motion.a>
-            </motion.div>
 
             {/* Social Links */}
             <motion.div variants={itemVariants} className="flex gap-5 pt-4">
@@ -203,7 +184,6 @@ const Hero = () => {
               {/* Image frame with gradient border */}
               <div className="w-full max-w-md relative z-10">
                 <img
-                  // src="/photos/profile.jpg"
                   src="/photos/ProfileNoBG.png"
                   alt="Professional portrait"
                   className="rounded-xl shadow-dark-md relative z-20 border-2 border-dark-lightest"
@@ -215,12 +195,12 @@ const Hero = () => {
 
               {/* Decorative elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-11 h-12 bg-dark-light rounded-lg flex items-center justify-center shadow-dark-md z-20"
+                className="absolute -top-4 -right-4 w-15 h-12 bg-dark-light rounded-lg flex items-center justify-center shadow-dark-md z-20"
                 initial={{ scale: 0, rotate: 0 }}
                 animate={{ scale: 1, rotate: 5 }}
                 transition={{ delay: 1, duration: 0.5 }}
               >
-                <span className="text-2xl text-primary">\^o^/</span>
+                <span className="text-2xl text-primary">(⌐■_■)</span>
               </motion.div>
 
               <motion.div

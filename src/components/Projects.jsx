@@ -13,143 +13,49 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Portfolio Website",
+      title: "React Quiz App",
       description:
-        "A personal portfolio website showcasing my projects and skills.",
-      image: "/project_images/portfolio.png",
-      category: "Projects",
-      tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
-      githubLink: "https://github.com/Sudharshan-3904/portfolio-site",
-      longDescription: `This is my personal portfolio website, built with React and Tailwind CSS. It showcases my projects, skills, and experience in a visually appealing and interactive manner. The site is designed to be responsive and user-friendly, providing a seamless experience across devices.
-      
-      The website features smooth animations using Framer Motion, enhancing the user experience. It includes sections for my projects, skills, and a contact form, allowing visitors to easily get in touch with me.`,
+        "A simple quiz application built with React to test knowledge on various topics.",
+      image: "/project_images/react_quiz_app.png",
+      category: "Project",
+      tech: ["React", "CSS/SCSS", "JSON", "Node.js"],
+      githubLink: "https://github.com/Sudharshan-3904/React-QuizApp",
+      longDescription: `This is a simple quiz application built with React that allows users to test their knowledge on various topics. The application fetches quiz questions from a JSON file and provides an interactive interface for users to answer the questions.
+
+      The React Quiz App features a clean and modern design, making it easy for users to navigate through the quiz. It includes functionalities such as displaying questions, tracking user answers, and providing feedback on the user's performance at the end of the quiz.`,
       highlights: [
-        "Responsive Desing",
-        "Modern Simplistic Design",
-        "Animated transition with Framer Motion",
-        "Easily Customizable and Extensible",
+        "JSON based quiz questions",
+        "Dynamic question rendering",
+        "User-friendly interface",
+        "User authentication and authorization",
+        "Google OAuth integration",
+        "Responsive design for all devices",
       ],
     },
     {
       id: 2,
-      title: "Smart Lab Copilot",
-      description: "An IoT enabled smart solution for resource wasteage.",
-      image: "/project_images/slc.png",
-      category: "Prototype",
-      tech: ["Arduino IDE", "IoT", "Arduino Uno", "ESP32"],
-      githubLink: "https://github.com/Sudharshan-3904/SmartLabCopilot",
-      longDescription: `This is an automated smart lab power management system, built with IoT sensors and automation technology. It addresses the growing power consumption challenges in institutional computer laboratories where students learn modern technical skills like coding, blockchain, and IoT. The system is designed to be scalable and easy to implement, providing optimal power regulation without cumbersome manual oversight.
-    
-      The project features sensor-based monitoring and automated power control, significantly reducing energy waste in hierarchical computer networks. It includes comprehensive design documentation, implementation guidelines, and performance results, offering institutions a reliable solution for sustainable laboratory operations while maintaining effective hands-on learning environments.`,
+      title: "Library Management System",
+      description:
+        "A lightweight library management system to manage books, members, and transactions.",
+      image: "/project_images/library_system.png",
+      category: "Project",
+      tech: ["Python", "SQLite", "bcrypt", "Custom Tkinter"],
+      githubLink: "https://github.com/Sudharshan-3904/LibrarySystem",
+      longDescription: `This project is a graphical user interface (GUI) application built using Python and the CTk library for creating modern and visually appealing interfaces. The code provides functionality for users to log in, view home section content, and update book data.
+
+      The Library Management System allows users to manage books, members, and transactions efficiently. It provides features for adding, updating, and deleting books, managing member information, and tracking book loans and returns. The application is designed to be user-friendly and intuitive, making it easy for librarians to manage their library operations.`,
       highlights: [
-        "Ablity to be an embedded system",
-        "Simple and effective design",
-        "Srteamline process and data flow",
-        "Scalable and Plug and play",
+        "ISBN based online searching",
+        "Password hashing for secure authentication",
+        "Detailed logging and error handling",
+        "User-friendly interface with CTk",
+        "Different user roles (Admin, Librarian, Member)",
+        "Data persistence using SQLite files",
       ],
     },
     {
       id: 3,
-      title: "IoT-Based Hydroponics System",
-      description:
-        "An automated hydroponics monitoring system with real-time data collection and cloud integration.",
-      image: "/project_images/hydroponics.png",
-      category: "Prototype",
-      tech: ["Arduino", "ESP32", "IoT", "Python", "Flask", "Firebase"],
-      githubLink: "https://github.com/Sudharshan-3904/SmartHydropnics",
-      longDescription: `This is an IoT-based hydroponics monitoring system designed to improve agricultural productivity through automated real-time monitoring. The system utilizes microcontroller boards like Arduino Uno and ESP32 with cloud integration to provide comprehensive plant growth management. It features a robust backend system with local model hosting capabilities, allowing for dynamic system adjustments and optimizations.
-      
-      The project demonstrates the practical application of IoT technology in agriculture, offering farmers and researchers an efficient way to monitor and control hydroponic environments remotely while ensuring optimal growing conditions.`,
-      highlights: [
-        "Real-time Environmental Monitoring",
-        "Multi-platform Microcontroller Support",
-        "Cloud Integration with Firebase",
-        "Local Model Hosting with Dynamic Updates",
-      ],
-    },
-    {
-      id: 4,
-      title: "PyVerse",
-      description:
-        "An Interactive python based application to simulate celestial systems with basic parameters.",
-      image: "/project_images/pyverse.png",
-      category: "Projects",
-      tech: ["Python", "PyGame", "CUDA", "PyTorch", "Vispy", "OpenGL"],
-      githubLink: "https://github.com/Sudharshan-3904/PyVerse",
-      longDescription: `PyVerse is a Python-based, interactive, and extensible galaxy-scale simulation platform. It supports real-time visualization, advanced physics models, and performance monitoring, making it ideal for both scientific exploration and educational demos.
-      
-      This is built by integrating PyGame and Vispy to enable realistic physics simulation of celestial systems. The application allows users to simulate and visualize the motion of celestial bodies in a galaxy, providing an interactive experience for understanding complex astronomical phenomena.`,
-      highlights: [
-        "Realistic Pysics Simulation",
-        "Preloaded with a sample presets",
-        "Realtime rendeting",
-        "Performance monitoring",
-        "Benchmarking and Stress testing",
-      ],
-    },
-    {
-      id: 5,
-      title: "Local Agents",
-      description:
-        "A exploration of local LLM based agents for productivity tools.",
-      image: "/project_images/local_agents.png",
-      category: "AI",
-      tech: ["Python", "Streamlit", "Ollama", "uv", "LangChain"],
-      githubLink: "https://github.com/Sudharshan-3904/LocalAgent",
-      longDescription: `This repository hosts a local AI agent system, providing a versatile platform for code generation, analysis, and email management through an intuitive Streamlit-based user interface. All agents run locally on your system, ensuring data privacy and control.
-
-      This projeect was implemented using langchain to implement basics of agentic AI for simple productivity tasks. The agents are designed to be modular and extensible, allowing for easy integration of new functionalities and improvements.`,
-      highlights: [
-        "Github Copilot like basic code agent",
-        "Email management Agent ",
-        "Blog writing Agent",
-        "RAG agent for document analysis",
-      ],
-    },
-    {
-      id: 6,
-      title: "Echo State Network Research",
-      description:
-        "A hands-on research and testing into development of Echo State Networks (ESN).",
-      image: "/project_images/echo_state_network.png",
-      category: "Research",
-      tech: ["Python", "Numpy", "CUDA", "nltk", "tensorlfow", "scikit-learn"],
-      githubLink:
-        "https://github.com/Sudharshan-3904/EchoStateNetwork-Research",
-      longDescription: `This was a hands-on research project focused on the development and testing of Echo State Networks (ESN), a type of recurrent neural network known for its efficiency in processing time-series data. The project involved implementing ESN from scratch, experimenting with various configurations, and evaluating its performance on different datasets.
-
-      The main goal was to explore the capabilities of ESN in tasks such as time-series prediction, classification, and signal processing. The project also included a comprehensive analysis of the ESN's performance compared to traditional neural networks and other machine learning models.`,
-      highlights: [
-        "Pickle file based model saving",
-        "Numpy based implementation",
-        "CPU, GPU and NPU support",
-        "Extensive testing and benchmarking",
-        "Documentation and detailed logs",
-      ],
-    },
-    {
-      id: 7,
-      title: "Neural Style Transfer",
-      description:
-        "A practical implementation of Neural Style Transfer using Deep Learning Techniques.",
-      image: "/project_images/nst_application.png",
-      category: "AI",
-      tech: ["Python", "Streamlit", "CUDA", "PyTorch", "OpenCV", "Numpy"],
-      githubLink: "https://github.com/Sudharshan-3904/NeuralStyleTransfer",
-      longDescription: `This is a Streamlit web application that implements Neural Style Transfer, allowing users to combine the content of one image with the artistic style of another.
-
-      This application uses deep learning techniques to transfer the style of one image (like a famous painting) onto the content of another image (like a photograph). The implementation is based on the original Neural Style Transfer paper by Gatys et al. and uses pre-trained VGG networks (VGG16 and VGG19) to extract content and style features.`,
-      highlights: [
-        "User-friendly Streamlit interface",
-        "Customizable parameters for style transfer",
-        "Multiple image formats supported",
-        "Real-time processing with GPU acceleration",
-        "High-quality output images",
-      ],
-    },
-    {
-      id: 8,
-      title: "Full Stack Blog Wesbite",
+      title: "Full Stack Blog Website",
       description:
         "A modern, responsive blog website with a React frontend and a Python/Flask backend.",
       image: "/project_images/fs_blog_site.png",
@@ -176,73 +82,12 @@ const Projects = () => {
       ],
     },
     {
-      id: 9,
-      title: "Wordle Game",
-      description:
-        "A command-line implementation of the popular Wordle word guessing game.",
-      image: "/project_images/wordle.png",
-      category: "Projects",
-      tech: ["Python", "Flask", "Requests"],
-      githubLink: "https://github.com/Sudharshan-3904/Wordle",
-      longDescription: `This is a command-line implementation of the popular Wordle word guessing game. The game allows users to guess a five-letter word within six attempts, providing feedback on the correctness of each guess.
-
-      The implementation includes a simple command-line interface where users can input their guesses and receive feedback on which letters are correct and in the right position, which letters are correct but in the wrong position, and which letters are not in the word at all. The game continues until the user either guesses the word correctly or runs out of attempts.`,
-      highlights: [
-        "API based random word generation",
-        "Color-coded feedback for guesses",
-        "Input validation for user guesses",
-        "6 attempts to guess the word",
-        "Clear and concise command-line interface",
-      ],
-    },
-    {
-      id: 10,
-      title: "Utilities App",
-      description:
-        "A collection of useful utilities and tools for everyday tasks.",
-      image: "/project_images/utilities.png",
-      category: "Projects",
-      tech: ["Python", "Pillow", "PyTube", "Custom Tkinter"],
-      githubLink: "https://github.com/Sudharshan-3904/UtilitiesApp",
-      longDescription: `This is a collection of useful utilities and tools for everyday tasks, implemented as a Python application with a custom Tkinter GUI. The application includes features like image processing, video downloading, and more.
-
-      The Utilities App provides a user-friendly interface for performing various tasks, such as converting images to different formats, downloading videos from YouTube, and more. The application is designed to be modular and extensible, allowing for easy addition of new utilities in the future.`,
-      highlights: [
-        "Youtube Video Downloader",
-        "Image Converter",
-        "Spreadsheet Converter",
-        "Video to Audio Converter",
-        "Internet Speed Test",
-        "Passwrod Creation Tool",
-      ],
-    },
-    {
-      id: 11,
-      title: "Flight Ticket Booking System",
-      description:
-        "A basic flight ticket booking system with user authentication and booking management.",
-      image: "/project_images/flight_booking_app.png",
-      category: "Projects",
-      tech: ["C Language", "CSV File Handling", "Data Logging"],
-      githubLink: "https://github.com/Sudharshan-3904/FlightBookingApp",
-      longDescription: `The Flight Booking System is a C program designed to manage and operate a basic flight booking system. This system allows users to book new flights, delete booked flights, view all currently booked flights, print a flight ticket, and quit the program.
-
-      The program uses CSV file handling to store flight data and user bookings, ensuring that all information is persistent across sessions. It includes features for user authentication, allowing users to log in and manage their bookings securely.`,
-      highlights: [
-        "Local CSV file handling for data storage",
-        "User authentication for secure access",
-        "Secure data storage and management",
-        "Basic flight management operations",
-        "Secure and efficient data handling",
-      ],
-    },
-    {
-      id: 12,
+      id: 4,
       title: "Do It Later App",
       description:
         "A simple task management application to help users manage their tasks and reminders.",
       image: "/project_images/do_it_later_app.png",
-      category: "Projects",
+      category: "Project",
       tech: ["Flutter", "Dart", "JSON Storage", "Mobile App"],
       githubLink: "https://github.com/Sudharshan-3904/DoItLater",
       longDescription: `DoItLater is a simple yet powerful to-do list manager built with Flutter. It allows you to keep track of your tasks, categorize them, prioritize them, and set deadlines. This project demonstrates how to use state management in Flutter, interact with JSON files for data persistence, and handle user inputs effectively.
@@ -257,33 +102,188 @@ const Projects = () => {
       ],
     },
     {
-      id: 13,
-      title: "Library Management System",
+      id: 5,
+      title: "Neural Style Transfer",
       description:
-        "A lightweight library management system to manage books, members, and transactions.",
-      image: "/project_images/library_system.png",
-      category: "Projects",
-      tech: ["Python", "SQLite", "bcrypt", "Custom Tkinter"],
-      githubLink: "https://github.com/Sudharshan-3904/LibrarySystem",
-      longDescription: `This project is a graphical user interface (GUI) application built using Python and the CTk library for creating modern and visually appealing interfaces. The code provides functionality for users to log in, view home section content, and update book data.
+        "A practical implementation of Neural Style Transfer using Deep Learning Techniques.",
+      image: "/project_images/nst_application.png",
+      category: "AI",
+      tech: ["Python", "Streamlit", "CUDA", "PyTorch", "OpenCV", "Numpy"],
+      githubLink: "https://github.com/Sudharshan-3904/NeuralStyleTransfer",
+      longDescription: `This is a Streamlit web application that implements Neural Style Transfer, allowing users to combine the content of one image with the artistic style of another.
 
-      The Library Management System allows users to manage books, members, and transactions efficiently. It provides features for adding, updating, and deleting books, managing member information, and tracking book loans and returns. The application is designed to be user-friendly and intuitive, making it easy for librarians to manage their library operations.`,
+      This application uses deep learning techniques to transfer the style of one image (like a famous painting) onto the content of another image (like a photograph). The implementation is based on the original Neural Style Transfer paper by Gatys et al. and uses pre-trained VGG networks (VGG16 and VGG19) to extract content and style features.`,
       highlights: [
-        "ISBN based online searching",
-        "Password hashing for secure authentication",
-        "Detailed logging and error handling",
-        "User-friendly interface with CTk",
-        "Different user roles (Admin, Librarian, Member)",
-        "Data persistence using SQLite files",
+        "User-friendly Streamlit interface",
+        "Customizable parameters for style transfer",
+        "Multiple image formats supported",
+        "Real-time processing with GPU acceleration",
+        "High-quality output images",
+      ],
+    },
+    {
+      id: 6,
+      title: "Echo State Network Research",
+      description:
+        "A hands-on research and testing into development of Echo State Networks (ESN).",
+      image: "/project_images/echo_state_network.png",
+      category: "Research",
+      tech: ["Python", "Numpy", "CUDA", "nltk", "tensorflow", "scikit-learn"],
+      githubLink:
+        "https://github.com/Sudharshan-3904/EchoStateNetwork-Research",
+      longDescription: `This was a hands-on research project focused on the development and testing of Echo State Networks (ESN), a type of recurrent neural network known for its efficiency in processing time-series data. The project involved implementing ESN from scratch, experimenting with various configurations, and evaluating its performance on different datasets.
+
+      The main goal was to explore the capabilities of ESN in tasks such as time-series prediction, classification, and signal processing. The project also included a comprehensive analysis of the ESN's performance compared to traditional neural networks and other machine learning models.`,
+      highlights: [
+        "Pickle file based model saving",
+        "Numpy based implementation",
+        "CPU, GPU and NPU support",
+        "Extensive testing and benchmarking",
+        "Documentation and detailed logs",
+      ],
+    },
+    {
+      id: 7,
+      title: "IoT-Based Hydroponics System",
+      description:
+        "An automated hydroponics monitoring system with real-time data collection and cloud integration.",
+      image: "/project_images/hydroponics.png",
+      category: "Prototype",
+      tech: ["Arduino", "ESP32", "IoT", "Python", "Flask", "Firebase"],
+      githubLink: "https://github.com/Sudharshan-3904/SmartHydropnics",
+      longDescription: `This is an IoT-based hydroponics monitoring system designed to improve agricultural productivity through automated real-time monitoring. The system utilizes microcontroller boards like Arduino Uno and ESP32 with cloud integration to provide comprehensive plant growth management. It features a robust backend system with local model hosting capabilities, allowing for dynamic system adjustments and optimizations.
+      
+      The project demonstrates the practical application of IoT technology in agriculture, offering farmers and researchers an efficient way to monitor and control hydroponic environments remotely while ensuring optimal growing conditions.`,
+      highlights: [
+        "Real-time Environmental Monitoring",
+        "Multi-platform Microcontroller Support",
+        "Cloud Integration with Firebase",
+        "Local Model Hosting with Dynamic Updates",
+      ],
+    },
+    {
+      id: 8,
+      title: "Smart Lab Copilot",
+      description: "An IoT enabled smart solution for resource wastage.",
+      image: "/project_images/slc.png",
+      category: "Prototype",
+      tech: ["Arduino IDE", "IoT", "Arduino Uno", "ESP32"],
+      githubLink: "https://github.com/Sudharshan-3904/SmartLabCopilot",
+      longDescription: `This is an automated smart lab power management system, built with IoT sensors and automation technology. It addresses the growing power consumption challenges in institutional computer laboratories where students learn modern technical skills like coding, blockchain, and IoT. The system is designed to be scalable and easy to implement, providing optimal power regulation without cumbersome manual oversight.
+    
+      The project features sensor-based monitoring and automated power control, significantly reducing energy waste in hierarchical computer networks. It includes comprehensive design documentation, implementation guidelines, and performance results, offering institutions a reliable solution for sustainable laboratory operations while maintaining effective hands-on learning environments.`,
+      highlights: [
+        "Ability to be an embedded system",
+        "Simple and effective design",
+        "Streamline process and data flow",
+        "Scalable and Plug and play",
+      ],
+    },
+    {
+      id: 9,
+      title: "Local Agents",
+      description:
+        "A exploration of local LLM based agents for productivity tools.",
+      image: "/project_images/local_agents.png",
+      category: "AI",
+      tech: ["Python", "Streamlit", "Ollama", "uv", "LangChain"],
+      githubLink: "https://github.com/Sudharshan-3904/LocalAgent",
+      longDescription: `This repository hosts a local AI agent system, providing a versatile platform for code generation, analysis, and email management through an intuitive Streamlit-based user interface. All agents run locally on your system, ensuring data privacy and control.
+
+      This project was implemented using LangChain to implement basics of agentic AI for simple productivity tasks. The agents are designed to be modular and extensible, allowing for easy integration of new functionalities and improvements.`,
+      highlights: [
+        "Github Copilot like basic code agent",
+        "Email management Agent ",
+        "Blog writing Agent",
+        "RAG agent for document analysis",
+      ],
+    },
+    {
+      id: 10,
+      title: "PyVerse",
+      description:
+        "An Interactive python based application to simulate celestial systems with basic parameters.",
+      image: "/project_images/pyverse.png",
+      category: "Project",
+      tech: ["Python", "PyGame", "CUDA", "PyTorch", "Vispy", "OpenGL"],
+      githubLink: "https://github.com/Sudharshan-3904/PyVerse",
+      longDescription: `PyVerse is a Python-based, interactive, and extensible galaxy-scale simulation platform. It supports real-time visualization, advanced physics models, and performance monitoring, making it ideal for both scientific exploration and educational demos.
+      
+      This is built by integrating PyGame and Vispy to enable realistic physics simulation of celestial systems. The application allows users to simulate and visualize the motion of celestial bodies in a galaxy, providing an interactive experience for understanding complex astronomical phenomena.`,
+      highlights: [
+        "Realistic Physics Simulation",
+        "Preloaded with a sample presets",
+        "Realtime rendering",
+        "Performance monitoring",
+        "Benchmarking and Stress testing",
+      ],
+    },
+    {
+      id: 11,
+      title: "Portfolio Website",
+      description:
+        "A personal portfolio website showcasing my top projects and skills.",
+      image: "/project_images/portfolio.png",
+      category: "Project",
+      tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
+      githubLink: "https://github.com/Sudharshan-3904/portfolio-site",
+      longDescription: `This is my personal portfolio website, built with React and Tailwind CSS. It showcases my projects, skills, and experience in a visually appealing and interactive manner. The site is designed to be responsive and user-friendly, providing a seamless experience across devices.
+      
+      The website features smooth animations using Framer Motion, enhancing the user experience. It includes sections for my projects, skills, and a contact form, allowing visitors to easily get in touch with me.`,
+      highlights: [
+        "Responsive Design",
+        "Modern Simplistic Design",
+        "Animated transition with Framer Motion",
+        "Easily Customizable and Extensible",
+      ],
+    },
+    {
+      id: 12,
+      title: "PyCursor",
+      description: "A Python based AI IDE for Python application development.",
+      image: "/project_images/pycursor.png",
+      category: "IDE",
+      tech: ["Python", "PyQt6", "LLM", "AI Agents"],
+      githubLink: "https://github.com/Sudharshan-3904/PyCursor",
+      longDescription: `This is a Python based PyQt6 desktop application that incorporates Cursor like capabilities through completely local models hosted via Ollama or on the local network enabling secure and rapid development.
+      
+      It features a Microsoft Visual Studio Code like interface with responsive interface. This app is currently in pre-alpha testing. `,
+      highlights: [
+        "Completely offline capable",
+        "Dynamic Venv management",
+        "Built-In git integration",
+        "API based model integration",
+        "Multiple project management",
+        "Sleek modern interface",
+      ],
+    },
+    {
+      id: 13,
+      title: "AStarRoadmaps",
+      description: "LLM based structured topic learner.",
+      image: "/project_images/astarroadmaps.png",
+      category: "AI",
+      tech: ["Python", "FastAPI", "AI Agents"],
+      githubLink: "https://github.com/Sudharshan-3904/AStarRoadMaps",
+      longDescription: `This is a simple quiz application built with React that allows users to test their knowledge on various topics. The application fetches quiz questions from a JSON file and provides an interactive interface for users to answer the questions.
+
+      The React Quiz App features a clean and modern design, making it easy for users to navigate through the quiz. It includes functionalities such as displaying questions, tracking user answers, and providing feedback on the user's performance at the end of the quiz.`,
+      highlights: [
+        "JSON based quiz questions",
+        "Dynamic question rendering",
+        "User-friendly interface",
+        "User authentication and authorization",
+        "Google OAuth integration",
+        "Responsive design for all devices",
       ],
     },
     {
       id: 14,
-      title: "React Quizz App",
+      title: "Multi Model Researcher",
       description:
         "A simple quiz application built with React to test knowledge on various topics.",
-      image: "/project_images/react_quizz_app.png",
-      category: "Projects",
+      image: "/project_images/mmr.png",
+      category: "AI",
       tech: ["React", "CSS/SCSS", "JSON", "Node.js"],
       githubLink: "https://github.com/Sudharshan-3904/React-QuizApp",
       longDescription: `This is a simple quiz application built with React that allows users to test their knowledge on various topics. The application fetches quiz questions from a JSON file and provides an interactive interface for users to answer the questions.
@@ -306,11 +306,12 @@ const Projects = () => {
     ...new Set(projects.map((project) => project.category)),
   ];
 
-  // Filter projects by category
-  const filteredProjects =
-    selectedCategory === "All"
+  // Filter projects by category and reverse the order
+  const filteredProjects = [
+    ...(selectedCategory === "All"
       ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      : projects.filter((project) => project.category === selectedCategory)),
+  ].reverse();
 
   // Animation variants
   const containerVariants = {
@@ -411,7 +412,7 @@ const Projects = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
-            My <span className="text-primary">Projects</span>
+            Featured <span className="text-primary">Projects</span>
           </motion.h2>
           <motion.div
             className="underline"
@@ -476,7 +477,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60" />
                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <span className="px-3 py-1 bg-primary bg-opacity-90 text-white text-xs rounded-full">
+                  <span className="px-3 py-1 bg-primary/90 text-white text-xs rounded-full">
                     {project.category}
                   </span>
                 </div>
@@ -535,7 +536,7 @@ const Projects = () => {
       <AnimatePresence>
         {isModalOpen && selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center modal-backdrop"
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center modal-backdrop"
             variants={backdropVariants}
             initial="hidden"
             animate="visible"
