@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white relative pb-6">
+    <footer className="bg-gray-900 text-white relative pb-10">
       {/* Semi-circle background */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] bg-gray-900 rounded-full z-0 pointer-events-none"></div>
 
