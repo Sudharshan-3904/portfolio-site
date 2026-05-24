@@ -4,7 +4,6 @@ import {
   FiGithub,
   FiLinkedin,
   FiMail,
-  FiMap,
 } from "react-icons/fi";
 
 const Hero = () => {

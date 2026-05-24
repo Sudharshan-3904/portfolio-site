@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiCode, FiHeart } from "react-icons/fi";
+import { FiCode } from "react-icons/fi";
 import { PiCertificateFill } from "react-icons/pi";
 
 const About = () => {

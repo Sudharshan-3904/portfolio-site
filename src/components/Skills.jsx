@@ -21,10 +21,9 @@ import {
   SiN8N,
   SiQt,
 } from "react-icons/si";
-import { BiSolidBarChartAlt2 } from "react-icons/bi";
-import { RiAiGenerate2, RiAiGenerateText, RiRobot2Fill } from "react-icons/ri";
+import { RiAiGenerate2, RiRobot2Fill } from "react-icons/ri";
 import { BsClipboard2DataFill } from "react-icons/bs";
-import { LuBrainCircuit, LuMagnet, LuNetwork } from "react-icons/lu";
+import { LuBrainCircuit } from "react-icons/lu";
 import { FaDartLang } from "react-icons/fa6";
 
 const Skills = () => {
@@ -77,8 +76,8 @@ const Skills = () => {
     {
       title: "Fields of Expertise",
       skills: [
+        { name: "AI Agents", icon: <SiN8N />, level: 95 },
         { name: "Data Science", icon: <BsClipboard2DataFill />, level: 90 },
-        { name: "AI Agents", icon: <SiN8N />, level: 90 },
         { name: "Generative AI", icon: <RiAiGenerate2 />, level: 85 },
         { name: "LLM's", icon: <RiRobot2Fill />, level: 80 },
         { name: "Deep Learning", icon: <LuBrainCircuit />, level: 85 },

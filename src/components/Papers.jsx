@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
-import { FiPaperclip } from "react-icons/fi";
+import { motion, useInView } from "framer-motion";
 
 const Papers = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

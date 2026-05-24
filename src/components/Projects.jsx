@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { FiGithub, FiExternalLink, FiX, FiCode } from "react-icons/fi";
+import { FiGithub, FiX, FiCode } from "react-icons/fi";
 
 const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
