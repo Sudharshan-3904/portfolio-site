@@ -35,7 +35,7 @@ const Projects = () => {
             title: "Do It Later App",
             description: "A simple task management application to help users manage their tasks and reminders.",
             image: "/project_images/do_it_later_app.png",
-            category: "Project",
+            category: "Prototype",
             tech: ["Flutter", "Dart", "JSON Storage", "Mobile App"],
             githubLink: "https://github.com/Sudharshan-3904/DoItLater",
             longDescription: `DoItLater is a simple yet powerful to-do list manager built with Flutter. It allows you to keep track of your tasks, categorize them, prioritize them, and set deadlines. This project demonstrates how to use state management in Flutter, interact with JSON files for data persistence, and handle user inputs effectively.
@@ -237,6 +237,45 @@ const Projects = () => {
                 "User authentication and authorization",
                 "Google OAuth integration",
                 "Responsive design for all devices",
+            ],
+        },
+        {
+            id: 13,
+            title: "StudioForge",
+            description: "A simple quiz application built with React to test knowledge on various topics.",
+            image: "/project_images/studio_forge.png",
+            category: "Full Stack",
+            tech: ["React", "Python", "Supabase", "FastAPI"],
+            githubLink: "https://github.com/Sujit-0207/studioforge",
+            longDescription: `StudioForge is a collaborative production workspace built for indie game teams to manage internal documentation, task planning, and bug tracking in one place.
+
+      It combines a team wiki, Kanban board, and lightweight issue tracker into a unified SaaS-style platform tailored for game development workflows.`,
+            highlights: [
+                "Multi User Collboration",
+                "Project Document management",
+                "Kanban boards for task tracking",
+                "User Authentication",
+                "Issue tracking",
+                "Responsive design for all devices",
+            ],
+        },
+        {
+            id: 14,
+            title: "Diabetes Care AI",
+            description:
+                "A multi-agent AI healthcare assistant built with LangGraph and React for triage and clinical support.",
+            image: "/project_images/dmChatbot.png",
+            category: "AI",
+            tech: ["React", "Python", "Supabase", "Docker", "FIHR", "RAG"],
+            githubLink: "https://github.com/Sudharshan-3904/dmChatbot",
+            longDescription: `The multi-agent system features a responsive and modern design, making it seamless for both patients and clinicians to navigate. It includes powerful functionalities such as role-based intent classification, real-time response streaming, and vector-backed research retrieval to provide accurate clinical support.`,
+            highlights: [
+                "Role-based intent classification for tailored medical triage",
+                "Multi-agent LangGraph architecture for specialized clinical support",
+                "VectorDB-backed RAG for accurate medical research retrieval",
+                "FHIR data persistence for secure health record management",
+                "Real-time token streaming for seamless conversational UI",
+                "Automated CI/CD deployment pipelines using GitHub Actions",
             ],
         },
     ];
