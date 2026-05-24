@@ -251,12 +251,12 @@ const Projects = () => {
 
       It combines a team wiki, Kanban board, and lightweight issue tracker into a unified SaaS-style platform tailored for game development workflows.`,
             highlights: [
-                "Multi User Collboration.",
-                "Project Document management.",
-                "Kanban boards for task tracking.",
-                "User Authentication.",
-                "Issue tracking.",
-                "Responsive design for all devices.",
+                "Multi User Collboration",
+                "Project Document management",
+                "Kanban boards for task tracking",
+                "User Authentication",
+                "Issue tracking",
+                "Responsive design for all devices",
             ],
         },
         {
@@ -270,12 +270,12 @@ const Projects = () => {
             githubLink: "https://github.com/Sudharshan-3904/dmChatbot",
             longDescription: `The multi-agent system features a responsive and modern design, making it seamless for both patients and clinicians to navigate. It includes powerful functionalities such as role-based intent classification, real-time response streaming, and vector-backed research retrieval to provide accurate clinical support.`,
             highlights: [
-                "Role-based intent classification for tailored medical triage.",
-                "Multi-agent LangGraph architecture for specialized clinical support.",
-                "VectorDB-backed RAG for accurate medical research retrieval.",
-                "FHIR data persistence for secure health record management.",
-                "Real-time token streaming for seamless conversational UI.",
-                "Automated CI/CD deployment pipelines using GitHub Actions.",
+                "Role-based intent classification for tailored medical triage",
+                "Multi-agent LangGraph architecture for specialized clinical support",
+                "VectorDB-backed RAG for accurate medical research retrieval",
+                "FHIR data persistence for secure health record management",
+                "Real-time token streaming for seamless conversational UI",
+                "Automated CI/CD deployment pipelines using GitHub Actions",
             ],
         },
     ];
