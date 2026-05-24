@@ -27,20 +27,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white relative">
+    <footer className="bg-gray-900 text-white relative pb-6">
+      {/* Semi-circle background */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] bg-gray-900 rounded-full z-0 pointer-events-none"></div>
+
       {/* Scroll to top button */}
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-center -mt-5">
-          <motion.button
-            onClick={scrollToTop}
-            className="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
-            aria-label="Scroll to top"
-            whileHover={{ y: -5 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FiArrowUp className="w-5 h-5" />
-          </motion.button>
-        </div>
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center">
+        <motion.button
+          onClick={scrollToTop}
+          className="bg-primary text-white w-[50px] h-[50px] rounded-full shadow-lg hover:bg-primary-dark transition-colors flex items-center justify-center"
+          aria-label="Scroll to top"
+          whileHover={{ y: -5 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <FiArrowUp className="w-5 h-5" />
+        </motion.button>
       </div>
 
       {/* Main Footer Content
