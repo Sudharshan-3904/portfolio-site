@@ -9,7 +9,7 @@ const experiences = [
         location: "Hyderabad, India",
         start_date: "2026",
         certificate_link:
-            "https://www.dropbox.com/scl/fi/47fuej7himy46ys9j34of/icliniq-internship-certificate.pdf?rlkey=tomjytpycezmmw60h0btcu5tv&st=5bhzkf40&dl=0",
+            "https://www.dropbox.com/scl/fi/cimb1ezcxifmgx016t78t/Oracle-Internship-Completion-Letter.pdf?rlkey=bzhex3oxdxsnk8gb4ukdp8rug&st=v38vbl38&dl=0",
         highlights: [
             "Designed and experimented with multi-agent workflow for enterprise application for interactive multi-faceted assistance.",
             "Hot-swappable system instruction sets and components for mid conversation context update without overwriting converstaion and session context.",
