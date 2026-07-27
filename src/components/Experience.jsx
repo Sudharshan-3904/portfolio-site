@@ -12,7 +12,7 @@ const experiences = [
             "https://www.dropbox.com/scl/fi/cimb1ezcxifmgx016t78t/Oracle-Internship-Completion-Letter.pdf?rlkey=bzhex3oxdxsnk8gb4ukdp8rug&st=v38vbl38&dl=0",
         highlights: [
             "Designed and experimented with multi-agent workflow for enterprise application for interactive multi-faceted assistance.",
-            "Hot-swappable system instruction sets and components for mid conversation context update without overwriting converstaion and session context.",
+            "Hot-swappable system instruction sets and components for mid-conversation context update without overwriting conversation and session context.",
             "Multi-step failure detection and re-routing with structured output enforcement for scalable system using LangGraph and custom components.",
         ],
         tools: ["Python", "SQL Developer", "RAG", "Page Indexing", "NLP", "LLM", "Ollama"],
@@ -42,7 +42,7 @@ const experiences = [
         certificate_link:
             "https://www.dropbox.com/scl/fi/4wvev4ncf8hlkjd38t7sr/Telkom-University-Internship-Certificate.pdf?rlkey=npu52vxpp33smgjbtom1xcldg&st=wj4khic8&dl=0",
         highlights: [
-            "Worked on prototyping an IoT based approach to Hydroponics to improve productivity and provide additional real-time monitoring methods.",
+            "Worked on prototyping an IoT-based approach to hydroponics to improve productivity and provide additional real-time monitoring methods.",
             "Tested the viability of the system on various microcontroller boards including Arduino Uno and ESP32 with cloud integration.",
             "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
         ],
@@ -60,7 +60,7 @@ const experiences = [
         highlights: [
             "Developed a backend java based script for AI-based on-device malware detection on Android for validating downloaded files.",
             "Designed and trained the model on Python and using Java to invoke the model to test the file for malware based on the file's metadata.",
-            "This support multiple files types such as .docx, .pdf, .ppt, .apk, and other document file types.",
+            "This supports multiple file types such as .docx, .pdf, .ppt, .apk, and other document file types.",
         ],
         tools: ["Java", "Tensorflow", "Gradle", "ML", "Android", "APK"],
     },
