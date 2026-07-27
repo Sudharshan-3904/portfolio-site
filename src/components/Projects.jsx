@@ -265,7 +265,7 @@ const Projects = () => {
             description:
                 "A multi-agent AI healthcare assistant built with LangGraph and React for triage and clinical support.",
             image: "/project_images/dmChatbot.png",
-            category: "AI",
+            category: "Research",
             tech: ["React", "Python", "Supabase", "Docker", "FIHR", "RAG"],
             githubLink: "https://github.com/Sudharshan-3904/dmChatbot",
             longDescription: `The multi-agent system features a responsive and modern design, making it seamless for both patients and clinicians to navigate. It includes powerful functionalities such as role-based intent classification, real-time response streaming, and vector-backed research retrieval to provide accurate clinical support.`,
@@ -276,6 +276,24 @@ const Projects = () => {
                 "FHIR data persistence for secure health record management",
                 "Real-time token streaming for seamless conversational UI",
                 "Automated CI/CD deployment pipelines using GitHub Actions",
+            ],
+        },
+        {
+            id: 15,
+            title: "Travel Booking Multi-Agent System",
+            description:
+                "A multi-agent AI travel booking system built as a simple benchmark to compare impact of various parameters on performance.",
+            image: "/project_images/travelBooking.png",
+            category: "AI",
+            tech: ["Streamlit", "Python", "LangGraph", "Ollama", "AI Agents"],
+            githubLink: "https://github.com/Sudharshan-3904/travelBooking",
+            longDescription: `A peer-to-peer multi-agent system where agents delegate tasks to each other to collaboratively simulate planning and booking a trip. Built with the intention to various system and model configurations on output quality and overhead. It also serves as a standardized implementation to test configurations across models.`,
+            highlights: [
+                "Multi-agent LangGraph architecture for collaborative task delegation",
+                "Standardized benchmark to compare system and model configurations",
+                "Customizable tool set for various travel planning and booking tasks",
+                "Comprehensize automated testing results and summary of sustained testing",
+                "Randommized testing scenarios to test robustness of the model and system configurations",
             ],
         },
     ];
