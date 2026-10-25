@@ -37,7 +37,7 @@ const Skills = () => {
         },
     };
 
-    // Categorized skills reflecting engineering role
+    // 4 categorized skill cards arranged as a 2x2 cube
     const skillCategories = [
         {
             title: "Core Development",
@@ -81,20 +81,19 @@ const Skills = () => {
                 { name: "Observability & Tracing", status: "Exploring" },
             ],
         },
-    ];
-
-    const supportingToolGroups = [
         {
-            category: "AI & Agent Frameworks",
-            tools: ["LangGraph", "LangChain", "Ollama", "PyTorch", "ChromaDB", "LM Studio"],
-        },
-        {
-            category: "Backend & Data",
-            tools: ["FastAPI", "Flask", "MongoDB", "SQLite", "NumPy", "Pandas"],
-        },
-        {
-            category: "Infrastructure & Tooling",
-            tools: ["Linux", "Docker", "Git & GitHub", "Postman", "N8N"],
+            title: "Tools & Infrastructure",
+            badge: "Tooling & Infra",
+            icon: <LuTerminal className="w-5 h-5 text-emerald-400" />,
+            description: "Developer tooling, container environments, vector stores, and orchestration frameworks.",
+            items: [
+                { name: "LangGraph & LangChain", status: "Primary" },
+                { name: "Docker & Linux Environments", status: "Working knowledge" },
+                { name: "Git, GitHub & CI/CD", status: "Primary" },
+                { name: "MongoDB & ChromaDB", status: "Working knowledge" },
+                { name: "Postman & API Testing", status: "Working knowledge" },
+                { name: "N8N Workflow Automation", status: "Working knowledge" },
+            ],
         },
     ];
 
@@ -117,7 +116,7 @@ const Skills = () => {
             <div className="absolute -right-20 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
             <div className="absolute -left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
                 {/* Section Title */}
                 <div className="section-title mb-16 text-center">
                     <motion.h2
@@ -139,19 +138,19 @@ const Skills = () => {
                     </p>
                 </div>
 
-                {/* 3 Core Engineering Pillars */}
+                {/* 2x2 Cube Grid */}
                 <motion.div
                     ref={ref}
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
                 >
                     {skillCategories.map((category, idx) => (
                         <motion.div
                             key={idx}
                             variants={cardVariants}
-                            className="bg-dark-lighter/70 rounded-2xl border border-slate-800/80 p-6 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
+                            className="bg-dark-lighter/70 rounded-2xl border border-slate-800/80 p-6 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
                             whileHover={{ y: -4 }}
                         >
                             <div>
@@ -175,7 +174,7 @@ const Skills = () => {
                                     {category.items.map((item, itemIdx) => (
                                         <div
                                             key={itemIdx}
-                                            className="flex items-center justify-between p-2 rounded-lg bg-dark/50 border border-slate-800/60"
+                                            className="flex items-center justify-between p-2.5 rounded-lg bg-dark/50 border border-slate-800/60"
                                         >
                                             <span className="text-sm text-darkText-primary font-medium">
                                                 {item.name}
@@ -193,41 +192,6 @@ const Skills = () => {
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                {/* Supporting Tools and Technologies */}
-                <motion.div
-                    className="mt-12 bg-dark-lighter/50 rounded-2xl border border-slate-800/80 p-8 shadow-dark-md"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                    <div className="flex items-center gap-2 mb-6">
-                        <LuTerminal className="w-4 h-4 text-accent" />
-                        <h3 className="text-base font-bold text-darkText-primary font-mono tracking-tight">
-                            Supporting Tools & Technologies
-                        </h3>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {supportingToolGroups.map((group, gIdx) => (
-                            <div key={gIdx} className="space-y-3">
-                                <h4 className="text-xs font-mono text-darkText-muted uppercase tracking-wider">
-                                    {group.category}
-                                </h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {group.tools.map((tool, tIdx) => (
-                                        <span
-                                            key={tIdx}
-                                            className="px-3 py-1 rounded-md text-xs font-mono bg-dark-lightest/60 text-darkText-secondary border border-slate-800 hover:border-slate-700 transition-colors"
-                                        >
-                                            {tool}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
                 </motion.div>
             </div>
         </section>

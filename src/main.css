@@ -91,7 +91,7 @@
 /* Custom component classes */
 @layer components {
   .container {
-    @apply px-4 mx-auto max-w-7xl;
+    @apply w-full px-4 mx-auto max-w-7xl;
   }
   
   .btn {

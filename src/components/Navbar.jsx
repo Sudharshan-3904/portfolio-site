@@ -79,12 +79,12 @@ const Navbar = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex justify-between items-center gap-6">
           {/* Logo / Brand */}
           <a
             href="#home"
-            className="text-sm font-mono font-bold tracking-tight text-darkText-primary hover:text-primary transition-colors flex items-center gap-2"
+            className="flex-shrink-0 text-sm font-mono font-bold tracking-tight text-darkText-primary hover:text-primary transition-colors flex items-center gap-2"
           >
             <span className="px-1.5 py-0.5 rounded bg-primary/15 text-primary text-xs font-mono border border-primary/25">
               &gt;
@@ -97,7 +97,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="hidden md:flex items-center space-x-6 text-xs font-mono"
+            className="hidden lg:flex items-center gap-5 xl:gap-8 text-xs font-mono"
           >
             {navLinks.map((link, index) => (
               <a
@@ -111,7 +111,7 @@ const Navbar = () => {
           </motion.div>
 
           {/* Mobile Navigation Toggle */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               aria-label="Toggle navigation menu"
@@ -131,7 +131,7 @@ const Navbar = () => {
           initial="closed"
           animate={isOpen ? "open" : "closed"}
           variants={menuVariants}
-          className="md:hidden overflow-hidden bg-dark-lighter/95 backdrop-blur-md rounded-xl mt-3 border border-slate-800/90 shadow-2xl"
+          className="lg:hidden overflow-hidden bg-dark-lighter/95 backdrop-blur-md rounded-xl mt-3 border border-slate-800/90 shadow-2xl"
         >
           <div className="flex flex-col space-y-1 p-4 font-mono text-xs">
             {navLinks.map((link, index) => (
