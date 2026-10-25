@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Papers from "./components/Papers";
+import Publications from "./components/Publications";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
@@ -79,7 +79,8 @@ function App() {
         <Skills />
         <Experiences />
         <Projects />
-        <Papers />
+        <FreelanceWorks />
+        <Publications />
         <Contact />
       </main>
       <Footer />
