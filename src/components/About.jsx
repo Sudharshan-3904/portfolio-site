@@ -49,7 +49,7 @@ const About = () => {
                 "My primary technical direction: developing LLM-assisted workflows, multi-agent coordination, retrieval-augmented pipelines, and local inference models.",
         },
         {
-            icon: <FiServer className="w-5 h-5 text-indigo-400" />,
+            icon: <FiServer className="w-5 h-5 text-primary" />,
             title: "Software Engineering & Systems Breadth",
             description:
                 "Building beyond a single domain: web service backends (FastAPI/Flask), data modeling, embedded hardware (IoT), and developer tooling.",
@@ -100,7 +100,7 @@ const About = () => {
 
                         <motion.p variants={itemVariants}>
                             My primary technical focus is in{" "}
-                            <span className="text-white font-medium">Python and intelligent systems</span>. I build
+                            <span className="text-darkText-primary font-medium">Python and intelligent systems</span>. I build
                             LLM-assisted applications, multi-agent workflows, and retrieval-augmented systems, exploring
                             how models can interact with tools, manage state, and assist human workflows reliably. I
                             treat this as an applied engineering craft rather than magic: understanding the constraints,

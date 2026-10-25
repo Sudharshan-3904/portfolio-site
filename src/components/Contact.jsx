@@ -118,7 +118,7 @@ export default function Contact() {
                   href="https://github.com/Sudharshan-3904"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-white transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-darkText-primary transition-colors"
                 >
                   <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                     <FiGithub className="w-4 h-4" />
@@ -133,7 +133,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-white transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-darkText-primary transition-colors"
                 >
                   <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                     <FiLinkedin className="w-4 h-4" />
@@ -238,7 +238,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-darkText-primary bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
               >
                 <FiSend className="w-4 h-4" />
                 <span>Send Message</span>

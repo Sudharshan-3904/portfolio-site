@@ -109,7 +109,7 @@ const FreelanceWorks = () => {
               {/* Right: Project Content */}
               <div className="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-darkText-primary mb-2">
                     {work.title}
                   </h3>
                   <p className="text-darkText-secondary text-base mb-4 whitespace-pre-line">
@@ -143,7 +143,7 @@ const FreelanceWorks = () => {
                       href={work.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-primary hover:bg-accent text-white px-5 py-2 rounded font-medium transition-colors text-sm flex items-center gap-2"
+                      className="bg-primary hover:bg-primary-dark text-darkText-primary px-5 py-2 rounded font-medium transition-colors text-sm flex items-center gap-2 shadow-sm shadow-primary/30"
                     >
                       View Live <FiExternalLink />
                     </a>

@@ -27,12 +27,12 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-dark-darker text-white relative pt-12 pb-12 border-t border-slate-800/80">
+        <footer className="bg-dark-darker text-darkText-primary relative pt-12 pb-12 border-t border-slate-800/80">
             {/* Scroll to top button */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center">
                 <motion.button
                     onClick={scrollToTop}
-                    className="bg-dark-lighter border border-slate-700 text-darkText-secondary hover:text-white w-10 h-10 rounded-full shadow-lg hover:border-primary transition-all flex items-center justify-center"
+                    className="bg-dark-lighter border border-slate-700 text-darkText-secondary hover:text-darkText-primary w-10 h-10 rounded-full shadow-lg hover:border-primary transition-all flex items-center justify-center"
                     aria-label="Scroll to top"
                     whileHover={{ y: -3 }}
                     whileTap={{ scale: 0.95 }}

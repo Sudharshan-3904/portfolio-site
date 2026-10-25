@@ -103,7 +103,7 @@ const Navbar = () => {
               <a
                 key={index}
                 href={link.href}
-                className="text-darkText-secondary hover:text-white transition-colors duration-200"
+                className="text-darkText-secondary hover:text-darkText-primary transition-colors duration-200"
               >
                 {link.name}
               </a>
@@ -139,7 +139,7 @@ const Navbar = () => {
                 key={index}
                 variants={itemVariants}
                 href={link.href}
-                className="text-darkText-secondary hover:text-white hover:bg-dark-lightest/70 px-3 py-2.5 rounded-lg transition-colors"
+                className="text-darkText-secondary hover:text-darkText-primary hover:bg-dark-lightest/70 px-3 py-2.5 rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

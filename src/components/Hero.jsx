@@ -24,12 +24,7 @@ const Hero = () => {
         },
     };
 
-    const technicalLabels = [
-        "Python",
-        "LLMs",
-        "Multi-agent systems",
-        "Applied research",
-    ];
+    const technicalLabels = ["Python", "LLMs", "Multi-agent systems", "Applied research"];
 
     const socialLinks = [
         {
@@ -83,7 +78,7 @@ const Hero = () => {
                             </p>
                             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-darkText-primary tracking-tight leading-[1.25]">
                                 I build things, explore ideas, <br className="hidden sm:inline" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-indigo-300 to-accent">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-darkText-primary">
                                     and figure out how they work.
                                 </span>
                             </h1>
@@ -95,26 +90,37 @@ const Hero = () => {
                             className="text-darkText-secondary text-base sm:text-lg leading-relaxed max-w-2xl"
                         >
                             I'm a software developer with a strong technical direction in{" "}
-                            <span className="text-darkText-primary font-medium">Python and intelligent systems</span>.
-                            I enjoy understanding how technologies function under the hood, building practical tools,
-                            and turning concepts into working implementations across software engineering, AI applications,
+                            <span className="text-darkText-primary font-medium">Python and intelligent systems</span>. I
+                            enjoy understanding how technologies function under the hood, building practical tools, and
+                            turning concepts into working implementations across software engineering, AI applications,
                             and modern computing systems.
                         </motion.p>
 
                         {/* Direction Overview Pills */}
-                        <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2 pt-1 text-xs font-mono text-darkText-muted">
+                        <motion.div
+                            variants={itemVariants}
+                            className="flex flex-wrap items-center gap-2 pt-1 text-xs font-mono text-darkText-muted"
+                        >
                             <span className="text-darkText-secondary font-semibold">Current Focus:</span>
-                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">Python</span>
-                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">AI Agents & LLMs</span>
-                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">Web Backends</span>
-                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">IoT & Systems</span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">
+                                Python
+                            </span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">
+                                AI Agents & LLMs
+                            </span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">
+                                Web Backends
+                            </span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">
+                                IoT & Systems
+                            </span>
                         </motion.div>
 
                         {/* Calls to Action */}
                         <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
                             <a
                                 href="#projects"
-                                className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
+                                className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm font-medium text-darkText-primary bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
                             >
                                 Explore my work
                                 <FiArrowRight className="w-4 h-4" />
@@ -130,14 +136,17 @@ const Hero = () => {
                             </a>
                             <a
                                 href="#contact"
-                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg text-sm font-medium text-darkText-secondary hover:text-white transition-colors"
+                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 rounded-lg text-sm font-medium text-darkText-secondary hover:text-darkText-primary transition-colors"
                             >
                                 Contact
                             </a>
                         </motion.div>
 
                         {/* Subtle Social Links */}
-                        <motion.div variants={itemVariants} className="flex items-center gap-4 pt-4 border-t border-slate-800/60 max-w-md">
+                        <motion.div
+                            variants={itemVariants}
+                            className="flex items-center gap-4 pt-4 border-t border-slate-800/60 max-w-md"
+                        >
                             <span className="text-xs font-mono text-darkText-muted">Connect:</span>
                             {socialLinks.map((link, index) => (
                                 <a
@@ -169,7 +178,7 @@ const Hero = () => {
                                         <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                                     </div>
-                                    <span className="text-[11px] text-slate-400">workbench.py</span>
+                                    <span className="text-[11px] text-slate-400">__init__.py</span>
                                 </div>
 
                                 {/* Portrait image */}

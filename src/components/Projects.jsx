@@ -325,7 +325,7 @@ const Projects = () => {
                             className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 
                 ${
                     selectedCategory === category
-                        ? "bg-primary text-white shadow-md"
+                        ? "bg-primary text-darkText-primary shadow-md shadow-primary/25"
                         : "bg-dark-lightest text-darkText-secondary hover:bg-dark-lighter"
                 }`}
                             onClick={() => setSelectedCategory(category)}
@@ -377,7 +377,7 @@ const Projects = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60" />
                                 <div className="absolute bottom-0 left-0 p-4 w-full">
-                                    <span className="px-3 py-1 bg-primary/90 text-white text-xs rounded-full">
+                                    <span className="px-3 py-1 bg-primary/90 text-darkText-primary text-xs rounded-full">
                                         {project.category}
                                     </span>
                                 </div>
@@ -470,7 +470,7 @@ const Projects = () => {
                                         <h3 className="text-2xl font-bold text-darkText-primary mb-2">
                                             {selectedProject.title}
                                         </h3>
-                                        <span className="px-3 py-1 bg-primary text-white text-xs rounded-full">
+                                        <span className="px-3 py-1 bg-primary text-darkText-primary text-xs rounded-full">
                                             {selectedProject.category}
                                         </span>
                                     </div>

@@ -1,142 +1,156 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-accent: #06b6d4;
-  --color-accent-muted: #0284c7;
-  --color-dark: #0b0f19;
-  --color-dark-darker: #070a12;
-  --color-dark-lighter: #111827;
-  --color-dark-lightest: #1a2333;
-  --color-darkText-primary: #f8fafc;
-  --color-darkText-secondary: #94a3b8;
-  --color-darkText-muted: #64748b;
-  --color-surface: #111827;
+    --color-primary: #0f766e;
+    --color-primary-dark: #115e59;
+    --color-accent: #2dd4bf;
+    --color-accent-muted: #14b8a6;
+    --color-dark: #000000;
+    --color-dark-darker: #000000;
+    --color-dark-lighter: #090e0e;
+    --color-dark-lightest: #111a19;
+    --color-darkText-primary: #e2e8f0;
+    --color-darkText-secondary: #94a3b8;
+    --color-darkText-muted: #64748b;
+    --color-surface: #090e0e;
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Georgia", "ui-serif", "serif";
-  --font-mono: "JetBrains Mono", "SFMono-Regular", "ui-monospace", monospace;
+    /* Harmonized slate/gray tokens matching black bg and dark teal */
+    --color-slate-900: #060909;
+    --color-slate-800: #121c1a;
+    --color-slate-700: #1c2b28;
+    --color-slate-400: #94a3b8;
+    --color-slate-300: #cbd5e1;
+    --color-gray-800: #121c1a;
+    --color-gray-700: #1c2b28;
 
-  --spacing-128: 32rem;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: "Georgia", "ui-serif", "serif";
+    --font-mono: "JetBrains Mono", "SFMono-Regular", "ui-monospace", monospace;
 
-  --shadow-dark-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-  --shadow-dark: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
-  --shadow-dark-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
-  --shadow-dark-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-  --shadow-dark-glow: 0 0 12px 1px rgba(99, 102, 241, 0.25);
+    --spacing-128: 32rem;
 
-  --background-image-dark-gradient: linear-gradient(to bottom, #0b0f19, #111827);
-  --background-image-dark-radial: radial-gradient(ellipse at center, #111827, #0b0f19);
-  --background-image-dark-shine: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.08), transparent);
+    --shadow-dark-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+    --shadow-dark: 0 1px 3px 0 rgba(0, 0, 0, 0.8), 0 1px 2px 0 rgba(0, 0, 0, 0.9);
+    --shadow-dark-md: 0 4px 6px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -1px rgba(0, 0, 0, 0.8);
+    --shadow-dark-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.8);
+    --shadow-dark-glow: 0 0 16px 2px rgba(15, 118, 110, 0.45);
+
+    --background-image-dark-gradient: linear-gradient(to bottom, #000000, #090e0e);
+    --background-image-dark-radial: radial-gradient(ellipse at center, #061917, #000000);
+    --background-image-dark-shine: linear-gradient(45deg, transparent, rgba(15, 118, 110, 0.12), transparent);
 }
 
 @utility bg-transparent-border {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(15, 118, 110, 0.35);
 }
 
 /* Global styles */
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 
-  body {
-    @apply font-sans text-darkText-primary bg-dark;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+    body {
+        @apply font-sans text-darkText-primary bg-dark;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-darkText-primary;
-  }
-  h1 {
-    @apply text-4xl md:text-5xl;
-  }
-  h2 {
-    @apply text-3xl md:text-4xl;
-  }
-  h3 {
-    @apply text-2xl md:text-3xl;
-  }
-  
-  p {
-    @apply text-darkText-secondary;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold text-darkText-primary;
+    }
+    h1 {
+        @apply text-4xl md:text-5xl;
+    }
+    h2 {
+        @apply text-3xl md:text-4xl;
+    }
+    h3 {
+        @apply text-2xl md:text-3xl;
+    }
 
-  section {
-    @apply py-16 md:py-24 relative;
-  }
+    p {
+        @apply text-darkText-secondary;
+    }
 
-  /* Custom scrollbar for dark mode */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
+    section {
+        @apply py-16 md:py-24 relative;
+    }
 
-  ::-webkit-scrollbar-track {
-    @apply bg-dark-darker;
-  }
+    /* Custom scrollbar for dark mode */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    @apply bg-dark-lightest rounded-full;
-  }
+    ::-webkit-scrollbar-track {
+        @apply bg-dark-darker;
+    }
 
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
-  }
+    ::-webkit-scrollbar-thumb {
+        @apply bg-dark-lightest rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary;
+    }
 }
 
 /* Custom component classes */
 @layer components {
-  .container {
-    @apply w-full px-4 mx-auto max-w-7xl;
-  }
-  
-  .btn {
-    @apply px-6 py-2 font-medium transition-all duration-300 rounded-md;
-  }
-  
-  .btn-primary {
-    @apply text-white bg-primary hover:bg-primary-dark shadow-md hover:shadow-dark-glow;
-  }
-  
-  .btn-outline {
-    @apply bg-transparent-border border-primary text-primary;
-  }
+    .container {
+        @apply w-full px-4 mx-auto max-w-7xl;
+    }
 
-  .card {
-    @apply bg-surface shadow-dark-md rounded-xl p-6 hover:shadow-dark-lg transition-all duration-300;
-  }
+    .btn {
+        @apply px-6 py-2 font-medium transition-all duration-300 rounded-md;
+    }
 
-  .section-title {
-    @apply text-center mb-16;
-  }
+    .btn-primary {
+        @apply text-darkText-primary bg-primary hover:bg-primary-dark shadow-md hover:shadow-dark-glow;
+    }
 
-  .section-title h2 {
-    @apply text-3xl md:text-4xl font-bold mb-4;
-  }
+    .btn-outline {
+        @apply bg-transparent-border border-primary text-primary;
+    }
 
-  .section-title .underline {
-    @apply w-20 h-1 bg-primary mx-auto;
-  }
+    .card {
+        @apply bg-surface shadow-dark-md rounded-xl p-6 hover:shadow-dark-lg transition-all duration-300;
+    }
 
-  .glow-effect {
-    @apply relative;
-  }
+    .section-title {
+        @apply text-center mb-16;
+    }
 
-  .glow-effect::after {
-    content: "";
-    @apply absolute inset-0 rounded-md bg-primary opacity-0 blur-md transition-opacity duration-300;
-    z-index: -1;
-  }
+    .section-title h2 {
+        @apply text-3xl md:text-4xl font-bold mb-4;
+    }
 
-  .glow-effect:hover::after {
-    @apply opacity-20;
-  }
+    .section-title .underline {
+        @apply w-20 h-1 bg-primary mx-auto;
+    }
 
-  .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent;
-  }
+    .glow-effect {
+        @apply relative;
+    }
+
+    .glow-effect::after {
+        content: "";
+        @apply absolute inset-0 rounded-md bg-primary opacity-0 blur-md transition-opacity duration-300;
+        z-index: -1;
+    }
+
+    .glow-effect:hover::after {
+        @apply opacity-20;
+    }
+
+    .gradient-text {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-darkText-primary;
+    }
 }

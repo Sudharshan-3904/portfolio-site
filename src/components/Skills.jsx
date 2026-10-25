@@ -70,7 +70,7 @@ const Skills = () => {
         {
             title: "Systems, Hardware & Prototyping",
             badge: "Systems & Hardware",
-            icon: <LuLayers className="w-5 h-5 text-indigo-400" />,
+            icon: <LuLayers className="w-5 h-5 text-primary" />,
             description: "Hands-on computing: embedded microcontrollers, sensor telemetry, and low-level code.",
             items: [
                 { name: "Embedded Hardware (ESP32, Arduino)", status: "Proficient", evidence: "ESP32 · Arduino Uno · MicroPython · C++ Firmware" },
