@@ -13,44 +13,6 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Full Stack Blog Website",
-            description: "A modern, responsive blog website with a React frontend and a Python/Flask backend.",
-            image: "/project_images/fs_blog_site.png",
-            category: "Full Stack",
-            tech: ["Python", "Flask", "React", "CSS/SCSS", "SQLAlchemy", "JWT", "REST API"],
-            githubLink: "https://github.com/Sudharshan-3904/BlogWebsiteFullStack",
-            longDescription: `This is a full-stack blog website built with a React frontend and a Python/Flask backend. The application allows users to create, read, update, and delete blog posts, as well as manage user authentication and authorization.
-
-      The frontend is built with React, providing a modern and responsive user interface. The backend is implemented using Flask, which handles API requests, user authentication, and database interactions. The application uses SQLAlchemy for ORM and JWT for secure user authentication.`,
-            highlights: [
-                "User authentication and authorization",
-                "Comment system for blog posts",
-                "Rich text editor for blog posts",
-                "Responsive design for all devices",
-                "Search functionality for blog posts",
-            ],
-        },
-        {
-            id: 2,
-            title: "Do It Later App",
-            description: "A simple task management application to help users manage their tasks and reminders.",
-            image: "/project_images/do_it_later_app.png",
-            category: "Prototype",
-            tech: ["Flutter", "Dart", "JSON Storage", "Mobile App"],
-            githubLink: "https://github.com/Sudharshan-3904/DoItLater",
-            longDescription: `DoItLater is a simple yet powerful to-do list manager built with Flutter. It allows you to keep track of your tasks, categorize them, prioritize them, and set deadlines. This project demonstrates how to use state management in Flutter, interact with JSON files for data persistence, and handle user inputs effectively.
-
-      The application features a clean and intuitive user interface, making it easy to add, edit, and delete tasks. It also supports task categorization and prioritization, allowing users to focus on what matters most.`,
-            highlights: [
-                "Easy task management",
-                "Categorization and prioritization of tasks",
-                "User-friendly interface",
-                "Data persistence using JSON files",
-                "Dark and Light themes",
-            ],
-        },
-        {
-            id: 3,
             title: "Neural Style Transfer",
             description: "A practical implementation of Neural Style Transfer using Deep Learning Techniques.",
             image: "/project_images/nst_application.png",
@@ -69,7 +31,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 4,
+            id: 2,
             title: "Echo State Network Research",
             description: "A hands-on research and testing into development of Echo State Networks (ESN).",
             image: "/project_images/echo_state_network.png",
@@ -88,26 +50,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 5,
-            title: "IoT-Based Hydroponics System",
-            description:
-                "An automated hydroponics monitoring system with real-time data collection and cloud integration.",
-            image: "/project_images/hydroponics.png",
-            category: "Prototype",
-            tech: ["Arduino", "ESP32", "IoT", "Python", "Flask", "Firebase"],
-            githubLink: "https://github.com/Sudharshan-3904/SmartHydropnics",
-            longDescription: `This is an IoT-based hydroponics monitoring system designed to improve agricultural productivity through automated real-time monitoring. The system utilizes microcontroller boards like Arduino Uno and ESP32 with cloud integration to provide comprehensive plant growth management. It features a robust backend system with local model hosting capabilities, allowing for dynamic system adjustments and optimizations.
-      
-      The project demonstrates the practical application of IoT technology in agriculture, offering farmers and researchers an efficient way to monitor and control hydroponic environments remotely while ensuring optimal growing conditions.`,
-            highlights: [
-                "Real-time Environmental Monitoring",
-                "Multi-platform Microcontroller Support",
-                "Cloud Integration with Firebase",
-                "Local Model Hosting with Dynamic Updates",
-            ],
-        },
-        {
-            id: 6,
+            id: 3,
             title: "Smart Lab Copilot",
             description: "An IoT enabled smart solution for resource wastage.",
             image: "/project_images/slc.png",
@@ -125,7 +68,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 7,
+            id: 4,
             title: "PyCursor",
             description: "A Python based AI IDE for Python application development.",
             image: "/project_images/pycursor.png",
@@ -145,7 +88,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 8,
+            id: 5,
             title: "Multi Model Researcher",
             description: "A simple quiz application built with React to test knowledge on various topics.",
             image: "/project_images/mmr.png",
@@ -165,7 +108,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 9,
+            id: 6,
             title: "StudioForge",
             description: "A simple quiz application built with React to test knowledge on various topics.",
             image: "/project_images/studio_forge.png",
@@ -185,7 +128,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 10,
+            id: 7,
             title: "Diabetes Care AI",
             description:
                 "A multi-agent AI healthcare assistant built with LangGraph and React for triage and clinical support.",
@@ -204,7 +147,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 11,
+            id: 8,
             title: "Travel Booking Multi-Agent System",
             description:
                 "A multi-agent AI travel booking system built as a simple benchmark to compare impact of various parameters on performance.",
@@ -222,11 +165,11 @@ const Projects = () => {
             ],
         },
         {
-            id: 12,
-            title: "Local AI Harness",
+            id: 9,
+            title: "AgentLab",
             description:
                 "A local-first platform for running, monitoring, and benchmarking AI-assisted coding tasks across local models, tools, and dynamically switched skill suites.",
-            image: "/project_images/localAIHarness.png",
+            image: "/project_images/agentLab.png",
             category: "AI",
             tech: ["Python", "FastAPI", "LangGraph", "Ollama", "LM Studio", "React", "SQLite", "Docker"],
             githubLink: "https://github.com/Sudharshan-3904/AgentLab",
