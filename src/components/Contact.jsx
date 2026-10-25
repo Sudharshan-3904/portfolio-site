@@ -68,7 +68,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-dark-lighter relative overflow-hidden min-h-screen flex items-center justify-center"
+      className="py-24 bg-dark-lighter/40 backdrop-blur-[1px] relative overflow-hidden min-h-screen flex items-center justify-center"
     >
       {/* Background accents */}
       <div className="absolute right-0 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -105,7 +105,7 @@ export default function Contact() {
         >
           {/* Direct channels & info */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="bg-dark/70 rounded-2xl border border-slate-800/80 p-5 sm:p-6 md:p-8 space-y-6 shadow-dark-md">
+            <div className="bg-dark/35 backdrop-blur-md rounded-2xl border border-slate-800/70 p-5 sm:p-6 md:p-8 space-y-6 shadow-dark-md">
               <h3 className="text-lg font-bold text-darkText-primary font-mono">
                 Direct Channels
               </h3>
@@ -118,7 +118,7 @@ export default function Contact() {
                   href="https://github.com/Sudharshan-3904"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-darkText-primary transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/40 backdrop-blur-sm border border-slate-800/80 hover:border-primary/40 text-sm text-darkText-secondary hover:text-darkText-primary transition-colors"
                 >
                   <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                     <FiGithub className="w-4 h-4" />
@@ -133,7 +133,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-darkText-primary transition-colors"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/40 backdrop-blur-sm border border-slate-800/80 hover:border-primary/40 text-sm text-darkText-secondary hover:text-darkText-primary transition-colors"
                 >
                   <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                     <FiLinkedin className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function Contact() {
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="bg-dark/70 rounded-2xl border border-slate-800/80 p-5 sm:p-6 md:p-8 shadow-dark-md space-y-5"
+              className="bg-dark/35 backdrop-blur-md rounded-2xl border border-slate-800/70 p-5 sm:p-6 md:p-8 shadow-dark-md space-y-5"
             >
               <h3 className="text-lg font-bold text-darkText-primary font-mono mb-2">
                 Send a Message
@@ -162,7 +162,7 @@ export default function Contact() {
                 <div
                   className={`p-3 rounded-lg text-xs font-mono ${
                     status.includes("successfully")
-                      ? "bg-emerald-950/40 text-emerald-400 border border-emerald-800/60"
+                      ? "bg-blue-950/40 text-blue-300 border border-blue-800/60"
                       : "bg-red-950/40 text-red-400 border border-red-800/60"
                   }`}
                 >
@@ -186,7 +186,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
+                    className="w-full bg-dark-lighter/40 backdrop-blur-sm border border-slate-800/80 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
                     placeholder="e.g. Alex Chen"
                   />
                 </div>
@@ -200,7 +200,7 @@ export default function Contact() {
                     value={form.sender}
                     onChange={handleChange}
                     required
-                    className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
+                    className="w-full bg-dark-lighter/40 backdrop-blur-sm border border-slate-800/80 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
                     placeholder="alex@domain.com"
                   />
                 </div>
@@ -216,7 +216,7 @@ export default function Contact() {
                   value={form.subject}
                   onChange={handleChange}
                   required
-                  className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
+                  className="w-full bg-dark-lighter/40 backdrop-blur-sm border border-slate-800/80 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
                   placeholder="Python & AI Systems Opportunity"
                 />
               </div>
@@ -231,7 +231,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors resize-none placeholder:text-darkText-muted"
+                  className="w-full bg-dark-lighter/40 backdrop-blur-sm border border-slate-800/80 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors resize-none placeholder:text-darkText-muted"
                   placeholder="Share details about the role, project, or collaboration..."
                 />
               </div>

@@ -27,7 +27,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-dark-darker text-darkText-primary relative pt-12 pb-12 border-t border-slate-800/80">
+        <footer className="bg-dark-darker/80 backdrop-blur-md text-darkText-primary relative pt-12 pb-12 border-t border-slate-800/80">
             {/* Scroll to top button */}
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center">
                 <motion.button

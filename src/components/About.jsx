@@ -57,7 +57,7 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="py-24 bg-dark-lighter relative overflow-hidden">
+        <section id="about" className="py-24 bg-dark-lighter/40 backdrop-blur-[1px] relative overflow-hidden">
             {/* Background accents */}
             <div className="absolute right-0 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
             <div className="absolute left-10 bottom-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -87,7 +87,7 @@ const About = () => {
                 <div ref={ref} className="max-w-4xl mx-auto">
                     {/* Main Narrative */}
                     <motion.div
-                        className="space-y-6 text-darkText-secondary text-base md:text-lg leading-relaxed bg-dark/60 p-5 sm:p-8 md:p-10 rounded-2xl border border-slate-800/80 shadow-dark-md"
+                        className="space-y-6 text-darkText-secondary text-base md:text-lg leading-relaxed bg-dark/35 backdrop-blur-md p-5 sm:p-8 md:p-10 rounded-2xl border border-slate-800/70 shadow-dark-md"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
@@ -117,7 +117,7 @@ const About = () => {
 
                         <motion.p
                             variants={itemVariants}
-                            className="border-t border-slate-800/80 pt-5 text-darkText-secondary"
+                            className="border-t border-slate-800/70 pt-5 text-darkText-secondary"
                         >
                             I value working implementations over inflated claims. I'm looking for opportunities where I
                             can contribute to Python and software engineering, build practical AI-powered systems, and
@@ -140,7 +140,7 @@ const About = () => {
                                 <motion.div
                                     key={index}
                                     variants={cardVariants}
-                                    className={`bg-dark/80 p-5 sm:p-8 rounded-xl border border-slate-800/80 hover:border-primary/40 transition-all duration-300 flex flex-col justify-between ${
+                                    className={`bg-dark/35 backdrop-blur-md p-5 sm:p-8 rounded-xl border border-slate-800/70 hover:border-primary/40 transition-all duration-300 flex flex-col justify-between shadow-dark-md ${
                                         isLastAndOdd
                                             ? "sm:col-span-2 sm:w-[75%] sm:mx-auto sm:justify-self-center shadow-dark-md"
                                             : "w-full"
@@ -148,7 +148,7 @@ const About = () => {
                                     whileHover={{ y: -3 }}
                                 >
                                     <div>
-                                        <div className="w-10 h-10 rounded-lg bg-dark-lighter border border-slate-800 flex items-center justify-center mb-4">
+                                        <div className="w-10 h-10 rounded-lg bg-dark-lighter/50 border border-slate-800/80 flex items-center justify-center mb-4">
                                             {item.icon}
                                         </div>
                                         <h3 className="font-semibold text-darkText-primary text-base sm:text-lg mb-2">

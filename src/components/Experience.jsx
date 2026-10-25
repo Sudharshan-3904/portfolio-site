@@ -85,7 +85,7 @@ const experiences = [
 
 const ExperienceCard = ({ exp }) => (
     <motion.div
-        className="w-full bg-dark-lighter/70 border border-slate-800/80 rounded-2xl p-5 sm:p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative"
+        className="w-full bg-dark-lighter/35 backdrop-blur-md border border-slate-800/70 rounded-2xl p-5 sm:p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -157,7 +157,7 @@ const Experiences = () => {
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
     return (
-        <section className="py-24 bg-dark-lighter relative overflow-hidden" id="experiences">
+        <section className="py-24 bg-dark-lighter/40 backdrop-blur-[1px] relative overflow-hidden" id="experiences">
             <div className="absolute right-0 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
             <div className="absolute -left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
 

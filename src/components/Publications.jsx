@@ -138,13 +138,11 @@ const Publications = () => {
     }, [isModalOpen]);
 
     return (
-        <section id="publications" className="py-20 bg-dark relative overflow-hidden">
+        <section id="publications" className="py-20 bg-transparent relative overflow-hidden">
             {/* Background design elements */}
-            <div className="absolute right-0 top-20 w-96 h-96 bg-primary opacity-5 blur-3xl -z-10" />
-            <div className="absolute -left-10 bottom-10 w-64 h-64 bg-accent opacity-5 blur-2xl -z-10" />
-            <div className="absolute left-1/3 top-1/2 w-20 h-20 bg-primary opacity-5 blur-xl -z-10" />
-            {/* Grid pattern overlay */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
+            <div className="absolute right-0 top-20 w-96 h-96 bg-primary/10 blur-3xl -z-10" />
+            <div className="absolute -left-10 bottom-10 w-64 h-64 bg-accent/10 blur-2xl -z-10" />
+            <div className="absolute left-1/3 top-1/2 w-20 h-20 bg-primary/10 blur-xl -z-10" />
 
             <div className="container mx-auto px-4 md:px-6">
                 {/* Section Title */}
@@ -214,20 +212,20 @@ const Publications = () => {
                                 key={pub.id}
                                 variants={itemVariants}
                                 whileHover={{ y: -10 }}
-                                className={`bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative ${
+                                className={`bg-dark/30 backdrop-blur-md border border-slate-800/70 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg hover:border-primary/40 transition-all duration-300 relative ${
                                     isLastAndOdd
                                         ? "sm:col-span-2 sm:w-[75%] sm:mx-auto sm:justify-self-center"
                                         : "w-full"
                                 }`}
                             >
                             {/* Publication Image */}
-                            <div className="relative overflow-hidden h-56">
+                            <div className="relative overflow-hidden h-56 rounded-lg">
                                 <img
                                     src={pub.image}
                                     alt={pub.title}
                                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-60" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-50" />
                                 <div className="absolute bottom-0 left-0 p-4 w-full">
                                     <span className="px-3 py-1 bg-primary/90 text-darkText-primary text-xs rounded-full">
                                         {pub.category}
@@ -246,13 +244,13 @@ const Publications = () => {
                                     {pub.tech.slice(0, 4).map((tech, index) => (
                                         <span
                                             key={index}
-                                            className="text-xs px-2 py-1 bg-dark-lightest text-darkText-secondary rounded-md"
+                                            className="text-xs px-2 py-1 bg-dark-lightest/50 border border-slate-800/60 text-darkText-secondary rounded-md"
                                         >
                                             {tech}
                                         </span>
                                     ))}
                                     {pub.tech.length > 4 && (
-                                        <span className="text-xs px-2 py-1 bg-dark-lightest text-darkText-secondary rounded-md">
+                                        <span className="text-xs px-2 py-1 bg-dark-lightest/50 border border-slate-800/60 text-darkText-secondary rounded-md">
                                             +{pub.tech.length - 4} more
                                         </span>
                                     )}

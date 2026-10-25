@@ -40,12 +40,12 @@ const Hero = () => {
     ];
 
     return (
-        <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-dark pt-20 pb-16">
+        <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-transparent pt-20 pb-16">
             {/* Subtle ambient lighting */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-1/4 -right-20 w-96 h-96 rounded-full bg-primary/10 blur-[120px]" />
                 <div className="absolute bottom-1/4 -left-20 w-80 h-80 rounded-full bg-accent/5 blur-[100px]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.08),rgba(255,255,255,0))]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(37,99,235,0.09),rgba(0,0,0,0))]" />
             </div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -170,19 +170,19 @@ const Hero = () => {
                             <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-primary/20 to-accent/20 blur-md opacity-60" />
 
                             {/* Card container */}
-                            <div className="relative rounded-2xl bg-dark-lighter border border-slate-800/80 overflow-hidden shadow-2xl">
+                            <div className="relative rounded-2xl bg-dark-lighter/35 backdrop-blur-md border border-slate-800/70 overflow-hidden shadow-2xl">
                                 {/* Understated terminal header bar */}
-                                <div className="flex items-center justify-between px-4 py-2.5 bg-dark-darker border-b border-slate-800 text-xs font-mono text-darkText-muted">
+                                <div className="flex items-center justify-between px-4 py-2.5 bg-dark-darker/60 backdrop-blur-sm border-b border-slate-800/70 text-xs font-mono text-darkText-muted">
                                     <div className="flex items-center gap-1.5">
                                         <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                                         <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                                        <span className="w-2.5 h-2.5 rounded-full bg-sky-400/80" />
                                     </div>
                                     <span className="text-[11px] text-slate-400">__init__.py</span>
                                 </div>
 
                                 {/* Portrait image */}
-                                <div className="p-4 bg-gradient-to-b from-dark-lighter to-dark">
+                                <div className="p-4 bg-gradient-to-b from-dark-lighter/30 to-dark/30">
                                     <img
                                         src="/photos/ProfileNoBG.png"
                                         alt="Sudharshan - Software Developer"
@@ -191,9 +191,9 @@ const Hero = () => {
                                 </div>
 
                                 {/* Understated engineering details badge */}
-                                <div className="px-4 py-3 bg-dark-darker/90 border-t border-slate-800/80 text-xs font-mono flex items-center justify-between">
+                                <div className="px-4 py-3 bg-dark-darker/60 backdrop-blur-sm border-t border-slate-800/70 text-xs font-mono flex items-center justify-between">
                                     <span className="text-darkText-secondary flex items-center gap-2">
-                                        <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                        <span className="inline-block w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.8)] animate-pulse" />
                                         <span>Python & Intelligent Systems</span>
                                     </span>
                                     <span className="text-darkText-muted">Dev & Systems</span>

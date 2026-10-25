@@ -84,7 +84,7 @@ const Skills = () => {
         {
             title: "Tooling, Infra & Active Exploration",
             badge: "Tools & Exploration",
-            icon: <LuTerminal className="w-5 h-5 text-emerald-400" />,
+            icon: <LuTerminal className="w-5 h-5 text-accent" />,
             description: "Developer workflows, container environments, vector stores, and active research.",
             items: [
                 { name: "Version Control (Git, GitHub, CI)", status: "Core Stack", evidence: "Git CLI · GitHub Actions · CI/CD Pipelines · PR Workflow" },
@@ -111,7 +111,7 @@ const Skills = () => {
     };
 
     return (
-        <section id="skills" className="py-24 bg-dark relative overflow-hidden">
+        <section id="skills" className="py-24 bg-transparent relative overflow-hidden">
             {/* Ambient lighting */}
             <div className="absolute -right-20 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
             <div className="absolute -left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -150,15 +150,15 @@ const Skills = () => {
                         <motion.div
                             key={idx}
                             variants={cardVariants}
-                            className="bg-dark-lighter/70 rounded-2xl border border-slate-800/80 p-5 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
+                            className="bg-dark-lighter/35 backdrop-blur-md rounded-2xl border border-slate-800/70 p-5 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
                             whileHover={{ y: -4 }}
                         >
                             <div>
                                 <div className="flex items-center justify-between mb-4">
-                                    <div className="w-10 h-10 rounded-xl bg-dark-lightest/80 border border-slate-800 flex items-center justify-center">
+                                    <div className="w-10 h-10 rounded-xl bg-dark-lightest/50 border border-slate-800/80 flex items-center justify-center">
                                         {category.icon}
                                     </div>
-                                    <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-dark-lightest border border-slate-800 text-darkText-muted">
+                                    <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-dark-lightest/50 border border-slate-800/80 text-darkText-muted">
                                         {category.badge}
                                     </span>
                                 </div>
@@ -174,7 +174,7 @@ const Skills = () => {
                                     {category.items.map((item, itemIdx) => (
                                         <div
                                             key={itemIdx}
-                                            className="p-2.5 rounded-lg bg-dark/50 border border-slate-800/60 hover:border-slate-700/80 transition-colors"
+                                            className="p-2.5 rounded-lg bg-dark/30 border border-slate-800/50 hover:border-slate-700/80 transition-colors"
                                         >
                                             <div className="flex items-start sm:items-center justify-between gap-2 mb-1">
                                                 <span className="text-sm text-darkText-primary font-medium leading-snug">

@@ -10,6 +10,7 @@ import FreelanceWorks from "./components/FreelanceWorks";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Experiences from "./components/Experience";
+import BackgroundElements from "./components/BackgroundElements";
 import "./main.css";
 
 function App() {
@@ -62,26 +63,31 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark text-darkText-primary">
+    <div className="min-h-screen bg-dark text-darkText-primary relative selection:bg-primary/30 selection:text-white">
       <Navbar />
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
         style={{ scaleX }}
       />
 
-      {/* Background elements */}
-      <div className="fixed inset-0 bg-dark-radial -z-20 opacity-40"></div>
-      <div className="fixed top-0 right-0 w-1/3 h-screen bg-primary opacity-5 blur-3xl -z-10"></div>
-      <div className="fixed bottom-0 left-0 w-1/4 h-1/2 bg-accent opacity-5 blur-3xl -z-10"></div>
+      {/* Living passive background elements */}
+      <BackgroundElements />
 
-      <main className="relative">
+      <main className="relative z-10">
         <Hero />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <About />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <Skills />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <Experiences />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <Projects />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <FreelanceWorks />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <Publications />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <Contact />
       </main>
       <Footer />
