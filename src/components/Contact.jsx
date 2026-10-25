@@ -105,7 +105,7 @@ export default function Contact() {
         >
           {/* Direct channels & info */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="bg-dark/70 rounded-2xl border border-slate-800/80 p-6 md:p-8 space-y-6 shadow-dark-md">
+            <div className="bg-dark/70 rounded-2xl border border-slate-800/80 p-5 sm:p-6 md:p-8 space-y-6 shadow-dark-md">
               <h3 className="text-lg font-bold text-darkText-primary font-mono">
                 Direct Channels
               </h3>
@@ -152,7 +152,7 @@ export default function Contact() {
             <form
               ref={formRef}
               onSubmit={handleSubmit}
-              className="bg-dark/70 rounded-2xl border border-slate-800/80 p-6 md:p-8 shadow-dark-md space-y-5"
+              className="bg-dark/70 rounded-2xl border border-slate-800/80 p-5 sm:p-6 md:p-8 shadow-dark-md space-y-5"
             >
               <h3 className="text-lg font-bold text-darkText-primary font-mono mb-2">
                 Send a Message

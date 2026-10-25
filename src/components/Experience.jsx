@@ -85,21 +85,21 @@ const experiences = [
 
 const ExperienceCard = ({ exp }) => (
     <motion.div
-        className="w-full bg-dark-lighter/70 border border-slate-800/80 rounded-2xl p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative"
+        className="w-full bg-dark-lighter/70 border border-slate-800/80 rounded-2xl p-5 sm:p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
     >
         {/* Header: Role & Organization (Primary) with Date & Location (Secondary) */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4 pb-4 border-b border-slate-800/60">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 sm:gap-2 mb-4 pb-4 border-b border-slate-800/60">
             <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                     <h3 className="text-xl font-bold text-darkText-primary">{exp.position}</h3>
                     <span className="text-darkText-muted font-mono text-xs">•</span>
                     <span className="text-primary font-semibold text-base">{exp.organization}</span>
                 </div>
-                <div className="flex items-center gap-4 text-xs font-mono text-darkText-muted">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-mono text-darkText-muted">
                     <span className="flex items-center gap-1">
                         <FiMapPin className="w-3.5 h-3.5" />
                         {exp.location}

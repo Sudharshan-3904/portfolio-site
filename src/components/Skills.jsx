@@ -150,7 +150,7 @@ const Skills = () => {
                         <motion.div
                             key={idx}
                             variants={cardVariants}
-                            className="bg-dark-lighter/70 rounded-2xl border border-slate-800/80 p-6 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
+                            className="bg-dark-lighter/70 rounded-2xl border border-slate-800/80 p-5 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
                             whileHover={{ y: -4 }}
                         >
                             <div>
@@ -176,12 +176,12 @@ const Skills = () => {
                                             key={itemIdx}
                                             className="p-2.5 rounded-lg bg-dark/50 border border-slate-800/60 hover:border-slate-700/80 transition-colors"
                                         >
-                                            <div className="flex items-center justify-between mb-1">
-                                                <span className="text-sm text-darkText-primary font-medium">
+                                            <div className="flex items-start sm:items-center justify-between gap-2 mb-1">
+                                                <span className="text-sm text-darkText-primary font-medium leading-snug">
                                                     {item.name}
                                                 </span>
                                                 <span
-                                                    className={`text-[10px] font-mono px-2 py-0.5 rounded border ${getStatusStyle(
+                                                    className={`text-[10px] font-mono px-2 py-0.5 rounded border flex-shrink-0 whitespace-nowrap ${getStatusStyle(
                                                         item.status
                                                     )}`}
                                                 >
@@ -189,8 +189,8 @@ const Skills = () => {
                                                 </span>
                                             </div>
                                             {item.evidence && (
-                                                <div className="text-[11px] font-mono text-darkText-muted flex items-center gap-1.5 pt-0.5">
-                                                    <span className="text-primary/70">↳</span>
+                                                <div className="text-[11px] font-mono text-darkText-muted flex items-start gap-1.5 pt-0.5 leading-tight">
+                                                    <span className="text-primary/70 flex-shrink-0 mt-0.5">↳</span>
                                                     <span>{item.evidence}</span>
                                                 </div>
                                             )}

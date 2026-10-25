@@ -307,7 +307,8 @@ const Projects = () => {
                         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        A collection spanning intelligent systems, machine learning research, IoT automation, and software tools — built to test ideas, solve practical challenges, and explore computing systems.
+                        A collection spanning intelligent systems, machine learning research, IoT automation, and
+                        software tools - built to test ideas, solve practical challenges, and explore computing systems.
                     </motion.p>
                 </div>
 
@@ -340,15 +341,33 @@ const Projects = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center justify-items-center w-full"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center justify-items-center w-full"
                 >
-                    {filteredProjects.map((project) => (
-                        <motion.div
-                            key={project.id}
-                            variants={itemVariants}
-                            whileHover={{ y: -10 }}
-                            className="w-full max-w-md md:max-w-none mx-auto bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative flex flex-col justify-between"
-                        >
+                    {filteredProjects.map((project, index) => {
+                        const isLastAndOdd2Col =
+                            filteredProjects.length % 2 !== 0 &&
+                            index === filteredProjects.length - 1;
+                        const isLastAnd1Leftover3Col =
+                            filteredProjects.length % 3 === 1 &&
+                            index === filteredProjects.length - 1;
+
+                        return (
+                            <motion.div
+                                key={project.id}
+                                variants={itemVariants}
+                                whileHover={{ y: -10 }}
+                                className={`w-full max-w-md sm:max-w-none mx-auto bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative flex flex-col justify-between ${
+                                    isLastAndOdd2Col
+                                        ? "sm:col-span-2 sm:w-[75%] sm:mx-auto sm:justify-self-center"
+                                        : ""
+                                } ${
+                                    isLastAnd1Leftover3Col
+                                        ? "lg:col-span-3 lg:w-[50%] lg:mx-auto lg:justify-self-center"
+                                        : isLastAndOdd2Col
+                                        ? "lg:col-span-1 lg:w-full"
+                                        : ""
+                                }`}
+                            >
                             {/* Project Image */}
                             <div className="relative overflow-hidden h-56">
                                 <img
@@ -408,7 +427,8 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
-                    ))}
+                        );
+                    })}
                 </motion.div>
             </div>
             {/* Project Details Modal */}

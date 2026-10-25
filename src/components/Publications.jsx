@@ -202,15 +202,24 @@ const Publications = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-8"
                 >
-                    {filteredPublications.map((pub) => (
-                        <motion.div
-                            key={pub.id}
-                            variants={itemVariants}
-                            whileHover={{ y: -10 }}
-                            className="bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative"
-                        >
+                    {filteredPublications.map((pub, index) => {
+                        const isLastAndOdd =
+                            filteredPublications.length % 2 !== 0 &&
+                            index === filteredPublications.length - 1;
+
+                        return (
+                            <motion.div
+                                key={pub.id}
+                                variants={itemVariants}
+                                whileHover={{ y: -10 }}
+                                className={`bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative ${
+                                    isLastAndOdd
+                                        ? "sm:col-span-2 sm:w-[75%] sm:mx-auto sm:justify-self-center"
+                                        : "w-full"
+                                }`}
+                            >
                             {/* Publication Image */}
                             <div className="relative overflow-hidden h-56">
                                 <img
@@ -272,14 +281,15 @@ const Publications = () => {
                                 </div>
                             </div>
                         </motion.div>
-                    ))}
+                        );
+                    })}
                 </motion.div>
             </div>
             {/* Publication Details Modal */}
             <AnimatePresence>
                 {isModalOpen && selectedPublication && (
                     <motion.div
-                        className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center modal-backdrop"
+                        className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto modal-backdrop"
                         variants={backdropVariants}
                         initial="hidden"
                         animate="visible"
