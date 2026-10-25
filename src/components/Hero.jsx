@@ -1,204 +1,191 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiArrowRight, FiFileText } from "react-icons/fi";
+import { SiPython } from "react-icons/si";
 
 const Hero = () => {
-    // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                delayChildren: 0.3,
-                staggerChildren: 0.2,
+                delayChildren: 0.15,
+                staggerChildren: 0.15,
             },
         },
     };
 
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: { y: 16, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 0.5 },
+            transition: { duration: 0.5, ease: "easeOut" },
         },
     };
 
+    const technicalLabels = [
+        "Python",
+        "LLMs",
+        "Multi-agent systems",
+        "Applied research",
+    ];
+
     const socialLinks = [
         {
-            icon: <FiGithub />,
+            icon: <FiGithub className="w-5 h-5" />,
             url: "https://github.com/Sudharshan-3904",
             label: "GitHub",
         },
         {
-            icon: <FiLinkedin />,
+            icon: <FiLinkedin className="w-5 h-5" />,
             url: "https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9",
             label: "LinkedIn",
         },
         {
-            icon: <FiMail />,
+            icon: <FiMail className="w-5 h-5" />,
             url: "mailto:sudharshanvalar@gmail.com",
             label: "Mail",
         },
     ];
 
     return (
-        <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-dark">
-            {/* Background Elements */}
-            <div className="absolute inset-0 overflow-hidden">
-                {/* Gradient background effect */}
-                <div className="absolute inset-0 bg-dark-gradient opacity-80"></div>
-
-                {/* Animated blobs and shapes */}
-                <motion.div
-                    className="absolute top-20 right-10 w-72 h-72 rounded-full bg-primary opacity-5 blur-3xl"
-                    animate={{
-                        scale: [1, 1.2, 1],
-                        x: [0, 20, 0],
-                        y: [0, 30, 0],
-                    }}
-                    transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
-                />
-                <motion.div
-                    className="absolute bottom-20 left-10 w-48 h-48 rounded-full bg-accent opacity-5 blur-3xl"
-                    animate={{
-                        scale: [1, 1.3, 1],
-                        x: [0, -20, 0],
-                        y: [0, -20, 0],
-                    }}
-                    transition={{ duration: 12, repeat: Infinity, repeatType: "reverse" }}
-                />
-                <motion.div
-                    className="hidden md:block absolute top-1/4 left-1/4 w-24 h-24 rounded-full bg-primary opacity-5 blur-xl"
-                    animate={{
-                        scale: [1, 1.5, 1],
-                        y: [0, 40, 0],
-                    }}
-                    transition={{ duration: 18, repeat: Infinity, repeatType: "reverse" }}
-                />
-
-                {/* Grid pattern overlay */}
-                <div className="absolute inset-0 bg-[url('data:image;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
+        <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-dark pt-20 pb-16">
+            {/* Subtle ambient lighting */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-1/4 -right-20 w-96 h-96 rounded-full bg-primary/10 blur-[120px]" />
+                <div className="absolute bottom-1/4 -left-20 w-80 h-80 rounded-full bg-accent/5 blur-[100px]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.08),rgba(255,255,255,0))]" />
             </div>
 
-            <div className="container mx-auto px-4 md:px-6 z-10">
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <motion.div
-                    className="grid md:grid-cols-5 gap-3 items-center"
+                    className="grid lg:grid-cols-12 gap-12 items-center"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Main Content */}
-                    <div className="md:col-span-3 space-y-6 gap-8">
-                        <motion.div
-                            variants={itemVariants}
-                            className="inline-block mb-2 gap-2 flex flex-wrap items-center"
-                        >
-                            <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
-                                Data Engineer
+                    {/* Left Column: Narrative & Technical Identity */}
+                    <div className="lg:col-span-7 space-y-6">
+                        {/* Technical Domain Badges */}
+                        <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-primary/10 text-primary border border-primary/25">
+                                <SiPython className="w-3.5 h-3.5" />
+                                Python Engineer
                             </span>
-                            <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
-                                ML/DL Engineer
-                            </span>
-                            <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20">
-                                Agents Developer
-                            </span>
+                            {technicalLabels.map((label, idx) => (
+                                <span
+                                    key={idx}
+                                    className="px-3 py-1 rounded-md text-xs font-mono text-darkText-secondary bg-dark-lightest/70 border border-slate-800"
+                                >
+                                    {label}
+                                </span>
+                            ))}
                         </motion.div>
 
-                        <motion.h1
-                            variants={itemVariants}
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-darkText-primary leading-tight"
-                        >
-                            Hi, I'm <span className="gradient-text">Sudharshan</span>
-                            <div className="block mt-2">
-                                <span className="relative">
-                                    I build
-                                    <motion.span
-                                        className="absolute -bottom-1 left-0 w-full h-1 bg-primary"
-                                        initial={{ width: 0 }}
-                                        animate={{ width: "100%" }}
-                                        transition={{ delay: 1.2, duration: 0.8 }}
-                                    />
-                                </span>{" "}
-                                <span className="text-accent">Software tools</span>
-                            </div>
-                        </motion.h1>
+                        {/* Primary Headline */}
+                        <motion.div variants={itemVariants} className="space-y-2">
+                            <p className="text-sm font-mono text-accent tracking-wider uppercase">
+                                Sudharshan M Prabhu
+                            </p>
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-darkText-primary tracking-tight leading-[1.15]">
+                                Python Developer <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-indigo-300 to-accent">
+                                    Building AI Systems
+                                </span>
+                            </h1>
+                        </motion.div>
 
+                        {/* Supporting Narrative Copy */}
                         <motion.p
                             variants={itemVariants}
-                            className="text-darkText-secondary text-lg md:text-xl max-w-2xl"
+                            className="text-darkText-secondary text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl"
                         >
-                            I'm a Software Developer specializing in AI Agents and multi part systems. Currently, I'm
-                            focused on creating impactful projects using AI and cloud technologies.
+                            I work on AI-powered applications, LLM-based agents, and the
+                            engineering systems behind them — exploring how they can reason,
+                            collaborate, and operate reliably.
                         </motion.p>
 
-                        {/* Social Links */}
-                        <motion.div variants={itemVariants} className="flex gap-5 pt-4">
+                        {/* Calls to Action */}
+                        <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-2">
+                            <a
+                                href="#projects"
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
+                            >
+                                Explore my work
+                                <FiArrowRight className="w-4 h-4" />
+                            </a>
+                            <a
+                                href="https://github.com/Sudharshan-3904"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-medium text-darkText-primary bg-dark-lightest/80 hover:bg-dark-lightest border border-slate-700/80 transition-all duration-200"
+                            >
+                                <FiGithub className="w-4 h-4" />
+                                GitHub
+                            </a>
+                            <a
+                                href="#contact"
+                                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-medium text-darkText-secondary hover:text-white transition-colors"
+                            >
+                                Contact
+                            </a>
+                        </motion.div>
+
+                        {/* Subtle Social Links */}
+                        <motion.div variants={itemVariants} className="flex items-center gap-4 pt-4 border-t border-slate-800/60 max-w-md">
+                            <span className="text-xs font-mono text-darkText-muted">Connect:</span>
                             {socialLinks.map((link, index) => (
-                                <motion.a
+                                <a
                                     key={index}
                                     href={link.url}
                                     aria-label={link.label}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-darkText-secondary hover:text-primary transition-all duration-300 text-xl"
-                                    whileHover={{
-                                        y: -4,
-                                        scale: 1.1,
-                                        color: "#7c4dff",
-                                        textShadow: "0 0 8px rgba(124, 77, 255, 0.5)",
-                                    }}
-                                    whileTap={{ scale: 0.9 }}
+                                    className="text-darkText-secondary hover:text-primary transition-colors p-1"
                                 >
                                     {link.icon}
-                                </motion.a>
+                                </a>
                             ))}
                         </motion.div>
                     </div>
 
-                    {/* Image/Avatar Area */}
-                    <motion.div className="md:col-span-2 flex justify-center md:justify-end" variants={itemVariants}>
-                        <div className="relative">
-                            {/* Glowing effect around image */}
-                            <motion.div
-                                className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-xl"
-                                animate={{
-                                    opacity: [0.1, 0.3, 0.1],
-                                    scale: [0.95, 1.05, 0.95],
-                                }}
-                                transition={{ duration: 4, repeat: Infinity }}
-                            />
+                    {/* Right Column: Profile & Terminal Accent */}
+                    <motion.div className="lg:col-span-5 flex justify-center lg:justify-end" variants={itemVariants}>
+                        <div className="relative w-full max-w-sm sm:max-w-md">
+                            {/* Subtle frame glow */}
+                            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-primary/20 to-accent/20 blur-md opacity-60" />
 
-                            {/* Image frame with gradient border */}
-                            <div className="w-full max-w-md relative z-10">
-                                <img
-                                    src="/photos/ProfileNoBG.png"
-                                    alt="Professional portrait"
-                                    className="rounded-xl shadow-dark-md relative z-20 border-2 border-dark-lightest"
-                                />
+                            {/* Card container */}
+                            <div className="relative rounded-2xl bg-dark-lighter border border-slate-800/80 overflow-hidden shadow-2xl">
+                                {/* Understated terminal header bar */}
+                                <div className="flex items-center justify-between px-4 py-2.5 bg-dark-darker border-b border-slate-800 text-xs font-mono text-darkText-muted">
+                                    <div className="flex items-center gap-1.5">
+                                        <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                                        <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                                    </div>
+                                    <span className="text-[11px] text-slate-400">agent_system.py</span>
+                                </div>
+
+                                {/* Portrait image */}
+                                <div className="p-4 bg-gradient-to-b from-dark-lighter to-dark">
+                                    <img
+                                        src="/photos/ProfileNoBG.png"
+                                        alt="Sudharshan - Python Developer & AI Systems Engineer"
+                                        className="w-full h-auto object-cover rounded-xl"
+                                    />
+                                </div>
+
+                                {/* Understated engineering details badge */}
+                                <div className="px-4 py-3 bg-dark-darker/90 border-t border-slate-800/80 text-xs font-mono flex items-center justify-between">
+                                    <span className="text-darkText-secondary flex items-center gap-2">
+                                        <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                        <span>Focus: Agents & Architecture</span>
+                                    </span>
+                                    <span className="text-darkText-muted">Python 3.12+</span>
+                                </div>
                             </div>
-
-                            {/* Background pattern */}
-                            <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-dark-lighter rounded-lg shadow-dark-md -z-0 hidden md:block"></div>
-
-                            {/* Decorative elements */}
-                            <motion.div
-                                className="absolute -top-4 -right-4 w-25 h-12 bg-dark-light rounded-lg flex items-center justify-center shadow-dark-md z-20"
-                                initial={{ scale: 0, rotate: 0 }}
-                                animate={{ scale: 1, rotate: 5 }}
-                                transition={{ delay: 1, duration: 0.5 }}
-                            >
-                                <span className="text-2xl text-primary">(⌐■_■)</span>
-                            </motion.div>
-
-                            <motion.div
-                                className="absolute -bottom-4 -left-4 w-16 h-16 bg-dark-lighter rounded-lg flex items-center justify-center shadow-dark-md z-20"
-                                initial={{ scale: 0, rotate: 0 }}
-                                animate={{ scale: 1, rotate: -10 }}
-                                transition={{ delay: 1.2, duration: 0.5 }}
-                            >
-                                <span className="text-3xl text-accent">👨🏻‍💻</span>
-                            </motion.div>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -206,18 +193,19 @@ const Hero = () => {
 
             {/* Scroll indicator */}
             <motion.div
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2, duration: 1 }}
+                className="hidden md:flex absolute bottom-6 left-1/2 transform -translate-x-1/2 flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.6 }}
+                transition={{ delay: 1, duration: 1 }}
             >
-                <motion.div
-                    className="w-6 h-10 border-2 border-darkText-muted rounded-full flex justify-center"
-                    animate={{ y: [0, 12, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                >
-                    <motion.div className="w-1 h-2 bg-primary rounded-full mt-2" />
-                </motion.div>
+                <span className="text-[10px] font-mono tracking-widest uppercase text-darkText-muted">Scroll</span>
+                <div className="w-5 h-8 border border-slate-700 rounded-full flex justify-center p-1">
+                    <motion.div
+                        className="w-1 h-2 bg-primary rounded-full"
+                        animate={{ y: [0, 8, 0] }}
+                        transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                </div>
             </motion.div>
         </section>
     );

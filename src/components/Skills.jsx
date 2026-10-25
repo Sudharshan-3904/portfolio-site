@@ -1,254 +1,231 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FaReact, FaHtml5, FaPython, FaFlask, FaChartBar, FaJava } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { LuBrainCircuit, LuLayers, LuTerminal } from "react-icons/lu";
 import {
-    SiTailwindcss,
-    SiMongodb,
-    SiCplusplus,
-    SiC,
-    SiSqlite,
-    SiFlutter,
-    SiStreamlit,
-    SiSourceforge,
-    SiArduino,
-    SiN8N,
     SiLangchain,
+    SiFastapi,
+    SiPytorch,
+    SiMongodb,
+    SiDocker,
+    SiLinux,
+    SiSqlite,
+    SiN8N,
+    SiPostman,
 } from "react-icons/si";
-import { RiAiGenerate2, RiRobot2Fill } from "react-icons/ri";
-import { BsClipboard2DataFill } from "react-icons/bs";
-import { LuBrainCircuit } from "react-icons/lu";
-import { FaDartLang } from "react-icons/fa6";
 
 const Skills = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.2 });
+    const isInView = useInView(ref, { once: true, amount: 0.15 });
 
-    // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
+                staggerChildren: 0.12,
             },
         },
     };
 
-    const categoryVariants = {
+    const cardVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 0.6 },
+            transition: { duration: 0.5, ease: "easeOut" },
         },
     };
 
-    const skillItemVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 0.4 },
-        },
-    };
-
-    // Skill data
+    // Categorized skills reflecting engineering role
     const skillCategories = [
         {
-            title: "Languages",
-            skills: [
-                { name: "Python", icon: <FaPython />, level: 90 },
-                { name: "C++", icon: <SiCplusplus />, level: 85 },
-                { name: "C Programming", icon: <SiC />, level: 80 },
-                { name: "HTML5/CSS/JS", icon: <FaHtml5 />, level: 85 },
-                { name: "SQL", icon: <SiSqlite />, level: 80 },
-                { name: "Dart", icon: <FaDartLang />, level: 85 },
-                { name: "Java", icon: <FaJava />, level: 80 },
+            title: "Core Development",
+            badge: "Foundation",
+            icon: <FaPython className="w-5 h-5 text-primary" />,
+            description: "Languages and engineering practices demonstrated across codebase implementations.",
+            items: [
+                { name: "Python", status: "Primary" },
+                { name: "Modular System Design", status: "Primary" },
+                { name: "APIs & Web Services (FastAPI)", status: "Primary" },
+                { name: "SQL & Relational Schemas", status: "Working knowledge" },
+                { name: "Data Structures & Algorithms", status: "Working knowledge" },
+                { name: "Testing & Debugging", status: "Working knowledge" },
             ],
         },
         {
-            title: "Fields of Expertise",
-            skills: [
-                { name: "AI Agents", icon: <SiN8N />, level: 95 },
-                { name: "Data Science", icon: <BsClipboard2DataFill />, level: 90 },
-                { name: "Generative AI", icon: <RiAiGenerate2 />, level: 85 },
-                { name: "LLM's", icon: <RiRobot2Fill />, level: 80 },
-                { name: "Deep Learning", icon: <LuBrainCircuit />, level: 85 },
-                { name: "Machine Learning", icon: <SiSourceforge />, level: 80 },
-                {
-                    name: "Internet of Things",
-                    icon: <SiArduino />,
-                    level: 90,
-                },
-                { name: "Data Visualization", icon: <FaChartBar />, level: 85 },
+            title: "AI & LLM Systems",
+            badge: "Applied Systems",
+            icon: <LuBrainCircuit className="w-5 h-5 text-accent" />,
+            description: "Production concepts implemented in multi-part agents and local pipelines.",
+            items: [
+                { name: "Agent Workflows", status: "Primary" },
+                { name: "Retrieval-Augmented Gen (RAG)", status: "Primary" },
+                { name: "Local Inference (Ollama)", status: "Primary" },
+                { name: "Structured Output Enforcement", status: "Primary" },
+                { name: "Prompt Design & Grounding", status: "Primary" },
+                { name: "Model Integration", status: "Working knowledge" },
             ],
         },
         {
-            title: "Frameworks",
-            skills: [
-                { name: "LangChain", icon: <SiLangchain />, level: 90 },
-                { name: "Mongo DB", icon: <SiMongodb />, level: 85 },
-                { name: "Flask", icon: <FaFlask />, level: 75 },
-                { name: "Streamlit", icon: <SiStreamlit />, level: 80 },
-                { name: "React", icon: <FaReact />, level: 85 },
-                { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 80 },
-                { name: "Flutter", icon: <SiFlutter />, level: 75 },
+            title: "AI System Architecture",
+            badge: "System Design",
+            icon: <LuLayers className="w-5 h-5 text-indigo-400" />,
+            description: "Architectural patterns distinguishing robust systems from toy applications.",
+            items: [
+                { name: "Multi-Agent Orchestration", status: "Primary" },
+                { name: "Stateful Memory Systems", status: "Primary" },
+                { name: "Agent Communication & Routing", status: "Primary" },
+                { name: "Dynamic Context Updating", status: "Working knowledge" },
+                { name: "System Evaluation", status: "Working knowledge" },
+                { name: "Observability & Tracing", status: "Exploring" },
             ],
         },
     ];
 
-    const tools_and_tech = [
-        "Git",
-        "GitHub",
-        "Linux",
-        "Docker",
-        "Next.js",
-        "Power BI",
-        "Tableau",
-        "Responsive Web Design",
-        "Netlify",
-        "Postman",
-        "Ollama",
-        "Arduino",
-        "Raspberry Pi",
-        "N8N",
-        "Virtual Box",
-        "LangGraph",
-        "LangSmith",
-        "MCP",
-        "FastAPI",
-        "Prompt Engineering",
+    const supportingToolGroups = [
+        {
+            category: "AI & Agent Frameworks",
+            tools: ["LangGraph", "LangChain", "Ollama", "PyTorch", "ChromaDB", "LM Studio"],
+        },
+        {
+            category: "Backend & Data",
+            tools: ["FastAPI", "Flask", "MongoDB", "SQLite", "NumPy", "Pandas"],
+        },
+        {
+            category: "Infrastructure & Tooling",
+            tools: ["Linux", "Docker", "Git & GitHub", "Postman", "N8N"],
+        },
     ];
+
+    const getStatusStyle = (status) => {
+        switch (status) {
+            case "Primary":
+                return "bg-primary/10 text-primary border-primary/25";
+            case "Working knowledge":
+                return "bg-accent/10 text-accent border-accent/25";
+            case "Exploring":
+                return "bg-slate-800 text-darkText-muted border-slate-700";
+            default:
+                return "bg-slate-800/80 text-darkText-secondary border-slate-700/80";
+        }
+    };
 
     return (
-        <section id="skills" className="py-20 bg-dark relative overflow-hidden">
-            {/* Background design elements */}
-            <div className="absolute -right-20 top-20 w-96 h-96 bg-primary opacity-5 blur-3xl -z-10" />
-            <div className="absolute -left-10 bottom-10 w-64 h-64 bg-accent opacity-5 blur-2xl -z-10" />
-            <div className="absolute left-1/3 top-1/2 w-20 h-20 bg-primary opacity-5 blur-xl -z-10" />
+        <section id="skills" className="py-24 bg-dark relative overflow-hidden">
+            {/* Ambient lighting */}
+            <div className="absolute -right-20 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
+            <div className="absolute -left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
-            {/* Grid pattern overlay */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
-
-            <div className="container mx-auto px-4 md:px-6 bg-dark">
+            <div className="container mx-auto px-4 md:px-6">
                 {/* Section Title */}
-                <div className="section-title">
+                <div className="section-title mb-16 text-center">
                     <motion.h2
-                        className="text-3xl md:text-4xl font-bold mb-4"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+                        className="text-3xl md:text-4xl font-bold tracking-tight mb-3"
+                        initial={{ opacity: 0, y: -16 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
                         transition={{ duration: 0.5 }}
                     >
-                        My <span className="text-primary">Skills</span>
+                        Technical <span className="text-primary">Focus</span>
                     </motion.h2>
                     <motion.div
-                        className="underline"
+                        className="underline h-1 w-16 bg-primary mx-auto rounded-full"
                         initial={{ width: 0 }}
-                        animate={isInView ? { width: 80 } : { width: 0 }}
-                        transition={{ duration: 0.7, delay: 0.3 }}
+                        animate={isInView ? { width: 64 } : { width: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
                     />
-                    <motion.p
-                        className="text-darkText-secondary mt-6 max-w-2xl mx-auto"
-                        initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                    >
-                        I've accumulated experience in various technologies and frameworks across the stack. Here are
-                        the skills I've been focussing on recently.
-                    </motion.p>
+                    <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
+                        Capabilities Grouped By Engineering Role
+                    </p>
                 </div>
 
-                {/* Skills Container */}
+                {/* 3 Core Engineering Pillars */}
                 <motion.div
                     ref={ref}
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid md:grid-cols-3 lg:grid-cols-3 gap-8"
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
-                    {skillCategories.map((category, categoryIndex) => (
+                    {skillCategories.map((category, idx) => (
                         <motion.div
-                            key={categoryIndex}
-                            variants={categoryVariants}
-                            className="bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg transition-all duration-300 relative"
-                            whileHover={{
-                                y: -5,
-                                boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
-                                borderColor: "rgba(124, 77, 255, 0.2)",
-                            }}
+                            key={idx}
+                            variants={cardVariants}
+                            className="bg-dark-lighter/70 rounded-2xl border border-slate-800/80 p-6 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
+                            whileHover={{ y: -4 }}
                         >
-                            {/* Add subtle gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-transparent rounded-xl" />
+                            <div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <div className="w-10 h-10 rounded-xl bg-dark-lightest/80 border border-slate-800 flex items-center justify-center">
+                                        {category.icon}
+                                    </div>
+                                    <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-dark-lightest border border-slate-800 text-darkText-muted">
+                                        {category.badge}
+                                    </span>
+                                </div>
 
-                            <h3 className="text-xl font-bold mb-5 text-darkText-primary relative z-10">
-                                {category.title}
-                            </h3>
+                                <h3 className="text-lg font-bold text-darkText-primary mb-1">
+                                    {category.title}
+                                </h3>
+                                <p className="text-xs text-darkText-muted mb-6 leading-relaxed">
+                                    {category.description}
+                                </p>
 
-                            <div className="space-y-5">
-                                {category.skills.map((skill, skillIndex) => (
-                                    <motion.div
-                                        key={skillIndex}
-                                        variants={skillItemVariants}
-                                        whileHover={{ scale: 1.02 }}
-                                        className="relative"
-                                    >
-                                        <div className="flex items-center justify-between mb-2">
-                                            <div className="flex items-center">
-                                                <span className="text-primary text-xl mr-2">{skill.icon}</span>
-                                                <span className="font-medium text-darkText-primary">{skill.name}</span>
-                                            </div>
-                                            <span className="text-sm text-darkText-secondary">{skill.level}%</span>
-                                        </div>
-
-                                        <div className="w-full bg-dark rounded-full h-2.5">
-                                            <motion.div
-                                                className="bg-gradient-to-r from-primary to-accent h-2.5 rounded-full relative"
-                                                initial={{ width: 0 }}
-                                                animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
-                                                transition={{
-                                                    duration: 1,
-                                                    delay: 0.2 + skillIndex * 0.1,
-                                                }}
+                                <div className="space-y-2.5">
+                                    {category.items.map((item, itemIdx) => (
+                                        <div
+                                            key={itemIdx}
+                                            className="flex items-center justify-between p-2 rounded-lg bg-dark/50 border border-slate-800/60"
+                                        >
+                                            <span className="text-sm text-darkText-primary font-medium">
+                                                {item.name}
+                                            </span>
+                                            <span
+                                                className={`text-[10px] font-mono px-2 py-0.5 rounded border ${getStatusStyle(
+                                                    item.status
+                                                )}`}
                                             >
-                                                {/* Glow effect for progress bar */}
-                                                <div className="absolute inset-0 rounded-full bg-primary opacity-30 blur-sm"></div>
-                                            </motion.div>
+                                                {item.status}
+                                            </span>
                                         </div>
-                                    </motion.div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </motion.div>
                     ))}
                 </motion.div>
 
-                {/* Additional tools tags */}
+                {/* Supporting Tools and Technologies */}
                 <motion.div
-                    className="mt-12 relative bg-dark/50 backdrop-blur-sm border-[0.5px] border-gray-800/50 rounded-xl shadow-dark-md px-6 py-8 flex flex-col items-center overflow-hidden"
+                    className="mt-12 bg-dark-lighter/50 rounded-2xl border border-slate-800/80 p-8 shadow-dark-md"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                    {/* Subtle gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 to-transparent rounded-xl pointer-events-none" />
-                    <h3 className="text-xl font-semibold mb-6 text-center text-darkText-primary relative z-10">
-                        Other Tools & Technologies
-                    </h3>
-                    <div className="flex flex-wrap justify-center gap-3 relative z-10">
-                        {tools_and_tech.map((tool, index) => (
-                            <motion.span
-                                key={index}
-                                className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium border border-primary/20"
-                                whileHover={{
-                                    y: -4,
-                                    scale: 1.05,
-                                    boxShadow: "0 4px 10px rgba(124, 77, 255, 0.2)",
-                                }}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                                transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                            >
-                                {tool}
-                            </motion.span>
+                    <div className="flex items-center gap-2 mb-6">
+                        <LuTerminal className="w-4 h-4 text-accent" />
+                        <h3 className="text-base font-bold text-darkText-primary font-mono tracking-tight">
+                            Supporting Tools & Technologies
+                        </h3>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {supportingToolGroups.map((group, gIdx) => (
+                            <div key={gIdx} className="space-y-3">
+                                <h4 className="text-xs font-mono text-darkText-muted uppercase tracking-wider">
+                                    {group.category}
+                                </h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {group.tools.map((tool, tIdx) => (
+                                        <span
+                                            key={tIdx}
+                                            className="px-3 py-1 rounded-md text-xs font-mono bg-dark-lightest/60 text-darkText-secondary border border-slate-800 hover:border-slate-700 transition-colors"
+                                        >
+                                            {tool}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </motion.div>

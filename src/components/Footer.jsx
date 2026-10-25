@@ -27,60 +27,44 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white relative pb-10">
-      {/* Semi-circle background */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] bg-gray-900 rounded-full z-0 pointer-events-none"></div>
-
+    <footer className="bg-dark-darker text-white relative pt-12 pb-12 border-t border-slate-800/80">
       {/* Scroll to top button */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex items-center justify-center">
         <motion.button
           onClick={scrollToTop}
-          className="bg-primary text-white w-[50px] h-[50px] rounded-full shadow-lg hover:bg-primary-dark transition-colors flex items-center justify-center"
+          className="bg-dark-lighter border border-slate-700 text-darkText-secondary hover:text-white w-10 h-10 rounded-full shadow-lg hover:border-primary transition-all flex items-center justify-center"
           aria-label="Scroll to top"
-          whileHover={{ y: -5 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ y: -3 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <FiArrowUp className="w-5 h-5" />
+          <FiArrowUp className="w-4 h-4" />
         </motion.button>
       </div>
 
-      {/* Main Footer Content
-      <div className="container mx-auto px-4 md:px-6 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
-          Logo and Description
-          <div className="md:col-span-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-400 mb-6"
-            >
-              A passionate tool developer specializing in creating beautiful,
-              functional, and accessible software tools.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex space-x-4"
-            >
-              {socialLinks.map((link, index) => (
-                <motion.a
-                  key={index}
-                  href={link.url}
-                  aria-label={link.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary transition-colors"
-                  whileHover={{ y: -3 }}
-                >
-                  {link.icon}
-                </motion.a>
-              ))}
-            </motion.div>
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-darkText-muted">
+          <div className="flex items-center gap-2">
+            <span className="text-darkText-primary font-bold">Sudharshan M Prabhu</span>
+            <span>—</span>
+            <span>Python Developer · AI Systems</span>
+          </div>
+
+          <div className="flex items-center space-x-4">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                aria-label={link.label}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-darkText-muted hover:text-primary transition-colors"
+              >
+                {link.icon}
+              </a>
+            ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 };

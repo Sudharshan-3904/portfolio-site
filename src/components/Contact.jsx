@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiSend } from "react-icons/fi";
+import { FiSend, FiMail, FiGithub, FiLinkedin, FiMapPin } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
+
 const TARGET_EMAIL = "sudharshanvalar@gmail.com";
 
 const containerVariants = {
@@ -9,17 +10,8 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.5 },
   },
 };
 
@@ -30,10 +22,10 @@ export default function Contact() {
     message: "",
     subject: "",
   });
-  const [status, setStatus] = useState(""); // <-- Add status state
+  const [status, setStatus] = useState("");
   const ref = useRef(null);
   const formRef = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,7 +37,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus(""); // Clear previous status
+    setStatus("Sending...");
     emailjs
       .sendForm("service_3on2h5m", "template_u7zna1c", formRef.current, {
         publicKey: "Nj9QaumWahmMlt_1E",
@@ -55,8 +47,8 @@ export default function Contact() {
           setStatus("Message sent successfully!");
           setForm({ sender: "", name: "", message: "", subject: "" });
         },
-        (error) => {
-          setStatus("Failed to send message. Please try again later.");
+        () => {
+          setStatus("Failed to send message. Please reach out via email directly.");
         }
       );
   };
@@ -64,104 +56,156 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-dark-lighter relative overflow-hidden min-h-screen flex items-center justify-center"
+      className="py-24 bg-dark-lighter relative overflow-hidden min-h-screen flex items-center justify-center"
     >
-      {/* Background Design Elements */}
-      <div className="absolute right-0 top-20 w-64 h-64 bg-primary opacity-5 blur-3xl -z-10" />
-      <div className="absolute left-10 bottom-10 w-32 h-32 bg-accent opacity-5 blur-2xl -z-10" />
-      <div className="absolute left-1/4 top-1/3 w-16 h-16 bg-dark-lightest rounded-full -z-10" />
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
+      {/* Background accents */}
+      <div className="absolute right-0 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="container mx-auto px-4 md:px-6 flex flex-col items-center justify-center w-full">
         {/* Section Title */}
-        <div className="section-title flex flex-col items-center justify-center">
+        <div className="section-title mb-14 text-center">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            className="text-3xl md:text-4xl font-bold tracking-tight mb-3"
+            initial={{ opacity: 0, y: -16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
             transition={{ duration: 0.5 }}
           >
-            Contact <span className="text-primary">Me</span>
+            Get In <span className="text-primary">Touch</span>
           </motion.h2>
           <motion.div
-            className="underline"
+            className="underline h-1 w-16 bg-primary mx-auto rounded-full"
             initial={{ width: 0 }}
-            animate={isInView ? { width: 80 } : { width: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            animate={isInView ? { width: 64 } : { width: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           />
+          <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
+            Python Engineering · AI Systems · Applied Research
+          </p>
         </div>
-        {/* Status message */}
-        {status && (
-          <div
-            className={`mb-4 text-center font-bold ${
-              status.includes("success") ? "text-green-400" : "text-red-400"
-            }`}
-          >
-            {status}
-          </div>
-        )}
+
         <motion.div
           ref={ref}
-          className="w-full flex items-center justify-center"
+          className="w-full max-w-5xl grid lg:grid-cols-12 gap-8 items-start"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Form Grid */}
-          <motion.form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="grid md:grid-cols-2 gap-12 items-center bg-dark-lighter rounded-xl shadow-dark-md p-8 w-full max-w-3xl"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            {/* Left: Name and Email Fields */}
-            <div className="flex flex-col gap-6">
-              <input type="hidden" name="email" value={TARGET_EMAIL} />
-              <div>
-                <label className="block text-darkText-secondary text-sm mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
-                  placeholder="Your name"
-                />
+          {/* Direct channels & info */}
+          <div className="lg:col-span-5 space-y-4">
+            <div className="bg-dark/70 rounded-2xl border border-slate-800/80 p-6 md:p-8 space-y-6 shadow-dark-md">
+              <h3 className="text-lg font-bold text-darkText-primary font-mono">
+                Direct Channels
+              </h3>
+              <p className="text-sm text-darkText-secondary leading-relaxed">
+                I'm actively interested in Python development, AI agent systems, and applied research opportunities. Feel free to reach out directly through any of these platforms:
+              </p>
+
+              <div className="space-y-4 pt-2">
+                <a
+                  href="mailto:sudharshanvalar@gmail.com"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-white transition-colors"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                    <FiMail className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-darkText-muted block">Email</span>
+                    <span className="font-mono text-xs text-darkText-primary">sudharshanvalar@gmail.com</span>
+                  </div>
+                </a>
+
+                <a
+                  href="https://github.com/Sudharshan-3904"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-white transition-colors"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                    <FiGithub className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-darkText-muted block">GitHub</span>
+                    <span className="font-mono text-xs text-darkText-primary">github.com/Sudharshan-3904</span>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-white transition-colors"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                    <FiLinkedin className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono text-darkText-muted block">LinkedIn</span>
+                    <span className="font-mono text-xs text-darkText-primary">Sudharshan M Prabhu</span>
+                  </div>
+                </a>
               </div>
-              <div>
-                <label className="block text-darkText-secondary text-sm mb-1">
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  name="sender"
-                  value={form.sender}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
-                  placeholder="your@email.com"
-                />
-              </div>
-              <motion.button
-                type="submit"
-                className="btn btn-outline flex items-center justify-center gap-2 px-6 py-3 rounded-md text-center w-full mt-6 transition-transform"
-                whileHover={{ scale: 1.07 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <FiSend className="w-5 h-5" />
-                SEND
-              </motion.button>
             </div>
-            {/* Right: Message Box */}
-            <div>
+          </div>
+
+          {/* Form */}
+          <div className="lg:col-span-7">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="bg-dark/70 rounded-2xl border border-slate-800/80 p-6 md:p-8 shadow-dark-md space-y-5"
+            >
+              <h3 className="text-lg font-bold text-darkText-primary font-mono mb-2">
+                Send a Message
+              </h3>
+
+              {status && (
+                <div
+                  className={`p-3 rounded-lg text-xs font-mono ${
+                    status.includes("successfully")
+                      ? "bg-emerald-950/40 text-emerald-400 border border-emerald-800/60"
+                      : "bg-red-950/40 text-red-400 border border-red-800/60"
+                  }`}
+                >
+                  {status}
+                </div>
+              )}
+
+              <input type="hidden" name="email" value={TARGET_EMAIL} />
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-darkText-muted text-xs font-mono mb-1.5">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
+                    placeholder="e.g. Alex Chen"
+                  />
+                </div>
+                <div>
+                  <label className="block text-darkText-muted text-xs font-mono mb-1.5">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    name="sender"
+                    value={form.sender}
+                    onChange={handleChange}
+                    required
+                    className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
+                    placeholder="alex@domain.com"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label className="block text-darkText-secondary text-sm mb-1">
+                <label className="block text-darkText-muted text-xs font-mono mb-1.5">
                   Subject
                 </label>
                 <input
@@ -170,13 +214,13 @@ export default function Contact() {
                   value={form.subject}
                   onChange={handleChange}
                   required
-                  className="w-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors placeholder-darkText-secondary"
-                  placeholder="Subject of your message"
+                  className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors placeholder:text-darkText-muted"
+                  placeholder="Python & AI Systems Opportunity"
                 />
               </div>
-              <br></br>
-              <div className="flex flex-col h-full">
-                <label className="block text-darkText-secondary text-sm mb-1">
+
+              <div>
+                <label className="block text-darkText-muted text-xs font-mono mb-1.5">
                   Message
                 </label>
                 <textarea
@@ -184,12 +228,21 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange}
                   required
-                  className="w-full h-full bg-transparent border-b-2 border-primary focus:border-accent text-white py-1 px-0 outline-none transition-colors min-h-[120px] resize-none placeholder-darkText-secondary"
-                  placeholder="Write text here..."
+                  rows={4}
+                  className="w-full bg-dark-lighter/80 border border-slate-800 rounded-lg text-darkText-primary py-2.5 px-3.5 text-sm outline-none focus:border-primary transition-colors resize-none placeholder:text-darkText-muted"
+                  placeholder="Share details about the role, project, or collaboration..."
                 />
               </div>
-            </div>
-          </motion.form>
+
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
+              >
+                <FiSend className="w-4 h-4" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
         </motion.div>
       </div>
     </section>

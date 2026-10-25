@@ -74,23 +74,36 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-dark shadow-md py-3" : "bg-transparent py-5"
+        scrolled
+          ? "bg-dark/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-dark-md"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
+          {/* Logo / Brand */}
+          <a
+            href="#home"
+            className="text-sm font-mono font-bold tracking-tight text-darkText-primary hover:text-primary transition-colors flex items-center gap-2"
+          >
+            <span className="px-1.5 py-0.5 rounded bg-primary/15 text-primary text-xs font-mono border border-primary/25">
+              &gt;
+            </span>
+            <span>sudharshan<span className="text-accent">.py</span></span>
+          </a>
+
           {/* Desktop Navigation */}
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="hidden md:flex space-x-8"
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="hidden md:flex items-center space-x-6 text-xs font-mono"
           >
             {navLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.href}
-                className="text-darkText-secondary hover:text-primary-dark transition-colors duration-300"
+                className="text-darkText-secondary hover:text-white transition-colors duration-200"
               >
                 {link.name}
               </a>
@@ -101,12 +114,13 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-800 focus:outline-none"
+              aria-label="Toggle navigation menu"
+              className="text-darkText-primary p-2 rounded-lg bg-dark-lighter border border-slate-800 focus:outline-none"
             >
               {isOpen ? (
-                <FiX className="h-6 w-6" />
+                <FiX className="h-5 w-5" />
               ) : (
-                <FiMenu className="h-6 w-6" />
+                <FiMenu className="h-5 w-5" />
               )}
             </button>
           </div>
@@ -117,15 +131,15 @@ const Navbar = () => {
           initial="closed"
           animate={isOpen ? "open" : "closed"}
           variants={menuVariants}
-          className="md:hidden overflow-hidden"
+          className="md:hidden overflow-hidden bg-dark-lighter/95 backdrop-blur-md rounded-xl mt-3 border border-slate-800/90 shadow-2xl"
         >
-          <div className="flex flex-col space-y-4 py-4">
+          <div className="flex flex-col space-y-1 p-4 font-mono text-xs">
             {navLinks.map((link, index) => (
               <motion.a
                 key={index}
                 variants={itemVariants}
                 href={link.href}
-                className="text-gray-800 hover:text-primary py-2 transition-colors duration-300"
+                className="text-darkText-secondary hover:text-white hover:bg-dark-lightest/70 px-3 py-2.5 rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

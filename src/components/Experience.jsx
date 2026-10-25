@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { FiExternalLink, FiMapPin, FiCalendar } from "react-icons/fi";
 
 const experiences = [
     {
@@ -11,11 +12,11 @@ const experiences = [
         certificate_link:
             "https://www.dropbox.com/scl/fi/cimb1ezcxifmgx016t78t/Oracle-Internship-Completion-Letter.pdf?rlkey=bzhex3oxdxsnk8gb4ukdp8rug&st=v38vbl38&dl=0",
         highlights: [
-            "Designed and experimented with multi-agent workflow for enterprise application for interactive multi-faceted assistance.",
-            "Hot-swappable system instruction sets and components for mid-conversation context update without overwriting conversation and session context.",
-            "Multi-step failure detection and re-routing with structured output enforcement for scalable system using LangGraph and custom components.",
+            "Designed and experimented with multi-agent workflows for enterprise applications providing interactive, multi-faceted assistance.",
+            "Engineered hot-swappable system instruction sets and modular components for mid-conversation context updates without overwriting session state.",
+            "Implemented multi-step failure detection and dynamic re-routing with structured output enforcement using LangGraph and custom orchestration components.",
         ],
-        tools: ["Python", "SQL Developer", "RAG", "Page Indexing", "NLP", "LLM", "Ollama"],
+        tools: ["Python", "LangGraph", "RAG", "SQL Developer", "NLP", "LLMs", "Ollama"],
     },
     {
         id: 4,
@@ -27,26 +28,27 @@ const experiences = [
         certificate_link:
             "https://www.dropbox.com/scl/fi/47fuej7himy46ys9j34of/icliniq-internship-certificate.pdf?rlkey=tomjytpycezmmw60h0btcu5tv&st=5bhzkf40&dl=0",
         highlights: [
-            "Implemented a system to convert traditional medical reports into interactive data and allow the user to interact with a chatbot based on it.",
-            "This was done by modelling a pipeline and allowing for a non-linear flow of data through multiple modules optimizing the user experience.",
-            "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
+            "Implemented an end-to-end processing system to transform traditional medical reports into structured interactive data for conversational query interfaces.",
+            "Modeled a multi-stage pipeline enabling non-linear data flow across OCR, data structuring, and retrieval-augmented generation (RAG) modules.",
+            "Developed backend services configured for local model hosting (LM Studio) to support rapid prompt iteration and dynamic parameter tuning.",
         ],
-        tools: ["Python", "MongoDB", "OCR", "RAG", "NLP", "LLM", "LM Studio"],
+        tools: ["Python", "MongoDB", "OCR", "RAG", "NLP", "LM Studio"],
     },
     {
         id: 3,
         position: "Student Researcher",
         organization: "Telkom University",
         location: "Bandung, Indonesia",
+        start_date: "2025",
         end_date: "2025",
         certificate_link:
             "https://www.dropbox.com/scl/fi/4wvev4ncf8hlkjd38t7sr/Telkom-University-Internship-Certificate.pdf?rlkey=npu52vxpp33smgjbtom1xcldg&st=wj4khic8&dl=0",
         highlights: [
-            "Worked on prototyping an IoT-based approach to hydroponics to improve productivity and provide additional real-time monitoring methods.",
-            "Tested the viability of the system on various microcontroller boards including Arduino Uno and ESP32 with cloud integration.",
-            "This was developed as a backend system with the ability to host a model locally allowing dynamic changes.",
+            "Researched and prototyped an IoT-based hydroponics monitoring architecture to evaluate real-time telemetry across sensor networks.",
+            "Tested firmware and system viability across multiple microcontrollers (Arduino Uno, ESP32) with cloud integration.",
+            "Engineered Python and Flask backend components with Firebase to ingest telemetry streams and log environmental metrics.",
         ],
-        tools: ["Firebase", "Arduino IDE", "BeautifulSoup", "Python", "IoT", "Flask"],
+        tools: ["Python", "Flask", "Firebase", "ESP32", "Arduino IDE", "IoT"],
     },
     {
         id: 2,
@@ -58,73 +60,94 @@ const experiences = [
         certificate_link:
             "https://www.dropbox.com/scl/fi/el8z30c47sohl0c9fluvt/Samsung-PRISM-Completion-Cetificate.pdf?rlkey=ta55rz3lkow04vedu2jcbzvho&st=zyhwl0s8&dl=0",
         highlights: [
-            "Developed a backend java based script for AI-based on-device malware detection on Android for validating downloaded files.",
-            "Designed and trained the model on Python and using Java to invoke the model to test the file for malware based on the file's metadata.",
-            "This supports multiple file types such as .docx, .pdf, .ppt, .apk, and other document file types.",
+            "Developed backend components for on-device machine learning malware detection on Android to validate downloaded files.",
+            "Trained and evaluated feature-classification models in Python, creating Java interfaces to invoke the model on-device.",
+            "Engineered metadata extraction pipelines supporting documents (.docx, .pdf, .ppt) and application packages (.apk).",
         ],
-        tools: ["Java", "Tensorflow", "Gradle", "ML", "Android", "APK"],
+        tools: ["Python", "TensorFlow", "Java", "Android", "Machine Learning"],
     },
     {
         id: 1,
         position: "Student Intern",
         organization: "MagnusVista Labs",
         location: "Coimbatore, India",
+        start_date: "2024",
         end_date: "2024",
         certificate_link:
             "https://www.dropbox.com/scl/fi/l91bud42kytw3rc6k0bph/MagnusVista-Internship-Certificate.pdf?rlkey=zkwpuua4nk8kyi4pe1pdqfg8d&st=y2r4qscn&dl=0",
         highlights: [
-            "Worked on agile development of a React-based Quiz app with JSON integration.",
-            "Has the capability to dynamically load and display data from a JSON file that can be retrieved from an API for a fluid and intuitive system.",
+            "Contributed to front-end and client-side logic for dynamic web applications using React and Vite.",
+            "Implemented structured JSON schema retrieval and state management for responsive data presentation.",
         ],
-        tools: ["React", "HTML", "CSS", "JS", "Vite", "Frontend", "JSON"],
+        tools: ["React", "JavaScript", "Vite", "REST APIs", "JSON"],
     },
 ];
 
 const ExperienceCard = ({ exp }) => (
     <motion.div
-        className="bg-dark-lightest border-primary/30 rounded-xl p-6 md:p-8 shadow-dark-md relative max-w-4xl mx-auto"
-        initial={{ opacity: 0, y: 30 }}
+        className="bg-dark-lighter/70 border border-slate-800/80 rounded-2xl p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
     >
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+        {/* Header: Role & Organization (Primary) with Date & Location (Secondary) */}
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4 pb-4 border-b border-slate-800/60">
             <div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{exp.position}</h3>
-                <div className="text-primary font-semibold mb-1">{exp.organization}</div>
-                <div className="text-darkText-secondary text-sm mb-1">{exp.location}</div>{" "}
+                <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <h3 className="text-xl font-bold text-darkText-primary">{exp.position}</h3>
+                    <span className="text-darkText-muted font-mono text-xs">•</span>
+                    <span className="text-primary font-semibold text-base">{exp.organization}</span>
+                </div>
+                <div className="flex items-center gap-4 text-xs font-mono text-darkText-muted">
+                    <span className="flex items-center gap-1">
+                        <FiMapPin className="w-3.5 h-3.5" />
+                        {exp.location}
+                    </span>
+                    <span className="flex items-center gap-1">
+                        <FiCalendar className="w-3.5 h-3.5" />
+                        {exp.start_date && exp.end_date && exp.start_date !== exp.end_date
+                            ? `${exp.start_date} – ${exp.end_date}`
+                            : exp.start_date || exp.end_date}
+                    </span>
+                </div>
             </div>
-            <div className="md:absolute md:top-6 md:right-8 flex-shrink-0">
-                <span className="bg-dark px-4 py-1 rounded-full text-darkText-secondary text-xs border border-primary/30">
-                    {exp.start_date}
-                    {exp.start_date && exp.end_date ? ` - ${exp.end_date}` : exp.end_date ? exp.end_date : ""}
-                </span>
-            </div>
+
+            {/* Certificate link */}
+            {exp.certificate_link && (
+                <a
+                    href={exp.certificate_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-darkText-secondary hover:text-primary transition-colors px-3 py-1.5 rounded-md bg-dark border border-slate-800 self-start mt-1 sm:mt-0"
+                >
+                    <span>Certificate</span>
+                    <FiExternalLink className="w-3 h-3" />
+                </a>
+            )}
         </div>
-        <ul className="list-disc list-inside text-darkText-secondary space-y-2 mt-4 mb-6">
+
+        {/* Structured Bullets */}
+        <ul className="space-y-2.5 text-darkText-secondary text-sm leading-relaxed mb-6">
             {exp.highlights.map((item, idx) => (
-                <li key={idx}>{item}</li>
+                <li key={idx} className="flex items-start gap-2.5">
+                    <span className="text-primary mt-1.5 font-mono text-xs">▹</span>
+                    <span>{item}</span>
+                </li>
             ))}
         </ul>
-        <div className="mb-4 flex flex-wrap gap-4 justify-center">
+
+        {/* Technical Context Tags */}
+        <div className="flex flex-wrap gap-1.5 items-center pt-2">
+            <span className="text-[11px] font-mono text-darkText-muted mr-1.5">Context:</span>
             {exp.tools.map((tool, ind) => (
                 <span
                     key={ind}
-                    className="text-xs px-2 py-1 bg-dark-lightest text-darkText-secondary rounded-md border border-primary/20"
+                    className="text-[11px] font-mono px-2.5 py-0.5 bg-dark-lightest/60 text-darkText-secondary rounded border border-slate-800"
                 >
                     {tool}
                 </span>
             ))}
-        </div>
-        <div className="flex justify-end">
-            <a
-                href={exp.certificate_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary hover:bg-accent text-white px-5 py-2 rounded font-medium transition-colors text-sm"
-            >
-                View Certificate
-            </a>
         </div>
     </motion.div>
 );
@@ -134,29 +157,32 @@ const Experiences = () => {
     const isInView = useInView(ref, { once: true, amount: 0.1 });
 
     return (
-        <section className="py-20 bg-dark relative overflow-hidden" id="experiences">
-            <div className="absolute right-0 top-20 w-96 h-96 bg-primary opacity-5 blur-3xl -z-10" />
-            <div className="absolute -left-10 bottom-10 w-64 h-64 bg-accent opacity-5 blur-2xl -z-10" />
-            <div className="absolute left-1/3 top-1/2 w-20 h-20 bg-primary opacity-5 blur-xl -z-10" />
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
+        <section className="py-24 bg-dark-lighter relative overflow-hidden" id="experiences">
+            <div className="absolute right-0 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
+            <div className="absolute -left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
+
             <div className="container mx-auto px-4 md:px-6">
-                <div className="section-title mb-10">
+                <div className="section-title mb-16 text-center">
                     <motion.h2
-                        className="text-3xl md:text-4xl font-bold mb-4"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+                        className="text-3xl md:text-4xl font-bold tracking-tight mb-3"
+                        initial={{ opacity: 0, y: -16 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
                         transition={{ duration: 0.5 }}
                     >
-                        Professional <span className="text-primary">Experiences</span>
+                        Professional <span className="text-primary">Experience</span>
                     </motion.h2>
                     <motion.div
-                        className="underline"
+                        className="underline h-1 w-16 bg-primary mx-auto rounded-full"
                         initial={{ width: 0 }}
-                        animate={isInView ? { width: 80 } : { width: 0 }}
-                        transition={{ duration: 0.7, delay: 0.3 }}
+                        animate={isInView ? { width: 64 } : { width: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
                     />
+                    <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
+                        Applied Engineering & Technical Contributions
+                    </p>
                 </div>
-                <div ref={ref} className="flex flex-col gap-8">
+
+                <div ref={ref} className="flex flex-col gap-6">
                     {experiences.map((exp) => (
                         <ExperienceCard key={exp.id} exp={exp} />
                     ))}

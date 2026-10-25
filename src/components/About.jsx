@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { FiCode } from "react-icons/fi";
-import { PiCertificateFill } from "react-icons/pi";
+import { LuBrainCircuit, LuCpu } from "react-icons/lu";
+import { FiServer } from "react-icons/fi";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -23,149 +22,135 @@ const About = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
   const cardVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
-  // Removed Experience from highlights as requested
-  const highlights = [
+  const engineeringPrinciples = [
     {
-      icon: <FiCode />,
-      title: "Polyglot Programming",
+      icon: <LuBrainCircuit className="w-5 h-5 text-primary" />,
+      title: "Agent & System Architecture",
       description:
-        "Proficient in multiple programming languages, adapting to the best tool for each task.",
+        "Designing multi-agent workflows, stateful memory systems, and hot-swappable context mechanisms for structured reasoning.",
     },
     {
-      icon: <PiCertificateFill />,
-      title: "Certifications",
+      icon: <LuCpu className="w-5 h-5 text-accent" />,
+      title: "Empirical Experiments",
       description:
-        "Certification in multiple online courses for proficiency and capability in various languages and skills.",
+        "Prototyping working implementations, stress-testing edge cases, and evaluating behavior with local and cloud models.",
+    },
+    {
+      icon: <FiServer className="w-5 h-5 text-indigo-400" />,
+      title: "Backend & Data Pipelines",
+      description:
+        "Developing Python services (FastAPI/Flask), document retrieval systems, and structured data stores that ground AI outputs.",
     },
   ];
 
   return (
     <section
       id="about"
-      className="py-20 bg-dark-lighter relative overflow-hidden"
+      className="py-24 bg-dark-lighter relative overflow-hidden"
     >
-      {/* Background Design Elements */}
-      <div className="absolute right-0 top-20 w-64 h-64 bg-primary opacity-5 blur-3xl -z-10" />
-      <div className="absolute left-10 bottom-10 w-32 h-32 bg-accent opacity-5 blur-2xl -z-10" />
-      <div className="absolute left-1/4 top-1/3 w-16 h-16 bg-dark-lightest rounded-full -z-10" />
-
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptLTI0IDBoNnY2aC02di02em0wLTEyaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6bTEyIDBoNnY2aC02di02em0tMjQtMTJoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnptMTIgMGg2djZoLTZ2LTZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-5 -z-10"></div>
+      {/* Background accents */}
+      <div className="absolute right-0 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute left-10 bottom-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Title */}
-        <div className="section-title">
+        <div className="section-title mb-14 text-center">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            className="text-3xl md:text-4xl font-bold tracking-tight mb-3"
+            initial={{ opacity: 0, y: -16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
             transition={{ duration: 0.5 }}
           >
             About <span className="text-primary">Me</span>
           </motion.h2>
           <motion.div
-            className="underline"
+            className="underline h-1 w-16 bg-primary mx-auto rounded-full"
             initial={{ width: 0 }}
-            animate={isInView ? { width: 80 } : { width: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            animate={isInView ? { width: 64 } : { width: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           />
+          <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
+            Engineering Interests & Approach
+          </p>
         </div>
 
         <div
           ref={ref}
-          className="grid md:grid-cols-1 gap-12 items-center justify-items-center"
+          className="max-w-4xl mx-auto"
         >
-          {/* Content Column */}
+          {/* Main Narrative */}
           <motion.div
-            className="order-2 justify-center items-center mx-auto max-w-2xl w-full text-center"
+            className="space-y-6 text-darkText-secondary text-base md:text-lg leading-relaxed bg-dark/60 p-8 md:p-10 rounded-2xl border border-slate-800/80 shadow-dark-md"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-medium text-primary mb-3"
-            >
-              Get to know me
-            </motion.h3>
-
-            <motion.h4
-              variants={itemVariants}
-              className="text-2xl md:text-3xl font-bold mb-6 text-darkText-primary"
-            >
-              Passionate{" "}
-              <span className="gradient-text">Developer & Designer</span>
-            </motion.h4>
-
-            <motion.p
-              variants={itemVariants}
-              className="text-darkText-secondary mb-6"
-            >
-              I'm a creative developer with a passion for building beautiful,
-              functional projects and applications. I love transforming ideas
-              into reality through code, design, and innovation.
+            <motion.p variants={itemVariants} className="text-darkText-primary font-medium">
+              I'm a Python developer focused on building AI-powered applications and
+              exploring how intelligent systems can work beyond a single model or prompt.
             </motion.p>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-darkText-secondary mb-8"
-            >
-              My journey began with a fascination for computers and coding,
-              followed by curiosity-driven learning, where I've honed my skills
-              in primarily Python-based implementations. I'm passionate about
-              clean code, intuitive design, and building applications that solve
-              real-world problems.
+            <motion.p variants={itemVariants}>
+              My work spans LLM applications, multi-agent systems, retrieval-based
+              workflows, and local model experimentation. I'm particularly interested
+              in how agents coordinate, how memory influences their decisions, and how
+              system design affects reliability and performance.
             </motion.p>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-darkText-secondary mb-8"
-            >
-              I develop tools, recreate games, and experiment with various
-              tools, technologies, concepts, and methodologies to gain knowledge
-              and experience. I am eager to explore fields like Cybersecurity,
-              Natural Language Processing, and Open LLM Architectures.
+            <motion.p variants={itemVariants}>
+              I approach projects as engineering experiments: understand the problem,
+              build a working implementation, evaluate its behavior, and investigate
+              what can be improved. Alongside AI, I work with backend development and
+              data processing to turn ideas into usable systems.
             </motion.p>
 
-            {/* Highlights Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 bg-dark">
-              {highlights.map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  className="bg-dark-lightest p-4 rounded-lg border border-dark-lightest flex flex-col items-center text-center space-y-3 hover:shadow-dark-md transition-all duration-300"
-                  whileHover={{
-                    y: -5,
-                    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.3)",
-                  }}
-                >
-                  <div className="text-primary text-2xl p-3 bg-dark rounded-full">
+            <motion.p variants={itemVariants} className="border-t border-slate-800/80 pt-5 text-darkText-secondary">
+              I'm interested in opportunities where I can contribute to Python
+              engineering, AI application development, and applied research while
+              continuing to deepen my understanding of the systems I build.
+            </motion.p>
+          </motion.div>
+
+          {/* Core Technical Pillars */}
+          <motion.div
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
+            {engineeringPrinciples.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                className="bg-dark/80 p-6 rounded-xl border border-slate-800/80 hover:border-primary/40 transition-all duration-300 flex flex-col justify-between"
+                whileHover={{ y: -3 }}
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-lg bg-dark-lighter border border-slate-800 flex items-center justify-center mb-4">
                     {item.icon}
                   </div>
-                  <div>
-                    <h5 className="font-semibold text-darkText-primary mb-2">
-                      {item.title}
-                    </h5>
-                    <p className="text-darkText-secondary text-sm">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                  <h3 className="font-semibold text-darkText-primary text-base mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-darkText-secondary text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
