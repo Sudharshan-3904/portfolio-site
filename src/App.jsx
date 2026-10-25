@@ -79,7 +79,6 @@ function App() {
         <Skills />
         <Experiences />
         <Projects />
-        <FreelanceWorks />
         <Publications />
         <Contact />
       </main>
