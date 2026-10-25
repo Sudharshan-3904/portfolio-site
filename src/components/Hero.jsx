@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiArrowRight, FiFileText } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiArrowRight, FiFileText } from "react-icons/fi";
 import { SiPython } from "react-icons/si";
 
 const Hero = () => {
@@ -42,11 +42,6 @@ const Hero = () => {
             url: "https://www.linkedin.com/in/sudharshan-m-prabhu-384a421b9",
             label: "LinkedIn",
         },
-        {
-            icon: <FiMail className="w-5 h-5" />,
-            url: "mailto:sudharshanvalar@gmail.com",
-            label: "Mail",
-        },
     ];
 
     return (
@@ -71,27 +66,25 @@ const Hero = () => {
                         <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2">
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-mono font-medium bg-primary/10 text-primary border border-primary/25">
                                 <SiPython className="w-3.5 h-3.5" />
-                                Python Engineer
+                                Python & Software Developer
                             </span>
-                            {technicalLabels.map((label, idx) => (
-                                <span
-                                    key={idx}
-                                    className="px-3 py-1 rounded-md text-xs font-mono text-darkText-secondary bg-dark-lightest/70 border border-slate-800"
-                                >
-                                    {label}
-                                </span>
-                            ))}
+                            <span className="px-3 py-1 rounded-md text-xs font-mono text-accent bg-dark-lightest/70 border border-slate-800">
+                                Intelligent Systems
+                            </span>
+                            <span className="px-3 py-1 rounded-md text-xs font-mono text-darkText-secondary bg-dark-lightest/70 border border-slate-800">
+                                Systems Exploration
+                            </span>
                         </motion.div>
 
-                        {/* Primary Headline */}
+                        {/* Primary Headline: Curiosity-led & broader */}
                         <motion.div variants={itemVariants} className="space-y-2">
                             <p className="text-sm font-mono text-accent tracking-wider uppercase">
                                 Sudharshan M Prabhu
                             </p>
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-darkText-primary tracking-tight leading-[1.15]">
-                                Python Developer <br />
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-darkText-primary tracking-tight leading-[1.2]">
+                                I build things, explore ideas, <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-indigo-300 to-accent">
-                                    Building AI Systems
+                                    and figure out how they work.
                                 </span>
                             </h1>
                         </motion.div>
@@ -99,12 +92,23 @@ const Hero = () => {
                         {/* Supporting Narrative Copy */}
                         <motion.p
                             variants={itemVariants}
-                            className="text-darkText-secondary text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl"
+                            className="text-darkText-secondary text-base sm:text-lg leading-relaxed max-w-2xl"
                         >
-                            I work on AI-powered applications, LLM-based agents, and the
-                            engineering systems behind them — exploring how they can reason,
-                            collaborate, and operate reliably.
+                            I'm a software developer with a strong technical direction in{" "}
+                            <span className="text-darkText-primary font-medium">Python and intelligent systems</span>.
+                            I enjoy understanding how technologies function under the hood, building practical tools,
+                            and turning concepts into working implementations across software engineering, AI applications,
+                            and modern computing systems.
                         </motion.p>
+
+                        {/* Direction Overview Pills */}
+                        <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2 pt-1 text-xs font-mono text-darkText-muted">
+                            <span className="text-darkText-secondary font-semibold">Current Focus:</span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">Python</span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">AI Agents & LLMs</span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">Web Backends</span>
+                            <span className="px-2 py-0.5 rounded bg-dark-lighter border border-slate-800 text-slate-300">IoT & Systems</span>
+                        </motion.div>
 
                         {/* Calls to Action */}
                         <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-2">
@@ -165,14 +169,14 @@ const Hero = () => {
                                         <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                                     </div>
-                                    <span className="text-[11px] text-slate-400">agent_system.py</span>
+                                    <span className="text-[11px] text-slate-400">workbench.py</span>
                                 </div>
 
                                 {/* Portrait image */}
                                 <div className="p-4 bg-gradient-to-b from-dark-lighter to-dark">
                                     <img
                                         src="/photos/ProfileNoBG.png"
-                                        alt="Sudharshan - Python Developer & AI Systems Engineer"
+                                        alt="Sudharshan - Software Developer"
                                         className="w-full h-auto object-cover rounded-xl"
                                     />
                                 </div>
@@ -181,9 +185,9 @@ const Hero = () => {
                                 <div className="px-4 py-3 bg-dark-darker/90 border-t border-slate-800/80 text-xs font-mono flex items-center justify-between">
                                     <span className="text-darkText-secondary flex items-center gap-2">
                                         <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                                        <span>Focus: Agents & Architecture</span>
+                                        <span>Python & Intelligent Systems</span>
                                     </span>
-                                    <span className="text-darkText-muted">Python 3.12+</span>
+                                    <span className="text-darkText-muted">Dev & Systems</span>
                                 </div>
                             </div>
                         </div>

@@ -41,12 +41,12 @@ const Footer = () => {
         </motion.button>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-darkText-muted">
           <div className="flex items-center gap-2">
             <span className="text-darkText-primary font-bold">Sudharshan M Prabhu</span>
             <span>—</span>
-            <span>Python Developer · AI Systems</span>
+            <span>Software Developer · Python & Intelligent Systems</span>
           </div>
 
           <div className="flex items-center space-x-4">

@@ -85,7 +85,7 @@ const experiences = [
 
 const ExperienceCard = ({ exp }) => (
     <motion.div
-        className="bg-dark-lighter/70 border border-slate-800/80 rounded-2xl p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative max-w-4xl mx-auto"
+        className="w-full bg-dark-lighter/70 border border-slate-800/80 rounded-2xl p-6 md:p-8 hover:border-primary/40 shadow-dark-md transition-all duration-300 relative"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -182,7 +182,7 @@ const Experiences = () => {
                     </p>
                 </div>
 
-                <div ref={ref} className="flex flex-col gap-6">
+                <div ref={ref} className="max-w-4xl mx-auto w-full flex flex-col gap-6 items-stretch">
                     {experiences.map((exp) => (
                         <ExperienceCard key={exp.id} exp={exp} />
                     ))}

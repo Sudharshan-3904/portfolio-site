@@ -293,7 +293,7 @@ const Projects = () => {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                         transition={{ duration: 0.5 }}
                     >
-                        Featured <span className="text-primary">Projects</span>
+                        Featured <span className="text-primary">Projects</span> & Experiments
                     </motion.h2>
                     <motion.div
                         className="underline"
@@ -302,12 +302,12 @@ const Projects = () => {
                         transition={{ duration: 0.7, delay: 0.3 }}
                     />
                     <motion.p
-                        className="text-darkText-secondary mt-6 max-w-2xl mx-auto"
+                        className="text-darkText-secondary mt-6 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed"
                         initial={{ opacity: 0 }}
                         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        Explore my recent projects and discover the solutions I've built
+                        A collection spanning intelligent systems, machine learning research, IoT automation, and software tools — built to test ideas, solve practical challenges, and explore computing systems.
                     </motion.p>
                 </div>
 

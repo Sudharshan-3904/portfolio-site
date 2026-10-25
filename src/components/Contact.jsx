@@ -1,9 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiSend, FiMail, FiGithub, FiLinkedin, FiMapPin } from "react-icons/fi";
+import { FiSend, FiGithub, FiLinkedin, FiMapPin } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
-
-const TARGET_EMAIL = "sudharshanvalar@gmail.com";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -14,6 +12,20 @@ const containerVariants = {
     },
   },
 };
+
+// Target email and EmailJS credentials read dynamically from environment variables (.env)
+const targetEmail =
+  import.meta.env.VITE_EMAIL ||
+  import.meta.env.VITE_TARGET_EMAIL ||
+  import.meta.env.VITE_CONTACT_EMAIL ||
+  "";
+
+const emailServiceId =
+  import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_3on2h5m";
+const emailTemplateId =
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_u7zna1c";
+const emailPublicKey =
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "Nj9QaumWahmMlt_1E";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -39,8 +51,8 @@ export default function Contact() {
     e.preventDefault();
     setStatus("Sending...");
     emailjs
-      .sendForm("service_3on2h5m", "template_u7zna1c", formRef.current, {
-        publicKey: "Nj9QaumWahmMlt_1E",
+      .sendForm(emailServiceId, emailTemplateId, formRef.current, {
+        publicKey: emailPublicKey,
       })
       .then(
         () => {
@@ -48,7 +60,7 @@ export default function Contact() {
           setForm({ sender: "", name: "", message: "", subject: "" });
         },
         () => {
-          setStatus("Failed to send message. Please reach out via email directly.");
+          setStatus("Failed to send message. Please reach out via LinkedIn or GitHub.");
         }
       );
   };
@@ -80,7 +92,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
           />
           <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
-            Python Engineering · AI Systems · Applied Research
+            Software Development · Python & Intelligent Systems · Systems Exploration
           </p>
         </div>
 
@@ -98,23 +110,10 @@ export default function Contact() {
                 Direct Channels
               </h3>
               <p className="text-sm text-darkText-secondary leading-relaxed">
-                I'm actively interested in Python development, AI agent systems, and applied research opportunities. Feel free to reach out directly through any of these platforms:
+                I'm actively interested in software engineering, Python development, and intelligent systems opportunities. Feel free to reach out directly through any of these platforms:
               </p>
 
               <div className="space-y-4 pt-2">
-                <a
-                  href="mailto:sudharshanvalar@gmail.com"
-                  className="flex items-center gap-3 p-3 rounded-xl bg-dark-lighter/60 border border-slate-800 hover:border-primary/40 text-sm text-darkText-secondary hover:text-white transition-colors"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                    <FiMail className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] font-mono text-darkText-muted block">Email</span>
-                    <span className="font-mono text-xs text-darkText-primary">sudharshanvalar@gmail.com</span>
-                  </div>
-                </a>
-
                 <a
                   href="https://github.com/Sudharshan-3904"
                   target="_blank"
@@ -171,7 +170,10 @@ export default function Contact() {
                 </div>
               )}
 
-              <input type="hidden" name="email" value={TARGET_EMAIL} />
+              {/* Target recipient email loaded dynamically from .env */}
+              {targetEmail && (
+                <input type="hidden" name="email" value={targetEmail} />
+              )}
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>

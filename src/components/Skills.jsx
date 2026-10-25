@@ -37,74 +37,74 @@ const Skills = () => {
         },
     };
 
-    // 4 categorized skill cards arranged as a 2x2 cube
+    // 4 categorized skill cards in a 2x2 cube with demonstrated concrete tools & technologies
     const skillCategories = [
         {
-            title: "Core Development",
-            badge: "Foundation",
+            title: "Python & Intelligent Systems",
+            badge: "Core Direction",
             icon: <FaPython className="w-5 h-5 text-primary" />,
-            description: "Languages and engineering practices demonstrated across codebase implementations.",
+            description: "Core technical direction: language depth, agent orchestration, and retrieval workflows.",
             items: [
-                { name: "Python", status: "Primary" },
-                { name: "Modular System Design", status: "Primary" },
-                { name: "APIs & Web Services (FastAPI)", status: "Primary" },
-                { name: "SQL & Relational Schemas", status: "Working knowledge" },
-                { name: "Data Structures & Algorithms", status: "Working knowledge" },
-                { name: "Testing & Debugging", status: "Working knowledge" },
+                { name: "Python", status: "Core Stack", evidence: "AsyncIO · OOP · NumPy · Typing · Multiprocessing" },
+                { name: "Agent Workflows & LangGraph", status: "Core Stack", evidence: "LangGraph · StateGraph · Tool Calling · Pydantic" },
+                { name: "Retrieval-Augmented Gen (RAG)", status: "Core Stack", evidence: "Embeddings · Chunking · Semantic Search · Reranking" },
+                { name: "Local Inference (Ollama, LM Studio)", status: "Core Stack", evidence: "Ollama · LM Studio · GGUF Runtimes · Hugging Face" },
+                { name: "Structured Outputs & Prompt Design", status: "Core Stack", evidence: "Pydantic Schemas · JSON Schema · System Prompts" },
+                { name: "Deep Learning (PyTorch, TensorFlow)", status: "Proficient", evidence: "PyTorch · Torchvision · CNNs · Model Inference" },
             ],
         },
         {
-            title: "AI & LLM Systems",
-            badge: "Applied Systems",
+            title: "Software Engineering & Backends",
+            badge: "Backends & Architecture",
             icon: <LuBrainCircuit className="w-5 h-5 text-accent" />,
-            description: "Production concepts implemented in multi-part agents and local pipelines.",
+            description: "Applied software practices: API services, clean modular design, and data stores.",
             items: [
-                { name: "Agent Workflows", status: "Primary" },
-                { name: "Retrieval-Augmented Gen (RAG)", status: "Primary" },
-                { name: "Local Inference (Ollama)", status: "Primary" },
-                { name: "Structured Output Enforcement", status: "Primary" },
-                { name: "Prompt Design & Grounding", status: "Primary" },
-                { name: "Model Integration", status: "Working knowledge" },
+                { name: "Web APIs (FastAPI & Flask)", status: "Core Stack", evidence: "FastAPI · Flask · Uvicorn · REST · WebSockets" },
+                { name: "Modular Architecture & Systems Design", status: "Core Stack", evidence: "Clean Architecture · Service Layers · Dependency Injection" },
+                { name: "Relational & Document DBs (SQL, MongoDB)", status: "Proficient", evidence: "PostgreSQL · SQLite · MongoDB · SQLAlchemy · PyMongo" },
+                { name: "Data Structures & Core Algorithms", status: "Proficient", evidence: "Graphs · Trees · Hash Maps · Time/Space Complexity" },
+                { name: "Testing, Debugging & Code Quality", status: "Proficient", evidence: "PyTest · Unittest · PDB Debugger · Flake8/Black" },
+                { name: "Client-side Web (React, Vite)", status: "Proficient", evidence: "React 18 · Vite · Tailwind CSS · Responsive UI" },
             ],
         },
         {
-            title: "AI System Architecture",
-            badge: "System Design",
+            title: "Systems, Hardware & Prototyping",
+            badge: "Systems & Hardware",
             icon: <LuLayers className="w-5 h-5 text-indigo-400" />,
-            description: "Architectural patterns distinguishing robust systems from toy applications.",
+            description: "Hands-on computing: embedded microcontrollers, sensor telemetry, and low-level code.",
             items: [
-                { name: "Multi-Agent Orchestration", status: "Primary" },
-                { name: "Stateful Memory Systems", status: "Primary" },
-                { name: "Agent Communication & Routing", status: "Primary" },
-                { name: "Dynamic Context Updating", status: "Working knowledge" },
-                { name: "System Evaluation", status: "Working knowledge" },
-                { name: "Observability & Tracing", status: "Exploring" },
+                { name: "Embedded Hardware (ESP32, Arduino)", status: "Proficient", evidence: "ESP32 · Arduino Uno · MicroPython · C++ Firmware" },
+                { name: "Sensor Telemetry & Cloud Logging", status: "Proficient", evidence: "MQTT · HTTP Streaming · Firebase Realtime DB · Sensors" },
+                { name: "Linux Environment & Shell Tooling", status: "Proficient", evidence: "Bash · Zsh · SSH · Systemd Services · Grep/Awk" },
+                { name: "Low-Level Foundations (C / C++)", status: "Proficient", evidence: "Pointers · Memory Layouts · Structs · GCC Compiler" },
+                { name: "On-Device Services (Java, Android)", status: "Proficient", evidence: "Java · Android SDK · Gradle · JNI · APK Inspection" },
+                { name: "Hardware Interfacing & Serial Buses", status: "Exploring", evidence: "I2C · SPI · UART Protocols · GPIO Pinouts · ADC" },
             ],
         },
         {
-            title: "Tools & Infrastructure",
-            badge: "Tooling & Infra",
+            title: "Tooling, Infra & Active Exploration",
+            badge: "Tools & Exploration",
             icon: <LuTerminal className="w-5 h-5 text-emerald-400" />,
-            description: "Developer tooling, container environments, vector stores, and orchestration frameworks.",
+            description: "Developer workflows, container environments, vector stores, and active research.",
             items: [
-                { name: "LangGraph & LangChain", status: "Primary" },
-                { name: "Docker & Linux Environments", status: "Working knowledge" },
-                { name: "Git, GitHub & CI/CD", status: "Primary" },
-                { name: "MongoDB & ChromaDB", status: "Working knowledge" },
-                { name: "Postman & API Testing", status: "Working knowledge" },
-                { name: "N8N Workflow Automation", status: "Working knowledge" },
+                { name: "Version Control (Git, GitHub, CI)", status: "Core Stack", evidence: "Git CLI · GitHub Actions · CI/CD Pipelines · PR Workflow" },
+                { name: "Containerization (Docker)", status: "Proficient", evidence: "Dockerfiles · Docker Compose · Multi-stage Builds · Volumes" },
+                { name: "Vector Databases (ChromaDB)", status: "Proficient", evidence: "ChromaDB · FAISS · Cosine Similarity · Embeddings Index" },
+                { name: "API Testing & Tooling (Postman)", status: "Proficient", evidence: "Postman Collections · Newman CLI · Environment Presets" },
+                { name: "Workflow Automation (N8N)", status: "Proficient", evidence: "N8N Workflows · Webhooks · API Integrations · Data Nodes" },
+                { name: "Observability, Tracing & Profiling", status: "Exploring", evidence: "OpenTelemetry · cProfile · Structured Logs · Latency Metrics" },
             ],
         },
     ];
 
     const getStatusStyle = (status) => {
         switch (status) {
-            case "Primary":
-                return "bg-primary/10 text-primary border-primary/25";
-            case "Working knowledge":
-                return "bg-accent/10 text-accent border-accent/25";
+            case "Core Stack":
+                return "bg-primary/10 text-primary border-primary/30";
+            case "Proficient":
+                return "bg-accent/10 text-accent border-accent/30";
             case "Exploring":
-                return "bg-slate-800 text-darkText-muted border-slate-700";
+                return "bg-amber-400/10 text-amber-300 border-amber-400/30";
             default:
                 return "bg-slate-800/80 text-darkText-secondary border-slate-700/80";
         }
@@ -125,7 +125,7 @@ const Skills = () => {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -16 }}
                         transition={{ duration: 0.5 }}
                     >
-                        Technical <span className="text-primary">Focus</span>
+                        Technical <span className="text-primary">Focus</span> & Breadth
                     </motion.h2>
                     <motion.div
                         className="underline h-1 w-16 bg-primary mx-auto rounded-full"
@@ -134,7 +134,7 @@ const Skills = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     />
                     <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
-                        Capabilities Grouped By Engineering Role
+                        Core Stack · Proficient Foundations · Active Exploration
                     </p>
                 </div>
 
@@ -174,18 +174,26 @@ const Skills = () => {
                                     {category.items.map((item, itemIdx) => (
                                         <div
                                             key={itemIdx}
-                                            className="flex items-center justify-between p-2.5 rounded-lg bg-dark/50 border border-slate-800/60"
+                                            className="p-2.5 rounded-lg bg-dark/50 border border-slate-800/60 hover:border-slate-700/80 transition-colors"
                                         >
-                                            <span className="text-sm text-darkText-primary font-medium">
-                                                {item.name}
-                                            </span>
-                                            <span
-                                                className={`text-[10px] font-mono px-2 py-0.5 rounded border ${getStatusStyle(
-                                                    item.status
-                                                )}`}
-                                            >
-                                                {item.status}
-                                            </span>
+                                            <div className="flex items-center justify-between mb-1">
+                                                <span className="text-sm text-darkText-primary font-medium">
+                                                    {item.name}
+                                                </span>
+                                                <span
+                                                    className={`text-[10px] font-mono px-2 py-0.5 rounded border ${getStatusStyle(
+                                                        item.status
+                                                    )}`}
+                                                >
+                                                    {item.status}
+                                                </span>
+                                            </div>
+                                            {item.evidence && (
+                                                <div className="text-[11px] font-mono text-darkText-muted flex items-center gap-1.5 pt-0.5">
+                                                    <span className="text-primary/70">↳</span>
+                                                    <span>{item.evidence}</span>
+                                                </div>
+                                            )}
                                         </div>
                                     ))}
                                 </div>

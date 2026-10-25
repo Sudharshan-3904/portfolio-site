@@ -37,22 +37,22 @@ const About = () => {
 
   const engineeringPrinciples = [
     {
-      icon: <LuBrainCircuit className="w-5 h-5 text-primary" />,
-      title: "Agent & System Architecture",
+      icon: <LuCpu className="w-5 h-5 text-accent" />,
+      title: "Curiosity & First Principles",
       description:
-        "Designing multi-agent workflows, stateful memory systems, and hot-swappable context mechanisms for structured reasoning.",
+        "Driven by understanding how systems operate beneath abstractions — testing hypotheses, inspecting behavior, and learning by building working prototypes.",
     },
     {
-      icon: <LuCpu className="w-5 h-5 text-accent" />,
-      title: "Empirical Experiments",
+      icon: <LuBrainCircuit className="w-5 h-5 text-primary" />,
+      title: "Python & Intelligent Systems",
       description:
-        "Prototyping working implementations, stress-testing edge cases, and evaluating behavior with local and cloud models.",
+        "My primary technical direction: developing LLM-assisted workflows, multi-agent coordination, retrieval-augmented pipelines, and local inference models.",
     },
     {
       icon: <FiServer className="w-5 h-5 text-indigo-400" />,
-      title: "Backend & Data Pipelines",
+      title: "Software Engineering & Systems Breadth",
       description:
-        "Developing Python services (FastAPI/Flask), document retrieval systems, and structured data stores that ground AI outputs.",
+        "Building beyond a single domain: web service backends (FastAPI/Flask), data modeling, embedded hardware (IoT), and developer tooling.",
     },
   ];
 
@@ -83,7 +83,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           />
           <p className="text-xs font-mono uppercase tracking-widest text-accent mt-4">
-            Engineering Interests & Approach
+            Curiosity, Approach & Technical Philosophy
           </p>
         </div>
 
@@ -99,58 +99,59 @@ const About = () => {
             animate={isInView ? "visible" : "hidden"}
           >
             <motion.p variants={itemVariants} className="text-darkText-primary font-medium">
-              I'm a Python developer focused on building AI-powered applications and
-              exploring how intelligent systems can work beyond a single model or prompt.
+              I’m a software developer motivated by genuine curiosity about how computing systems work — from the logic running in a local script to the distributed components behind an application.
             </motion.p>
 
             <motion.p variants={itemVariants}>
-              My work spans LLM applications, multi-agent systems, retrieval-based
-              workflows, and local model experimentation. I'm particularly interested
-              in how agents coordinate, how memory influences their decisions, and how
-              system design affects reliability and performance.
+              My primary technical focus is in <span className="text-white font-medium">Python and intelligent systems</span>. I build LLM-assisted applications, multi-agent workflows, and retrieval-augmented systems, exploring how models can interact with tools, manage state, and assist human workflows reliably. I treat this as an applied engineering craft rather than magic: understanding the constraints, evaluating outputs, and keeping architectures grounded.
             </motion.p>
 
             <motion.p variants={itemVariants}>
-              I approach projects as engineering experiments: understand the problem,
-              build a working implementation, evaluate its behavior, and investigate
-              what can be improved. Alongside AI, I work with backend development and
-              data processing to turn ideas into usable systems.
+              At the same time, I intentionally maintain breadth across software engineering. I enjoy developing backend services, working with relational and document databases, and experimenting with embedded microcontrollers (IoT) and system utilities. Exploring different technical domains helps me write more resilient code and pick the right abstraction for each problem.
             </motion.p>
 
             <motion.p variants={itemVariants} className="border-t border-slate-800/80 pt-5 text-darkText-secondary">
-              I'm interested in opportunities where I can contribute to Python
-              engineering, AI application development, and applied research while
-              continuing to deepen my understanding of the systems I build.
+              I value working implementations over inflated claims. I'm looking for opportunities where I can contribute to Python and software engineering, build practical AI-powered systems, and collaborate with teams that appreciate thoughtful problem-solving and clean code.
             </motion.p>
           </motion.div>
 
-          {/* Core Technical Pillars */}
+          {/* Core Technical Pillars: 2-column layout with odd 3rd card ~50% wider and centered */}
           <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+            className="grid sm:grid-cols-2 gap-6 mt-10"
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            {engineeringPrinciples.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="bg-dark/80 p-6 rounded-xl border border-slate-800/80 hover:border-primary/40 transition-all duration-300 flex flex-col justify-between"
-                whileHover={{ y: -3 }}
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-lg bg-dark-lighter border border-slate-800 flex items-center justify-center mb-4">
-                    {item.icon}
+            {engineeringPrinciples.map((item, index) => {
+              const isLastAndOdd =
+                engineeringPrinciples.length % 2 !== 0 &&
+                index === engineeringPrinciples.length - 1;
+
+              return (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  className={`bg-dark/80 p-6 sm:p-8 rounded-xl border border-slate-800/80 hover:border-primary/40 transition-all duration-300 flex flex-col justify-between ${
+                    isLastAndOdd
+                      ? "sm:col-span-2 sm:w-[75%] sm:mx-auto sm:justify-self-center shadow-dark-md"
+                      : "w-full"
+                  }`}
+                  whileHover={{ y: -3 }}
+                >
+                  <div>
+                    <div className="w-10 h-10 rounded-lg bg-dark-lighter border border-slate-800 flex items-center justify-center mb-4">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-semibold text-darkText-primary text-base sm:text-lg mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-darkText-secondary text-sm leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="font-semibold text-darkText-primary text-base mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-darkText-secondary text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
