@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
+import OptimizedImage from "./OptimizedImage";
+
 
 const FreelanceWorks = () => {
   const ref = useRef(null);
@@ -90,13 +92,14 @@ const FreelanceWorks = () => {
               className="bg-dark-lighter/75 border border-slate-800/70 hover:border-primary/40 rounded-xl p-6 md:p-8 shadow-dark-md flex flex-col md:flex-row items-stretch max-w-4xl mx-auto relative overflow-hidden transition-all duration-300"
             >
               {/* Left: Project Image */}
-              <div className="md:w-1/2 w-full flex justify-center items-center mb-6 md:mb-0 md:mr-8 overflow-hidden rounded-md border border-slate-800/60">
-                <motion.img
+              <div className="md:w-1/2 w-full flex justify-center items-center mb-6 md:mb-0 md:mr-8 overflow-hidden rounded-md border border-slate-800/60 min-h-[200px]">
+                <OptimizedImage
                   src={work.image}
                   alt={work.title}
-                  className="object-cover w-full h-full min-h-[200px]"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
+                  loading="lazy"
+                  decoding="async"
+                  className="object-cover w-full h-full min-h-[200px] hover:scale-105 transition-transform duration-300"
+                  wrapperClassName="w-full h-full min-h-[200px]"
                 />
               </div>
               {/* Right: Project Content */}

@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { FiExternalLink, FiX, FiFileText } from "react-icons/fi";
+import OptimizedImage from "./OptimizedImage";
+
 
 const Publications = () => {
     const [selectedCategory, setSelectedCategory] = useState("All");
@@ -215,10 +217,13 @@ const Publications = () => {
                             >
                             {/* Publication Image */}
                             <div className="relative overflow-hidden h-56 rounded-lg">
-                                <img
+                                <OptimizedImage
                                     src={pub.image}
                                     alt={pub.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    wrapperClassName="w-full h-full"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-50" />
                                 <div className="absolute bottom-0 left-0 p-4 w-full">
@@ -297,10 +302,11 @@ const Publications = () => {
                         >
                             {/* Modal Header */}
                             <div className="relative">
-                                <img
+                                <OptimizedImage
                                     src={selectedPublication.image}
                                     alt={selectedPublication.title}
                                     className="w-full h-64 object-cover rounded-t-xl"
+                                    wrapperClassName="w-full h-64 rounded-t-xl"
                                 />
                                 <button
                                     onClick={closeModal}

@@ -13,13 +13,35 @@
   <meta property="og:description" content="Software developer with a strong focus on Python and intelligent systems, exploring modern computing, web backends, and systems experimentation." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#000000" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- LCP image preload for instant hero render -->
+  <link rel="preload" as="image" href="/photos/ProfileNoBG.png" type="image/png" fetchpriority="high" />
 </head>
 
-<body>
-  <div id="root"></div>
+<body style="margin: 0; background-color: #000; color: #f1f5f9;">
+  <div id="root">
+    <!-- Streamlined initial pipeline fallback (replaced immediately upon React mount) -->
+    <div style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, #07152f, #000000); font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #94a3b8; user-select: none;">
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #38bdf8; box-shadow: 0 0 10px #38bdf8; display: inline-block;"></span>
+        <span style="color: #e2e8f0; font-weight: 500;">Sudharshan Prabhu</span>
+      </div>
+      <div style="font-size: 11px; color: #64748b; margin-bottom: 16px;">// initializing intelligent systems...</div>
+      <div style="width: 140px; height: 2px; background: rgba(56, 189, 248, 0.15); border-radius: 9999px; overflow: hidden; position: relative;">
+        <div style="width: 45%; height: 100%; background: #38bdf8; border-radius: 9999px; position: absolute; animation: initialLoadBar 1.2s infinite ease-in-out;"></div>
+      </div>
+      <style>
+        @keyframes initialLoadBar {
+          0% { left: -45%; }
+          100% { left: 100%; }
+        }
+      </style>
+    </div>
+  </div>
   <script type="module" src="/src/index.jsx"></script>
 </body>
 

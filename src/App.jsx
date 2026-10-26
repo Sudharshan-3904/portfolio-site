@@ -1,17 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Skills from "./components/Skills";
-import Publications from "./components/Publications";
-import Projects from "./components/Projects";
-import FreelanceWorks from "./components/FreelanceWorks";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import Experiences from "./components/Experience";
 import BackgroundElements from "./components/BackgroundElements";
+import SectionSkeleton from "./components/SectionSkeleton";
 import "./main.css";
+
+// Lazily load below-the-fold modules to streamline initial load pipeline
+const Skills = lazy(() => import("./components/Skills"));
+const Experiences = lazy(() => import("./components/Experience"));
+const Projects = lazy(() => import("./components/Projects"));
+const FreelanceWorks = lazy(() => import("./components/FreelanceWorks"));
+const Publications = lazy(() => import("./components/Publications"));
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
+
 
 function App() {
   // Subdomain redirect logic
@@ -62,6 +66,27 @@ function App() {
     };
   }, []);
 
+  // Idle background preloading for downstream chunks after initial render
+  useEffect(() => {
+    const preloadModules = () => {
+      import("./components/Skills");
+      import("./components/Experience");
+      import("./components/Projects");
+      import("./components/FreelanceWorks");
+      import("./components/Publications");
+      import("./components/Contact");
+      import("./components/Footer");
+    };
+
+    if ("requestIdleCallback" in window) {
+      const handle = window.requestIdleCallback(preloadModules, { timeout: 2500 });
+      return () => window.cancelIdleCallback(handle);
+    } else {
+      const timer = setTimeout(preloadModules, 1200);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen text-darkText-primary relative selection:bg-primary/30 selection:text-white">
       <Navbar />
@@ -78,19 +103,33 @@ function App() {
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <About />
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <Skills />
+        <Suspense fallback={<SectionSkeleton id="skills" title="Skills" minHeight="min-h-[400px]" />}>
+          <Skills />
+        </Suspense>
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <Experiences />
+        <Suspense fallback={<SectionSkeleton id="experience" title="Experience" minHeight="min-h-[400px]" />}>
+          <Experiences />
+        </Suspense>
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <Projects />
+        <Suspense fallback={<SectionSkeleton id="projects" title="Projects" minHeight="min-h-[500px]" />}>
+          <Projects />
+        </Suspense>
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <FreelanceWorks />
+        <Suspense fallback={<SectionSkeleton id="freelance" title="Freelance Works" minHeight="min-h-[400px]" />}>
+          <FreelanceWorks />
+        </Suspense>
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <Publications />
+        <Suspense fallback={<SectionSkeleton id="publications" title="Publications" minHeight="min-h-[450px]" />}>
+          <Publications />
+        </Suspense>
         <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <Contact />
+        <Suspense fallback={<SectionSkeleton id="contact" title="Contact" minHeight="min-h-[500px]" />}>
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={<div className="h-20 w-full bg-dark" />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

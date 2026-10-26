@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FiSend, FiGithub, FiLinkedin, FiMapPin } from "react-icons/fi";
-import emailjs from "@emailjs/browser";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,6 +34,7 @@ export default function Contact() {
     subject: "",
   });
   const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const ref = useRef(null);
   const formRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -47,22 +47,27 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-    emailjs
-      .sendForm(emailServiceId, emailTemplateId, formRef.current, {
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setStatus("Transmitting message...");
+
+    try {
+      // Lazy load emailjs only when user submits to optimize initial page loading pipeline
+      const emailjs = (await import("@emailjs/browser")).default;
+      await emailjs.sendForm(emailServiceId, emailTemplateId, formRef.current, {
         publicKey: emailPublicKey,
-      })
-      .then(
-        () => {
-          setStatus("Message sent successfully!");
-          setForm({ sender: "", name: "", message: "", subject: "" });
-        },
-        () => {
-          setStatus("Failed to send message. Please reach out via LinkedIn or GitHub.");
-        }
-      );
+      });
+      setStatus("Message sent successfully!");
+      setForm({ sender: "", name: "", message: "", subject: "" });
+      setTimeout(() => setStatus(""), 6000);
+    } catch {
+      setStatus("Failed to send message. Please reach out via LinkedIn or GitHub.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -234,10 +239,42 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-darkText-primary bg-primary hover:bg-primary-dark transition-all duration-200 shadow-sm shadow-primary/30"
+                disabled={isSubmitting}
+                className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm ${
+                  isSubmitting
+                    ? "bg-primary/50 text-darkText-muted cursor-wait"
+                    : "text-darkText-primary bg-primary hover:bg-primary-dark shadow-primary/30"
+                }`}
               >
-                <FiSend className="w-4 h-4" />
-                <span>Send Message</span>
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      />
+                    </svg>
+                    <span>Transmitting Message...</span>
+                  </>
+                ) : (
+                  <>
+                    <FiSend className="w-4 h-4" />
+                    <span>Send Message</span>
+                  </>
+                )}
               </button>
             </form>
           </div>

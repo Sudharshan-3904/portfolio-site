@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiArrowRight, FiFileText } from "react-icons/fi";
 import { SiPython } from "react-icons/si";
+import OptimizedImage from "./OptimizedImage";
+
 
 const Hero = () => {
     const containerVariants = {
@@ -181,10 +183,12 @@ const Hero = () => {
 
                                 {/* Portrait image */}
                                 <div className="p-4 bg-gradient-to-b from-dark-lighter/30 to-dark/30">
-                                    <img
+                                    <OptimizedImage
                                         src="/photos/ProfileNoBG.png"
                                         alt="Sudharshan - Software Developer"
+                                        priority={true}
                                         className="w-full h-auto object-cover rounded-xl"
+                                        wrapperClassName="w-full h-auto rounded-xl"
                                     />
                                 </div>
 
