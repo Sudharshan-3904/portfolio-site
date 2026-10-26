@@ -63,7 +63,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark text-darkText-primary relative selection:bg-primary/30 selection:text-white">
+    <div className="min-h-screen text-darkText-primary relative selection:bg-primary/30 selection:text-white">
       <Navbar />
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"

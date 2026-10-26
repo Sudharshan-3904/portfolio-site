@@ -112,10 +112,6 @@ const Skills = () => {
 
     return (
         <section id="skills" className="py-24 bg-transparent relative overflow-hidden">
-            {/* Ambient lighting */}
-            <div className="absolute -right-20 top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none -z-10" />
-            <div className="absolute -left-10 bottom-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10" />
-
             <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
                 {/* Section Title */}
                 <div className="section-title mb-16 text-center">
@@ -150,7 +146,7 @@ const Skills = () => {
                         <motion.div
                             key={idx}
                             variants={cardVariants}
-                            className="bg-dark-lighter/35 backdrop-blur-md rounded-2xl border border-slate-800/70 p-5 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
+                            className="bg-dark-lighter/75 rounded-2xl border border-slate-800/70 p-5 sm:p-7 flex flex-col justify-between hover:border-primary/40 transition-all duration-300 shadow-dark-md"
                             whileHover={{ y: -4 }}
                         >
                             <div>

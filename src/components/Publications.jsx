@@ -139,11 +139,6 @@ const Publications = () => {
 
     return (
         <section id="publications" className="py-20 bg-transparent relative overflow-hidden">
-            {/* Background design elements */}
-            <div className="absolute right-0 top-20 w-96 h-96 bg-primary/10 blur-3xl -z-10" />
-            <div className="absolute -left-10 bottom-10 w-64 h-64 bg-accent/10 blur-2xl -z-10" />
-            <div className="absolute left-1/3 top-1/2 w-20 h-20 bg-primary/10 blur-xl -z-10" />
-
             <div className="container mx-auto px-4 md:px-6">
                 {/* Section Title */}
                 <div className="section-title">
@@ -212,7 +207,7 @@ const Publications = () => {
                                 key={pub.id}
                                 variants={itemVariants}
                                 whileHover={{ y: -10 }}
-                                className={`bg-dark/30 backdrop-blur-md border border-slate-800/70 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg hover:border-primary/40 transition-all duration-300 relative ${
+                                className={`bg-dark/75 border border-slate-800/70 rounded-xl shadow-dark-md p-6 hover:shadow-dark-lg hover:border-primary/40 transition-all duration-300 relative ${
                                     isLastAndOdd
                                         ? "sm:col-span-2 sm:w-[75%] sm:mx-auto sm:justify-self-center"
                                         : "w-full"
